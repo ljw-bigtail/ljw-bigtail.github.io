@@ -1,0 +1,900 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript,jQuery," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+<meta name="keywords" content="JavaScript,jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery基础+++">
+<meta property="og:url" content="http://yoursite.com/2016/11/22/jQuery基础+++/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-12-07T03:29:18.256Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery基础+++">
+<meta name="twitter:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/22/jQuery基础+++/"/>
+
+
+  <title> jQuery基础+++ | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jQuery基础+++
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-22T09:00:00+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/22/jQuery基础+++/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/22/jQuery基础+++/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。<br>我认为，理解思路才是最重要的。<br>比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······</p>
+<a id="more"></a>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h3 id="显示和隐藏"><a href="#显示和隐藏" class="headerlink" title="显示和隐藏"></a>显示和隐藏</h3><ul>
+<li>隐藏元素，不仅仅是<code>display = none;</code>，还控制了各个属性（宽度、高度、透明度）。<br>参数可选，如果不填，就是直接隐藏，还可以填写 “fast” / “slow” 用来表示不同速度（200ms / 600ms）的隐藏动画，还可以直接填写时间数字，单位是毫秒。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//hide( option );</span></div><div class="line">hide( slow );</div><div class="line">hide( <span class="number">3000</span> );</div></pre></td></tr></table></figure>
+<ul>
+<li>显示元素，与隐藏元素相反，把元素的各个属性恢复到hide()之前的状态。<br>参数与hide()一样。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//show( option );</span></div><div class="line">show( fast );</div><div class="line">show( <span class="number">2000</span> );</div></pre></td></tr></table></figure>
+<p>Tips：组合使用，效果更好</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(“button”).hide(<span class="number">3000</span>).show(<span class="number">3000</span>);    <span class="comment">//先隐藏在显示</span></div><div class="line"></div><div class="line"><span class="comment">//反复推拉效果或闪烁效果······</span></div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(“div”).hide(<span class="number">1000</span>).show(<span class="number">1000</span>);</div><div class="line">&#125;,<span class="number">2000</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>显示隐藏切换，toggle()。<br>方法监视元素是否是隐藏状态，如果是隐藏状态，点击后就执行show()；如果是显示状态，点击后执行hide()。</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">toggle( [ duration ],[ complete ] );  //切换方法的持续时间、动画执行完的回调方法</div><div class="line"></div><div class="line"><span class="comment">//原理</span></div><div class="line"><span class="function"><span class="title">if</span><span class="params">( display === true )</span></span>&#123;</div><div class="line">	$("elem").show();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>( <span class="attribute">display</span> === false )&#123;</div><div class="line">	$("elem").hide();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="上卷下拉"><a href="#上卷下拉" class="headerlink" title="上卷下拉"></a>上卷下拉</h3><ul>
+<li>下拉效果，控制元素的height在设定的时间内变大，还需要在css里设置<code>display:none;</code>，<br>参数与toggle的使用一样。但不填时，默认参数为400.以上两点是slide()与上面方法的区别。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideDown( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
+<ul>
+<li>上卷效果，基本与slideDown()的使用方法一致，但还可以设置缓动函数（运动速度的改变函数）。<br>仅调用jQuery时，缓动函数可以有两种：”swing”（默认），”linear”，还可以通过<a href="http://jqueryui.com/easing/" target="_blank" rel="external">调用插件</a>使用新的缓动函数。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideUp( [ duration ],[ easing ],[ complte ] )</div></pre></td></tr></table></figure>
+<ul>
+<li>上卷或下拉切换的方法，与toggle()方法类似。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideToggle( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
+<h3 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h3><ul>
+<li>淡出效果，根据时间控制元素的透明度（0% ~ 100%）。<br>参数与上面一致。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeOut( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
+<ul>
+<li>淡入效果，如果元素本身可见，不进行任何操作。<br>参数与上面一致。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeIn( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
+<ul>
+<li>淡入淡出切换的方法，与toggle()方法类似。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeToggle( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
+<ul>
+<li>可控的淡入效果，控制元素的透明度显示到指定的百分比。<br>参数中的opacity控制元素的透明度，其他与前面的一致。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeTo( [ duration ],[ opacity ],[ complete ] );</div></pre></td></tr></table></figure>
+<h3 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h3><h4 id="USE1"><a href="#USE1" class="headerlink" title="USE1"></a>USE1</h4><p>animate( properties , [ duration ] , [ easing ] , [ complete ] );<br>参数：属性，运动时间，运动变化关系，回调函数。</p>
+<blockquote>
+<p>以当前元素属性为动画起点，以参数中的属性为终点，以后面的数字为时间（ms）做变化，默认变化为线性关系。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).animate(&#123;</div><div class="line">	opacity:<span class="number">0</span></div><div class="line">&#125;,<span class="number">3000</span>);</div></pre></td></tr></table></figure>
+<p>Tips：</p>
+<ol>
+<li>如果不填单位，默认是’px’，<code>{width：50}</code>；</li>
+<li>如果填写单位，格式为<code>{width: &quot;50px&quot;,height: &quot;10em&quot;}</code>;</li>
+<li>属性值还能使用”show”，”hide”，“toggle”，分别表示为”控制元素的显示”，”控制元素的显示”，“控制元素的显隐切换”。</li>
+</ol>
+<h4 id="USE2"><a href="#USE2" class="headerlink" title="USE2"></a>USE2</h4><p>animate( properties , options );<br>参数：属性，选项。</p>
+<blockquote>
+<p>实际上就是把后面的可选参数集合在一起了。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).animate(&#123;</div><div class="line">	width: <span class="string">'200px'</span>,</div><div class="line">    opacity: <span class="number">0</span></div><div class="line">&#125;,&#123;</div><div class="line">	duration: <span class="number">3000</span>,</div><div class="line">    spacialEasing: &#123;</div><div class="line">    	width: <span class="string">'linear'</span>,</div><div class="line">     	opacity: <span class="string">'easeOutBounce'</span></div><div class="line">    &#125;</div><div class="line">    complete: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="built_in">console</span>.log(<span class="string">"Done"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h4><p>执行时，当前动画被暂停。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.stop();  <span class="comment">//停止当前动画（第一个）。只能再次启动动画。</span></div><div class="line">.stop(<span class="literal">true</span>);  <span class="comment">//停止全部动画（每一个）。</span></div><div class="line">.stop();  <span class="comment">//停止动画，直接显示第一个动画的目标。</span></div></pre></td></tr></table></figure>
+<h2 id="jQuery核心"><a href="#jQuery核心" class="headerlink" title="jQuery核心"></a>jQuery核心</h2><h3 id="遍历-each"><a href="#遍历-each" class="headerlink" title="遍历-each()"></a>遍历-each()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//遍历元素，然后进行回调操作。</span></div><div class="line">jQuery.each( array/object , callback );</div></pre></td></tr></table></figure>
+<p>callback中可以传进去两个参数：index，value。</p>
+<h3 id="查找-inArray"><a href="#查找-inArray" class="headerlink" title="查找-inArray()"></a>查找-inArray()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//传递一个值，在array中进行查找，可以在fromIndex中写搜索的起始索引。</span></div><div class="line">jQuery.inArray( value , array , [ fromIndex ] );</div></pre></td></tr></table></figure>
+<p> 还可以通过判断返回值<code>!= -1</code>来确定是否存在改值。</p>
+<h3 id="去空白-trim"><a href="#去空白-trim" class="headerlink" title="去空白-trim()"></a>去空白-trim()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'div'</span>));  <span class="comment">//去除div中的空格</span></div></pre></td></tr></table></figure>
+<p>移除所有的换行符、空格、制表符，不移除字符串中间的空白字符</p>
+<h3 id="获取DOM-get"><a href="#获取DOM-get" class="headerlink" title="获取DOM-get()"></a>获取DOM-get()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).get(<span class="number">1</span>);  <span class="comment">//找到对应索引值的元素</span></div></pre></td></tr></table></figure>
+<p>从获取的元素中筛选出索引值与参数对应的元素，参数为负值时，表示倒数。</p>
+<h3 id="获取索引-index"><a href="#获取索引-index" class="headerlink" title="获取索引-index()"></a>获取索引-index()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>). index();  <span class="comment">//获取查找到元素的索引</span></div></pre></td></tr></table></figure>
+<p>参数没有时，获取第一个。<br>参数中填写获取元素的语句，可以是JS的，还可以是JQ的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>jQuery的基础就到这里了，目前的状态在会用、理解思路上。<br>暂时还没有时间看源码，以后用的多了再看。<br>jQuery确实方便，但是在更多时候，我认为原生更好用。<br>加油！！！</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/22/jQuery基础++/" rel="next" title="jQuery基础++">
+                <i class="fa fa-chevron-left"></i> jQuery基础++
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/01/实习-收获/" rel="prev" title="实习-收获">
+                实习-收获 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/22/jQuery基础+++/"
+           data-title="jQuery基础+++" data-url="http://yoursite.com/2016/11/22/jQuery基础+++/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">1.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#显示和隐藏"><span class="nav-number">1.1.</span> <span class="nav-text">显示和隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上卷下拉"><span class="nav-number">1.2.</span> <span class="nav-text">上卷下拉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#淡入淡出"><span class="nav-number">1.3.</span> <span class="nav-text">淡入淡出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义动画"><span class="nav-number">1.4.</span> <span class="nav-text">自定义动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#USE1"><span class="nav-number">1.4.1.</span> <span class="nav-text">USE1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USE2"><span class="nav-number">1.4.2.</span> <span class="nav-text">USE2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停止动画"><span class="nav-number">1.4.3.</span> <span class="nav-text">停止动画</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery核心"><span class="nav-number">2.</span> <span class="nav-text">jQuery核心</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历-each"><span class="nav-number">2.1.</span> <span class="nav-text">遍历-each()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找-inArray"><span class="nav-number">2.2.</span> <span class="nav-text">查找-inArray()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#去空白-trim"><span class="nav-number">2.3.</span> <span class="nav-text">去空白-trim()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取DOM-get"><span class="nav-number">2.4.</span> <span class="nav-text">获取DOM-get()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取索引-index"><span class="nav-number">2.5.</span> <span class="nav-text">获取索引-index()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

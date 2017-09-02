@@ -1,0 +1,930 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Node.js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="keywords" content="Node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js基础模块">
+<meta property="og:url" content="http://yoursite.com/2016/12/12/Node.js基础模块/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-19/27869542-file_1482149317188_4388.jpg">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-12/21889398-file_1481545560121_17022.png">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-12/87376352-file_1481545560306_fed7.png">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-12/38759389-file_1481546278415_de2c.png">
+<meta property="og:updated_time" content="2016-12-19T12:14:27.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node.js基础模块">
+<meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-19/27869542-file_1482149317188_4388.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/12/Node.js基础模块/"/>
+
+
+  <title> Node.js基础模块 | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Node.js基础模块
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-12T08:33:44+08:00" content="2016-12-12">
+              2016-12-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/12/Node.js基础模块/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/Node.js基础模块/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-19/27869542-file_1482149317188_4388.jpg" alt="常用模块"></p>
+<a id="more"></a>
+<h2 id="Buffer（缓冲区）"><a href="#Buffer（缓冲区）" class="headerlink" title="Buffer（缓冲区）"></a>Buffer（缓冲区）</h2><h3 id="理解与使用"><a href="#理解与使用" class="headerlink" title="理解与使用"></a>理解与使用</h3><p> 因为JavaScript对Unicode友好，但难以处理二进制数据。<br> 而TCP流与文件系统经常需要操作字节流，于是在Buffer类中存储原始数据。</p>
+<blockquote>
+<p>操作Buffer就像操作JavaScript的数组类似。<br>一旦创建了Buffer实例化对象，就不能改变它的大小。</p>
+</blockquote>
+<p>因为Buffer是全局对象，所以不需要使用 “ require(‘buffer’) ”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> buf = <span class="keyword">new</span> Buffer(size);</div></pre></td></tr></table></figure>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-12/21889398-file_1481545560121_17022.png" alt="Buffer对象"></p>
+<table>
+<thead>
+<tr>
+<th>Buffer静态方法</th>
+<th>Buffer静态方法使用含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poolSize</td>
+<td>内存载体的容量</td>
+</tr>
+<tr>
+<td>isBuffer</td>
+<td>判断对象类型是否是Buffer</td>
+</tr>
+<tr>
+<td>compare</td>
+<td>用来判断两个Buffer对象的相对位置，一般做字符串排序</td>
+</tr>
+<tr>
+<td>isEncoding</td>
+<td>支持某种编码，中文~UTF-8</td>
+</tr>
+<tr>
+<td>concat</td>
+<td>连接几个Buffer对象作为一个新的Buffer对象</td>
+</tr>
+<tr>
+<td>byteLength</td>
+<td>指定字符串编码所占据的字符数</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Buffer实例方法</th>
+<th>Buffer实例方法使用含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buffer[index]</td>
+<td>根据下标确定第index个位置的内容</td>
+</tr>
+<tr>
+<td>buffer.length</td>
+<td>确定Buffer的长度</td>
+</tr>
+<tr>
+<td>buffer.write(string , offser , length , encoding)</td>
+<td>当有了string参数就可以对Buffer写入内容（长度改变的内容不会影响Buffer的长度。长了，会自动截取多余的部分；短了，仅更改部分的信息。）。offset作为起始下标位置，默认0。length表示将要写入的字符串大小。encoding是编码格式，默认’utf8’。</td>
+</tr>
+<tr>
+<td>buffer.toString(encoding , start=0 , end=buffer.length)</td>
+<td>输出Buffer的内容</td>
+</tr>
+<tr>
+<td>buffer.copy(target , tStart , sStart , sEnd=buffer.length)</td>
+<td>target表示目标buffer（target）Start表示从目标Buffer的第几个字节开始写，默认是0。sStart表示原Buffer（buffer，默认是0。sEnd表示原Buffer的终止位置，默认是buffer.length。</td>
+</tr>
+<tr>
+<td>buffer.slice(start , end)</td>
+<td>剪切出一个新的buffer，这个buffer将会和原来的buffer引用相同的内存地址，start（默认0）、end（默认buffer.length）表示截取的索引。</td>
+</tr>
+<tr>
+<td>buffer.compare(otherBuffer)</td>
+<td>对比两个buffer，相同（返回0），在buf在otherBuff之前返回（-1）。</td>
+</tr>
+<tr>
+<td>buffer.equals(otherBuffer)</td>
+<td>对比两个buffer是否相同（返回true）</td>
+</tr>
+<tr>
+<td>buffer.fill(value , offset , end)</td>
+<td>用value填充整个buffer，offset（默认0）、end是（默认buffer.length）表示填充的索引</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p>对照片进行base64编码方式的转换。</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-12/87376352-file_1481545560306_fed7.png" alt="对照片进行base64编码方式的转换"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"></div><div class="line">fs.readFile(<span class="string">'big.jpg'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,origin_buffer</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(Buffer.isBuffer(origin_buffer));</div><div class="line">	fs.writeFile(<span class="string">'logo_buffer.png'</span>,origin_buffer,<span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span> (err) &#123;</div><div class="line">			<span class="built_in">console</span>.log(err);</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">	<span class="comment">/*var base64Image = new Buffer(origin_buffer).toString('base64');*/</span></div><div class="line">	<span class="keyword">var</span> base64Image = origin_buffer.toString(<span class="string">'base64'</span>);</div><div class="line">	<span class="built_in">console</span>.log(base64Image);</div><div class="line"></div><div class="line">	<span class="keyword">var</span> decodedImage = <span class="keyword">new</span> Buffer(base64Image,<span class="string">'base64'</span>);</div><div class="line">	<span class="built_in">console</span>.log(Buffer.compare(origin_buffer,decodedImage));</div><div class="line">	fs.writeFile(<span class="string">'logo_decoded.png'</span>,decodedImage,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span> (err) &#123;</div><div class="line">			<span class="built_in">console</span>.log(err);</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="逻辑分析"><a href="#逻辑分析" class="headerlink" title="逻辑分析"></a>逻辑分析</h4><p>Buffer，作为缓冲池，直接操作内存，上面的代码先读了一张照片，然后把照片存储在缓冲池中，然后把缓冲池中的照片编码写入到本地。<br>中间写了两张照片到本地，第一章是直接写入，第二章是先把照片转换为base64编码方式，然后存入缓冲池，最后在写照片的时候把编码方式为base64的这段代码转换为照片。<br>中间有执行报错的回调函数（err）。</p>
+<h2 id="Stream（流）"><a href="#Stream（流）" class="headerlink" title="Stream（流）"></a>Stream（流）</h2><h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><p>Stream就像是管道一样，是一个抽象接口，实现了操作数据时的加载方式。<br>对http服务器发送请求的request对象就是一个stream，还有标准输出时等。</p>
+<h3 id="Demo-1"><a href="#Demo-1" class="headerlink" title="Demo"></a>Demo</h3><p>查看流的运行状态与常用事件。</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-12/38759389-file_1481546278415_de2c.png" alt="查看流的运行状态。"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> readStream = fs.createReadStream(<span class="string">'stream_copy_logo.js'</span>);</div><div class="line"><span class="keyword">var</span> n = <span class="number">0</span>;</div><div class="line"></div><div class="line">readStream</div><div class="line">	.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">chunk</span>) </span>&#123;</div><div class="line">		n++;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data emits'</span>);</div><div class="line">		<span class="built_in">console</span>.log(Buffer.isBuffer(chunk));</div><div class="line">		<span class="comment">/*console.log(chunk.toString('utf8'));*/</span></div><div class="line"></div><div class="line">		readStream.pause();</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data pause'</span>);</div><div class="line">		setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="built_in">console</span>.log(<span class="string">'data pause end'</span>);</div><div class="line">			readStream.resume();</div><div class="line">		&#125;,<span class="number">2000</span>);</div><div class="line">	&#125;)</div><div class="line">	.on(<span class="string">'readable'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data readable'</span>);</div><div class="line">	&#125;)</div><div class="line">	.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(n);</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data ends'</span>);</div><div class="line">	&#125;)</div><div class="line">	.on(<span class="string">'close'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data close'</span>);</div><div class="line">	&#125;)</div><div class="line">	.on(<span class="string">'error'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'data read error'</span> + e);</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<h4 id="逻辑分析-1"><a href="#逻辑分析-1" class="headerlink" title="逻辑分析"></a>逻辑分析</h4><p>这里主要创建一个读取的流，然后根据绑定不同事件来观察Stream加载文件时的状态。</p>
+<p>常用的事件有：<br>data - 当有数据可读时触发。<br>end - 没有更多的数据可读时触发。<br>error - 在接收和写入过程中发生错误时触发。<br>finish - 所有数据已被写入到底层系统时触发。</p>
+<h2 id="Net（网络通信）"><a href="#Net（网络通信）" class="headerlink" title="Net（网络通信）"></a>Net（网络通信）</h2><h3 id="理解与使用-1"><a href="#理解与使用-1" class="headerlink" title="理解与使用"></a>理解与使用</h3>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag">#Node.js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/01/实习-收获/" rel="next" title="实习-收获">
+                <i class="fa fa-chevron-left"></i> 实习-收获
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/01/辞旧迎新-2017/" rel="prev" title="辞旧迎新-2017">
+                辞旧迎新-2017 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/12/Node.js基础模块/"
+           data-title="Node.js基础模块" data-url="http://yoursite.com/2016/12/12/Node.js基础模块/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Buffer（缓冲区）"><span class="nav-number">1.</span> <span class="nav-text">Buffer（缓冲区）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解与使用"><span class="nav-number">1.1.</span> <span class="nav-text">理解与使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo"><span class="nav-number">1.2.</span> <span class="nav-text">Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑分析"><span class="nav-number">1.2.1.</span> <span class="nav-text">逻辑分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stream（流）"><span class="nav-number">2.</span> <span class="nav-text">Stream（流）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解"><span class="nav-number">2.1.</span> <span class="nav-text">理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo-1"><span class="nav-number">2.2.</span> <span class="nav-text">Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑分析-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">逻辑分析</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Net（网络通信）"><span class="nav-number">3.</span> <span class="nav-text">Net（网络通信）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#理解与使用-1"><span class="nav-number">3.1.</span> <span class="nav-text">理解与使用</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

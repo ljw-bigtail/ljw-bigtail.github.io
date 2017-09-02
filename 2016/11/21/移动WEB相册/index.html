@@ -1,0 +1,889 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript,Demo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="经过这两天的思考，终于把移动端的相册做好了。Github-移动WEB相册">
+<meta name="keywords" content="JavaScript,Demo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动WEB相册">
+<meta property="og:url" content="http://yoursite.com/2016/11/21/移动WEB相册/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="经过这两天的思考，终于把移动端的相册做好了。Github-移动WEB相册">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-16/34428852-file_1481857865911_2b22.gif">
+<meta property="og:updated_time" content="2016-12-16T03:43:08.119Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动WEB相册">
+<meta name="twitter:description" content="经过这两天的思考，终于把移动端的相册做好了。Github-移动WEB相册">
+<meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-12-16/34428852-file_1481857865911_2b22.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/21/移动WEB相册/"/>
+
+
+  <title> 移动WEB相册 | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                移动WEB相册
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-21T10:30:00+08:00" content="2016-11-21">
+              2016-11-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Demo/" itemprop="url" rel="index">
+                    <span itemprop="name">Demo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/21/移动WEB相册/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/21/移动WEB相册/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> 经过这两天的思考，终于把移动端的相册做好了。<a href="https://github.com/ljw-bigtail/WEB-photo-album" target="_blank" rel="external">Github-移动WEB相册</a></p>
+<a id="more"></a>
+<h2 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h2><p>一开始，我的想法是做一个可以适合移动端浏览的照片展示工具，作为练习，然后突然想到ajax也可以用在里面，与是就有了之下的东西。</p>
+<h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><p>因为之前有看过慕课上的视频，所以很认同用canvas的加载方法，<br>所以，有标题、有图片列表、有放大图。</p>
+<h3 id="样式结构"><a href="#样式结构" class="headerlink" title="样式结构"></a>样式结构</h3><p>样式很简单：<br>缩放页面，深色背景加上方形缩略图，中间加上padding。<br>展示页面，根据宽、高选择合适的作为基准，加上padding即可。</p>
+<h3 id="交互结构"><a href="#交互结构" class="headerlink" title="交互结构"></a>交互结构</h3><p>刚开始没有写ajax时，我想分为两个个模块：canvas图片，绑定事件；之后就表示为三个模块。<br>然后呢，我使用了移动端的zepto框架的touch模块。</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-16/34428852-file_1481857865911_2b22.gif" alt="预览"></p>
+<h2 id="实现与改版"><a href="#实现与改版" class="headerlink" title="实现与改版"></a>实现与改版</h2><h3 id="第一版（load-js）"><a href="#第一版（load-js）" class="headerlink" title="第一版（load.js）"></a>第一版（load.js）</h3><h4 id="加载图片"><a href="#加载图片" class="headerlink" title="加载图片"></a>加载图片</h4><ol>
+<li>手动设定图片数量<code>total</code>；</li>
+<li>通过for循环依次加载html结构<code>&lt;li&gt;&lt;canvas&gt;&lt;/li&gt;</code>；</li>
+<li>根据for循环的i设置图片的路径，然后给canvas加载图片；</li>
+<li>改变ul的html结构<code>$().html()</code>。</li>
+</ol>
+<h4 id="滑动加载"><a href="#滑动加载" class="headerlink" title="滑动加载"></a>滑动加载</h4><ol>
+<li>给body绑定swipe事件；</li>
+<li>新增的内容根据之前一样的方式，但是我还没封装；</li>
+<li>最后呢，使用<code>.append()</code>方法，在ul尾部加载新li。</li>
+</ol>
+<h3 id="第二版（photo-js、ajaxPic-js）"><a href="#第二版（photo-js、ajaxPic-js）" class="headerlink" title="第二版（photo.js、ajaxPic.js）"></a>第二版（photo.js、ajaxPic.js）</h3><h4 id="加载图片（photo-js）"><a href="#加载图片（photo-js）" class="headerlink" title="加载图片（photo.js）"></a>加载图片（photo.js）</h4><p>这部分的思路和方法和之前的一样，没什么改变。</p>
+<h4 id="绑定事件（photo-js）"><a href="#绑定事件（photo-js）" class="headerlink" title="绑定事件（photo.js）"></a>绑定事件（photo.js）</h4><p>按照之前的思路，我写了两部分：给每张小图绑定放大事件，给每张大图绑定事件</p>
+<h5 id="小图的事件"><a href="#小图的事件" class="headerlink" title="小图的事件"></a>小图的事件</h5><p>小图的事件比较简单，就是点击每张小图片后，显示放大的图片。<br>这里需要用到一个jQuery的方法<code>delegate()</code>，因为zepto里面已经包含了这个方法，所以就不用再引用jQuery了。<br>因为我的大图展示在div里了，所以我只需要设置好每张图对应的css即可。</p>
+<ol>
+<li>首先设置大图背景的宽高，有与全屏比较好看，所以宽高需要动态设置。</li>
+<li>然后设置一个自定义属性，用于获取li的序号，然后生成大图的路径。</li>
+<li>大图的padding需要动态改变，逻辑是：根据图片的宽高比确定图片的横\竖（高/宽&gt;1.2，竖图）。如果是横图，左右padding为0，只设置上下padding；如果是竖图，上下padding为0，只设置左右padding。</li>
+</ol>
+<h5 id="大图的事件"><a href="#大图的事件" class="headerlink" title="大图的事件"></a>大图的事件</h5><ol>
+<li>点击隐藏事件，用hide()方法即可。</li>
+<li>左划，显示上一张图；右划，显示下一张图。</li>
+<li>加载图片时，需要引用加载大图的方法，为了美观，还需要使用animate.css，这些加载需要改变class值，所以需要给loadImg方法添加回调函数和<code>callback&amp;&amp;callback();</code>。</li>
+</ol>
+<h4 id="ajax加载（ajaxPic-js）"><a href="#ajax加载（ajaxPic-js）" class="headerlink" title="ajax加载（ajaxPic.js）"></a>ajax加载（ajaxPic.js）</h4><ol>
+<li>我使用ajax的思路是：用json保存图片的路径，然后加载图片时，仅解析数据之后通过url加载图片。</li>
+<li>当加载json数据返回200时，运行加载图片的代码。（目前还是没有封装）。</li>
+<li>其他的，就是最基本的异步加载的那些方法。</li>
+</ol>
+<p>这里出现了一个问题，加载没成功，F12之后，报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ajaxPic.js:31 XMLHttpRequest cannot load file:///C:/Users/Administrator/Desktop/%E7%A7%BB%E5%8A%A8WEB%E7%9B%B8%E5%86%8C/ajax/photo.json. Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource.</div></pre></td></tr></table></figure>
+<p>翻译之后明白了是跨域的问题，解决方法也很简单，就是把文件全部部署在服务器上，但是我之前的服务器忘记续费了，所以只能换另一种方法，webstorm。</p>
+<blockquote>
+<p>Tip：之前，一直使用sublime，虽然下载了webstorm，但是基本不怎么用。这回，明白了它的好。</p>
+</blockquote>
+<h3 id="第三版（ajaxLoad-js）"><a href="#第三版（ajaxLoad-js）" class="headerlink" title="第三版（ajaxLoad.js）"></a>第三版（ajaxLoad.js）</h3><p>这回把需要的方法都封装了，为了加载时后的复用。</p>
+<h4 id="加载图片-1"><a href="#加载图片-1" class="headerlink" title="加载图片"></a>加载图片</h4><ol>
+<li>image(photoSrc)，canvas加载图片的方法，本来是为了防止以后还要用，所以就封装了（结果没用上···）。</li>
+<li>loadPhoto(photoLen)，批量加载，麻烦的地方在于计算padding（每行最左边，padding-left = 0;）。</li>
+<li>接着就是使用ajax加载数据，因为之前封装好了方法，所以，只需要调用loadPhoto就可以了，由于id不能重复，所以我使用全局变量关联加载数据次数和滑动次数（loadNum）。</li>
+</ol>
+<h4 id="绑定方法"><a href="#绑定方法" class="headerlink" title="绑定方法"></a>绑定方法</h4><p>与之前的交互几乎一样，需要更改的是index值，修正了之前加载后的图片绑定的事件的问题。</p>
+<h2 id="想法与改进"><a href="#想法与改进" class="headerlink" title="想法与改进"></a>想法与改进</h2><blockquote>
+<p>之前还有一些想法没有实现，主要是逻辑方面没理清：我想做每次滑动都加载一部分图片，但是写出来之后却发现加载了节点却没加载对应的图片。</p>
+</blockquote>
+<p>现在解决了。方法就是改变之前的html()，使用append()。＼(＾∀＾)メ(＾∀＾)ノ</p>
+<hr>
+<ul>
+<li>12-16更新<blockquote>
+<p>现在解决了穿透的问题，但是又发现了新问题：zepto在chrome上非常不稳定，经常失效。</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/Demo/" rel="tag">#Demo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/17/初识移动WEB/" rel="next" title="初识移动WEB">
+                <i class="fa fa-chevron-left"></i> 初识移动WEB
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/22/jQuery基础++/" rel="prev" title="jQuery基础++">
+                jQuery基础++ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/21/移动WEB相册/"
+           data-title="移动WEB相册" data-url="http://yoursite.com/2016/11/21/移动WEB相册/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构思"><span class="nav-number">1.</span> <span class="nav-text">构思</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#页面结构"><span class="nav-number">1.1.</span> <span class="nav-text">页面结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样式结构"><span class="nav-number">1.2.</span> <span class="nav-text">样式结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交互结构"><span class="nav-number">1.3.</span> <span class="nav-text">交互结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现与改版"><span class="nav-number">2.</span> <span class="nav-text">实现与改版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一版（load-js）"><span class="nav-number">2.1.</span> <span class="nav-text">第一版（load.js）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加载图片"><span class="nav-number">2.1.1.</span> <span class="nav-text">加载图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#滑动加载"><span class="nav-number">2.1.2.</span> <span class="nav-text">滑动加载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二版（photo-js、ajaxPic-js）"><span class="nav-number">2.2.</span> <span class="nav-text">第二版（photo.js、ajaxPic.js）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加载图片（photo-js）"><span class="nav-number">2.2.1.</span> <span class="nav-text">加载图片（photo.js）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定事件（photo-js）"><span class="nav-number">2.2.2.</span> <span class="nav-text">绑定事件（photo.js）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小图的事件"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">小图的事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#大图的事件"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">大图的事件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax加载（ajaxPic-js）"><span class="nav-number">2.2.3.</span> <span class="nav-text">ajax加载（ajaxPic.js）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三版（ajaxLoad-js）"><span class="nav-number">2.3.</span> <span class="nav-text">第三版（ajaxLoad.js）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加载图片-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">加载图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">绑定方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想法与改进"><span class="nav-number">3.</span> <span class="nav-text">想法与改进</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

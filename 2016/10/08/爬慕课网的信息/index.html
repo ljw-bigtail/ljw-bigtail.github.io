@@ -1,0 +1,837 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Node.js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="之前一直在学习如何使用NodeJS，听的一知半解，知道一些API，但不明白到底怎么用。后面，老师讲了一个小案例，爬取慕课网的部分信息，让我有了直观的认识。">
+<meta name="keywords" content="Node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬取慕课网的信息">
+<meta property="og:url" content="http://yoursite.com/2016/10/08/爬慕课网的信息/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="之前一直在学习如何使用NodeJS，听的一知半解，知道一些API，但不明白到底怎么用。后面，老师讲了一个小案例，爬取慕课网的部分信息，让我有了直观的认识。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-24/32127309.jpg">
+<meta property="og:updated_time" content="2016-11-06T06:10:14.649Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爬取慕课网的信息">
+<meta name="twitter:description" content="之前一直在学习如何使用NodeJS，听的一知半解，知道一些API，但不明白到底怎么用。后面，老师讲了一个小案例，爬取慕课网的部分信息，让我有了直观的认识。">
+<meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-24/32127309.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/08/爬慕课网的信息/"/>
+
+
+  <title> 爬取慕课网的信息 | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                爬取慕课网的信息
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-08T00:00:00+08:00" content="2016-10-08">
+              2016-10-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/08/爬慕课网的信息/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/08/爬慕课网的信息/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前一直在学习如何使用NodeJS，听的一知半解，知道一些API，但不明白到底怎么用。后面，老师讲了一个小案例，爬取慕课网的部分信息，让我有了直观的认识。</p>
+<a id="more"></a>
+<p>第一遍跟着老师敲了一遍，但是错误百出：</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-24/32127309.jpg" alt="最奇葩的错误"></p>
+<p>实际上是因为我在声明Promise时，没有写对形式，导致promise对象设置错误。</p>
+<p>还有一些小错误，但是能根据报错信息改正过来。比如变量名称错误，Not Function，等等。</p>
+<p>下面是最后成功爬取的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//加载内置模块http的方法</span></div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line"><span class="comment">//通过bluebird加载Promise对象</span></div><div class="line"><span class="keyword">var</span> <span class="built_in">Promise</span> = <span class="built_in">require</span>(<span class="string">'bluebird'</span>);</div><div class="line"><span class="comment">//加载cheerio API</span></div><div class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</div><div class="line"><span class="comment">//为了简写，把重复的url部分放在baseUrl里，用的时候遍历一下就可以了</span></div><div class="line"><span class="keyword">var</span> baseUrl = <span class="string">'http://www.imooc.com/learn/'</span>;</div><div class="line"><span class="keyword">var</span> videoIds = [<span class="number">75</span>,<span class="number">134</span>,<span class="number">197</span>,<span class="number">259</span>,<span class="number">348</span>,<span class="number">637</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterChapters</span>(<span class="params">html</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> $ = cheerio.load(html);</div><div class="line">    <span class="comment">//trim()消除空格</span></div><div class="line">	<span class="keyword">var</span> chapters = $(<span class="string">'.chapter'</span>)</div><div class="line">    <span class="keyword">var</span> title = $(<span class="string">'.course-infos .w .path span'</span>).text();	</div><div class="line">    <span class="keyword">var</span> number = <span class="built_in">parseInt</span>($($(<span class="string">'.static-item .js-learn-num'</span>)).text().trim(), <span class="number">10</span>)</div><div class="line"></div><div class="line">	<span class="comment">/* 预想的数据结构</span></div><div class="line"><span class="comment">	courseData = &#123;</span></div><div class="line"><span class="comment">		title: title, 课程名称</span></div><div class="line"><span class="comment">		number: number, 学习人数</span></div><div class="line"><span class="comment">		videos: [&#123; </span></div><div class="line"><span class="comment">			chapterTitle: '',</span></div><div class="line"><span class="comment">			videos:[</span></div><div class="line"><span class="comment">				title: '',</span></div><div class="line"><span class="comment">				id: ''</span></div><div class="line"><span class="comment">			]</span></div><div class="line"><span class="comment">		&#125;]</span></div><div class="line"><span class="comment">	&#125;</span></div><div class="line"><span class="comment">	*/</span></div><div class="line"></div><div class="line">	<span class="keyword">var</span> courseData = &#123;</div><div class="line">		title: title,</div><div class="line">		number: number,</div><div class="line">		videos: []</div><div class="line">	&#125;;</div><div class="line">	chapters.each(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> chapter = $(<span class="keyword">this</span>);</div><div class="line">		<span class="keyword">var</span> chapterTitle = chapter.find(<span class="string">'strong'</span>).text();</div><div class="line">		<span class="keyword">var</span> videos = chapter.find(<span class="string">'.video'</span>).children(<span class="string">'li'</span>)</div><div class="line">		<span class="keyword">var</span> chapterData = &#123;</div><div class="line">			chapterTitle: chapterTitle,</div><div class="line">			videos: []</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		videos.each(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</div><div class="line">			<span class="keyword">var</span> video = $(<span class="keyword">this</span>).find(<span class="string">'.J-media-item'</span>);</div><div class="line">			<span class="keyword">var</span> videoTitle = video.text();</div><div class="line">			<span class="keyword">var</span> id = video.attr(<span class="string">'href'</span>).split(<span class="string">'/video/'</span>)[<span class="number">1</span>];</div><div class="line"></div><div class="line">			chapterData.videos.push(&#123;</div><div class="line">				title: videoTitle,</div><div class="line">				id: id</div><div class="line">			&#125;)</div><div class="line">		&#125;)</div><div class="line">		courseData.videos.push(chapterData);</div><div class="line">	&#125;)</div><div class="line">	<span class="keyword">return</span> courseData;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">printCourseInfo</span>(<span class="params">coursesData</span>) </span>&#123;</div><div class="line">	coursesData.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">courseData</span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(courseData.number + <span class="string">'人学过'</span> + courseData.title);</div><div class="line">	&#125;)</div><div class="line"></div><div class="line">	coursesData.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">courseData</span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'###'</span> + courseData.title);</div><div class="line">		</div><div class="line">		courseData.videos.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> chapterTitle = item.chapterTitle;</div><div class="line"></div><div class="line">			<span class="built_in">console</span>.log(chapterTitle);</div><div class="line"></div><div class="line">			item.videos.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">video</span>) </span>&#123;</div><div class="line">				<span class="built_in">console</span>.log(<span class="string">' 【'</span>+video.id+<span class="string">'】'</span>+video.title);</div><div class="line">			&#125;)</div><div class="line">		&#125;)</div><div class="line">	&#125;)</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'\n'</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">	异步的爬取数据，传入需要爬的网站的url</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPageAsync</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'正在爬取'</span>+url);</div><div class="line">		<span class="comment">//给http模块添加get方法</span></div><div class="line">		<span class="comment">//get方法必须传入url，可以添加success方法（成功时运行的函数）</span></div><div class="line">		http.get(url,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</div><div class="line">			<span class="keyword">var</span> html = <span class="string">''</span>;</div><div class="line">			<span class="comment">//on()绑定事件</span></div><div class="line">			<span class="comment">//data事件是不断获取返回的数据</span></div><div class="line">			res.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">				<span class="comment">//获取所有页面代码</span></div><div class="line">				html += data;</div><div class="line">			&#125;)</div><div class="line">			<span class="comment">//end事件是结束发送请求</span></div><div class="line">			res.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">				<span class="comment">//undefined</span></div><div class="line">				resolve(html);</div><div class="line">			&#125;)</div><div class="line">		&#125;).on(<span class="string">'error'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">			<span class="comment">//绑定错误事件，返回错误原因</span></div><div class="line">			reject(e);</div><div class="line">			<span class="built_in">console</span>.log(<span class="string">'获取课程数据出错'</span>);</div><div class="line">		&#125;)</div><div class="line"></div><div class="line">	&#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">//Promise对象的数组</span></div><div class="line"><span class="keyword">var</span> fetctCourseArray = [];</div><div class="line"><span class="comment">//遍历所有的课程id（id保存在这个数组videoIds里了）</span></div><div class="line">videoIds.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">	<span class="comment">//爬到所有课程页面的源码，返回Promise对象，并保存在数组里</span></div><div class="line">	fetctCourseArray.push(getPageAsync(baseUrl + id));</div><div class="line">&#125;)</div><div class="line"><span class="comment">//Promise.all(),返回一个Promise对象，使传入的参数（可迭代参数，比如数组）都resolve一遍</span></div><div class="line"><span class="comment">//Promise.resolve(),解析promise对象，按照后面的.then方法解析</span></div><div class="line"><span class="comment">//.then(),链式调用</span></div><div class="line"><span class="built_in">Promise</span></div><div class="line">	.all(fetctCourseArray)</div><div class="line">	.then(<span class="function"><span class="keyword">function</span>(<span class="params">pages</span>) </span>&#123;</div><div class="line">		<span class="comment">//存放页面解析结果</span></div><div class="line">		<span class="keyword">var</span> coursesData = [];</div><div class="line">		<span class="comment">//pages是课程页面</span></div><div class="line">		pages.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">html</span>) </span>&#123;</div><div class="line">			<span class="comment">//通过filterChapters解析html</span></div><div class="line">			<span class="keyword">var</span> courses = filterChapters(html);</div><div class="line">			<span class="comment">//把解析的结果放进coursesData[]</span></div><div class="line">			coursesData.push(courses);</div><div class="line">		&#125;)</div><div class="line">		<span class="comment">//由高到低排序</span></div><div class="line">		coursesData.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">			<span class="keyword">return</span> a.number &gt; b.number</div><div class="line">		&#125;)</div><div class="line">		<span class="comment">//打印输出</span></div><div class="line">		printCourseInfo(coursesData);</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<p>重点的部分写了注释。</p>
+<p>还有个问题解决不了：获取不到学习人数，听别人讲，是因为慕课网使用JS显示人数，所以爬虫获取不到信息。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag">#Node.js</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/30/CSS第二节-盒模型/" rel="next" title="CSS第二节-盒模型">
+                <i class="fa fa-chevron-left"></i> CSS第二节-盒模型
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/11/CSS第三节-定位 /" rel="prev" title="CSS第三节-定位">
+                CSS第三节-定位 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/08/爬慕课网的信息/"
+           data-title="爬取慕课网的信息" data-url="http://yoursite.com/2016/10/08/爬慕课网的信息/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,856 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="工作记录," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="继续记录工作。今天的任务是套用静态模板，使用jeecms生成动态的网站。总的来说并不难，只要找到了规律就可以。">
+<meta name="keywords" content="工作记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="创建自己的网站（动态）">
+<meta property="og:url" content="http://yoursite.com/2016/10/18/创建自己的网站（动态）/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="继续记录工作。今天的任务是套用静态模板，使用jeecms生成动态的网站。总的来说并不难，只要找到了规律就可以。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-10-21/15434937.jpg">
+<meta property="og:updated_time" content="2016-11-06T06:13:16.609Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="创建自己的网站（动态）">
+<meta name="twitter:description" content="继续记录工作。今天的任务是套用静态模板，使用jeecms生成动态的网站。总的来说并不难，只要找到了规律就可以。">
+<meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-10-21/15434937.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/18/创建自己的网站（动态）/"/>
+
+
+  <title> 创建自己的网站（动态） | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                创建自己的网站（动态）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-18T00:00:00+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工作记录/" itemprop="url" rel="index">
+                    <span itemprop="name">工作记录</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/18/创建自己的网站（动态）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/18/创建自己的网站（动态）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>继续记录工作。<br>今天的任务是套用静态模板，使用jeecms生成动态的网站。<br>总的来说并不难，只要找到了规律就可以。</p>
+<a id="more"></a>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><h3 id="第一步，创建静态模板"><a href="#第一步，创建静态模板" class="headerlink" title="第一步，创建静态模板"></a>第一步，创建静态模板</h3><p>之前练习了那么多，现在终于派上用场了。<br>因为公司提供了新闻类网站的模板，我就看了一下结构，并且实现套用jeecms的内置标签就可以了。</p>
+<h4 id="Jeecms-v7的内置标签"><a href="#Jeecms-v7的内置标签" class="headerlink" title="Jeecms v7的内置标签"></a>Jeecms v7的内置标签</h4><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-10-21/15434937.jpg" alt="举个例子"></p>
+<ul>
+<li>嵌入网页<code>[#include &quot;../include/resource.html&quot; /]</code>，把重用的部分源码写进新的文件中，然后在合适的位置进行调用。</li>
+</ul>
+<hr>
+<ul>
+<li>配置文章列表<code>[@cms_content_list count=&#39;4&#39; orderBy=&#39;4&#39; typeId=&#39;2&#39; titLen=&#39;26&#39; siteId=&#39;2&#39;] 内容 [/@cms_content_list]</code>，把文章列表进行表示的标签，其中的各个参数代表不同意义，需要与下一个标签配合使用。</li>
+<li>配置文章<code>[#list tag_list as art] 文章内容 [/#list]</code>，类似于<code>&lt;li&gt;</code>标签，不过只需要一个就可以实现多个标签。</li>
+<li>文章内容<code>[@text_cut s=art.title len=titLen /]</code>，填充上一个标签的内容。通过参数取得不同的标题内容。</li>
+</ul>
+<h3 id="第二部，使用模板"><a href="#第二部，使用模板" class="headerlink" title="第二部，使用模板"></a>第二部，使用模板</h3><ol>
+<li>打开eclipse，导入你的模板</li>
+<li>html路径：/WebContent/WEN-INF/t/cms/www/</li>
+<li>js\css\img路径：/WebContent/r/cms/www/</li>
+<li>启动server。</li>
+</ol>
+<h3 id="第三步，配置后台"><a href="#第三步，配置后台" class="headerlink" title="第三步，配置后台"></a>第三步，配置后台</h3><ol>
+<li>启动server后。 </li>
+<li>登入后台（ <a href="http://localhost:8080/jeeadmin/jeecms/login.do" target="_blank" rel="external">http://localhost:8080/jeeadmin/jeecms/login.do</a> ）配置 - 站点管理 - 添加站点。</li>
+<li>需要填的属性：站点名称（随便），域名（重点，127.0.0.4），路径（www），其余不变。</li>
+<li>然后在右上角下拉列表选择你的站点。</li>
+<li>配置 - 模板 - 设置 - 默认方案 - 选择你的模板 - 设置。</li>
+<li>OK！</li>
+</ol>
+<p><a href="http://pan.baidu.com/s/1jI6VIj8" target="_blank" rel="external">资源下载</a></p>
+<h2 id="JEECMS-v7标签（共16个）"><a href="#JEECMS-v7标签（共16个）" class="headerlink" title="JEECMS v7标签（共16个）"></a>JEECMS v7标签（共16个）</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div><div class="line">363</div><div class="line">364</div><div class="line">365</div><div class="line">366</div><div class="line">367</div><div class="line">368</div><div class="line">369</div><div class="line">370</div><div class="line">371</div><div class="line">372</div><div class="line">373</div><div class="line">374</div><div class="line">375</div><div class="line">376</div><div class="line">377</div><div class="line">378</div><div class="line">379</div><div class="line">380</div><div class="line">381</div><div class="line">382</div><div class="line">383</div><div class="line">384</div><div class="line">385</div><div class="line">386</div><div class="line">387</div><div class="line">388</div><div class="line">389</div><div class="line">390</div><div class="line">391</div><div class="line">392</div><div class="line">393</div><div class="line">394</div><div class="line">395</div><div class="line">396</div><div class="line">397</div><div class="line">398</div><div class="line">399</div><div class="line">400</div><div class="line">401</div><div class="line">402</div><div class="line">403</div><div class="line">404</div><div class="line">405</div><div class="line">406</div><div class="line">407</div><div class="line">408</div><div class="line">409</div><div class="line">410</div><div class="line">411</div><div class="line">412</div><div class="line">413</div><div class="line">414</div><div class="line">415</div><div class="line">416</div><div class="line">417</div><div class="line">418</div><div class="line">419</div><div class="line">420</div><div class="line">421</div><div class="line">422</div><div class="line">423</div><div class="line">424</div><div class="line">425</div><div class="line">426</div><div class="line">427</div><div class="line">428</div><div class="line">429</div><div class="line">430</div><div class="line">431</div><div class="line">432</div><div class="line">433</div><div class="line">434</div><div class="line">435</div><div class="line">436</div><div class="line">437</div><div class="line">438</div><div class="line">439</div><div class="line">440</div><div class="line">441</div><div class="line">442</div><div class="line">443</div><div class="line">444</div><div class="line">445</div><div class="line">446</div><div class="line">447</div><div class="line">448</div><div class="line">449</div><div class="line">450</div><div class="line">451</div><div class="line">452</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>.[@cms_cut]</div><div class="line">参数:</div><div class="line">S：截取字符串长度</div><div class="line">len：保留字符的长度</div><div class="line">append：保留字段以后的追加字符以。。。。显示</div><div class="line">作用：截取过长的字符串，如标题标题太长了可以。。。。表示</div><div class="line">eg：</div><div class="line">[@cms_content_list channelId=<span class="string">'60'</span> count=<span class="string">'5'</span> titLen=<span class="string">'20'</span> append=<span class="string">'...'</span> channelOption=<span class="string">'1'</span> dateFormat=<span class="string">'yyyy-MM-dd'</span>]</div><div class="line">  [<span class="selector-id">#list</span> tag_list as a]</div><div class="line">    &lt;li&gt;</div><div class="line">      &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;a.url&#125;"</span> target=_blank&gt;[@text_cut s=<span class="selector-tag">a</span><span class="selector-class">.title</span> len=titLen append=append/]&lt;/a&gt;</div><div class="line">    &lt;/li&gt;</div><div class="line">  [/#list]</div><div class="line">[/@cms_content_list]</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">2</span>.[@cms_friendink_list]</div><div class="line">参数:</div><div class="line">ctgId：链接类别</div><div class="line">siteId：站点ID</div><div class="line">enabled：是否显示</div><div class="line">作用：显示友情链接</div><div class="line">eg:文字链接</div><div class="line">[@cms_friendlink_list ctgId=<span class="string">'1'</span>]</div><div class="line">  [<span class="selector-id">#list</span> tag_list as link]</div><div class="line">    &lt;<span class="selector-tag">div</span> style=<span class="string">"margin-left:1.5%; float:left;"</span>&gt;</div><div class="line">      &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;link.domain&#125;"</span> onclick=<span class="string">"$.get('$&#123;base&#125;/friendlink_view.jspx?id=$&#123;link.id&#125;')"</span>target=<span class="string">"_blank"</span>&gt;</div><div class="line">        $&#123;link.name&#125;</div><div class="line">      &lt;/a&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  [/#list]</div><div class="line">[/@cms_friendlink_list]</div><div class="line">图片链接</div><div class="line">[@cms_friendlink_list ctgId=<span class="string">'2'</span>]</div><div class="line">  [<span class="selector-id">#list</span> tag_list as link]</div><div class="line">    &lt;li&gt;</div><div class="line">      &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;link.domain&#125;"</span> target=<span class="string">"_blank"</span> onclick=<span class="string">"$.get('$&#123;base&#125;/friendlink_view.jspx?id=$&#123;link.id&#125;')"</span>&gt; </div><div class="line">        &lt;<span class="selector-tag">img</span> src=<span class="string">"$&#123;link.logo!site.defImg&#125;"</span> alt=<span class="string">"$&#123;link.name&#125;"</span>/&gt;</div><div class="line">      &lt;/a&gt;</div><div class="line">    &lt;/li&gt;</div><div class="line">  [/#list] </div><div class="line">[/@cms_friendlink_list] </div><div class="line"></div><div class="line"></div><div class="line"><span class="number">3</span>.[@cms_tag_list]</div><div class="line">参数:</div><div class="line">count：显示个数</div><div class="line">作用：显示tag列表</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> align=<span class="string">"center"</span> style=<span class="string">"font-size:20px;color:red"</span>&gt;</div><div class="line">  热门tags： </div><div class="line">  [@cms_tag_list count=<span class="string">'8'</span>]</div><div class="line">    [<span class="selector-id">#list</span> tag_list as tag]</div><div class="line">      &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/tag/$&#123;tag.id&#125;.jspx"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">        $&#123;tag.name&#125;</div><div class="line">      &lt;/a&gt;</div><div class="line">      [#if tag_has_next]|[/#if]</div><div class="line">    [/#list]</div><div class="line">  [/@cms_tag_list]</div><div class="line">&lt;div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">4</span>.[@cms_lucene_page]</div><div class="line">参数:</div><div class="line"><span class="selector-tag">q</span>: 搜索关键字</div><div class="line">siteId:站点ID</div><div class="line">channeled:栏目ID</div><div class="line">startDate:：开始时间</div><div class="line">endDate:结束时间</div><div class="line">作用：对搜索结果分页</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"w96"</span> style=<span class="string">"min-height:500px;"</span>&gt;</div><div class="line">  [#if q??]</div><div class="line">    [@cms_lucene_page q=<span class="selector-tag">q</span> channelId=channelId descLen=<span class="string">'100'</span> append=<span class="string">'...'</span> count=<span class="string">'4'</span> sysPage=<span class="string">'1'</span>  ]</div><div class="line">      &lt;<span class="selector-tag">div</span> class=<span class="string">"search_msg"</span>&gt;</div><div class="line">        您搜索的&lt;span class="red"&gt;“$&#123;q!&#125;”&lt;/span&gt;，共有&lt;span class="red"&gt;$&#123;tag_list?size&#125; 条&lt;/span&gt;查询结果，[@process_time/]</div><div class="line">      &lt;/div&gt;</div><div class="line">      [<span class="selector-id">#list</span> tag_list as s]</div><div class="line">        &lt;<span class="selector-tag">dl</span> class=<span class="string">"list3"</span>&gt;</div><div class="line">          &lt;dt&gt;</div><div class="line">            &lt;span&gt;</div><div class="line">              [&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;s.ctgUrl&#125;"</span> target=<span class="string">"_blank"</span>&gt;$&#123;s.ctgName&#125;&lt;/a&gt;]</div><div class="line">            &lt;/span&gt;</div><div class="line">            &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;s.url&#125;"</span> title=<span class="string">"$&#123;s.title&#125;"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">              $&#123;s.title&#125;</div><div class="line">            &lt;/a&gt;</div><div class="line">          &lt;/dt&gt;</div><div class="line">          &lt;<span class="selector-tag">dd</span> class=<span class="string">"zy"</span>&gt;</div><div class="line">            [@text_cut s=s<span class="selector-class">.description</span> len=descLen append=append/]</div><div class="line">          &lt;/dd&gt;</div><div class="line">          &lt;dd&gt;</div><div class="line">            来源：&lt;a href="$&#123;s.originUrl!&#125;" target="_blank"&gt;$&#123;s.origin!'本站原创'&#125;&lt;/a&gt;&amp;nbsp;&amp;nbsp; 浏览次数：$&#123;s.views&#125;次&amp;nbsp;&amp;nbsp; 发布时间： $&#123;s.releaseDate&#125; </div><div class="line">          &lt;/dd&gt;</div><div class="line">        &lt;/dl&gt;</div><div class="line">      [/#list]</div><div class="line">    [/@cms_lucene_page]   </div><div class="line">  [/#<span class="keyword">if</span>]  </div><div class="line">&lt;/div&gt; </div><div class="line"></div><div class="line"></div><div class="line"><span class="number">5</span>.[@cms_lucene_list]</div><div class="line">参数:</div><div class="line"><span class="selector-tag">q</span>: 搜索关键字</div><div class="line">siteId:站点ID</div><div class="line">channeled:栏目ID</div><div class="line">startDate:：开始时间</div><div class="line">endDate:结束时间</div><div class="line">作用：对搜索结果列表</div><div class="line">ge:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"w96"</span> style=<span class="string">"min-height:500px;"</span>&gt;</div><div class="line">  [#if q??] </div><div class="line">    [@cms_lucene_list q=<span class="selector-tag">q</span> channelId=channelId descLen=<span class="string">'100'</span> append=<span class="string">'...'</span> count=<span class="string">'4'</span> sysPage=<span class="string">'1'</span>  ]</div><div class="line">      &lt;<span class="selector-tag">div</span> class=<span class="string">"search_msg"</span>&gt;</div><div class="line">        您搜索的&lt;span class="red"&gt;“$&#123;q!&#125;”&lt;/span&gt;，共有&lt;span class="red"&gt;$&#123;tag_list?size&#125; 条&lt;/span&gt;查询结果，[@process_time/]</div><div class="line">      &lt;/div&gt;</div><div class="line">      [<span class="selector-id">#list</span> tag_list as s]</div><div class="line">        &lt;<span class="selector-tag">dl</span> class=<span class="string">"list3"</span>&gt;</div><div class="line">          &lt;dt&gt;</div><div class="line">            &lt;span&gt;</div><div class="line">              [&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;s.ctgUrl&#125;"</span> target=<span class="string">"_blank"</span>&gt;$&#123;s.ctgName&#125;&lt;/a&gt;]</div><div class="line">            &lt;/span&gt;</div><div class="line">            &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;s.url&#125;"</span> title=<span class="string">"$&#123;s.title&#125;"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">              $&#123;s.title&#125;</div><div class="line">            &lt;/a&gt;</div><div class="line">          &lt;/dt&gt;</div><div class="line">          &lt;<span class="selector-tag">dd</span> class=<span class="string">"zy"</span>&gt;[@text_cut s=s<span class="selector-class">.description</span> len=descLen append=append/]&lt;/dd&gt;</div><div class="line">          &lt;dd&gt;</div><div class="line">            来源：&lt;a href="$&#123;s.originUrl!&#125;" target="_blank"&gt;$&#123;s.origin!'本站原创'&#125;&lt;/a&gt;&amp;nbsp;&amp;nbsp; 浏览次数：$&#123;s.views&#125;次&amp;nbsp;&amp;nbsp; 发布时间：$&#123;s.releaseDate&#125;</div><div class="line">          &lt;/dd&gt;</div><div class="line">        &lt;/dl&gt;</div><div class="line">      [/#list]</div><div class="line">    [/@cms_lucene_list]   </div><div class="line">  [/#<span class="keyword">if</span>]  </div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">6</span>.[@cms_include]页面模板包含标签</div><div class="line">作用：把做好的页面引入到另外一个页面上去，一般是整个网站的一些公共部分，每个网页都需要的，比如页头，页脚。</div><div class="line">eg:</div><div class="line">[<span class="selector-id">#include</span> <span class="string">"../include/页头顶栏.html"</span>/]</div><div class="line">[<span class="selector-id">#include</span> <span class="string">"../include/页头导航栏.html"</span>/]</div><div class="line">[<span class="selector-id">#include</span> <span class="string">"../include/页头搜索栏.html"</span>/]</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">7</span>.[@cms_guestbook_list]留言列表标签</div><div class="line">参数:</div><div class="line">siteId:站点ID</div><div class="line">ctgId:类别ID，用于调用不同类别</div><div class="line">checked:是否审核后显示。<span class="number">0</span>，不审核 <span class="number">1</span>，审核默认是不审核</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"blue_right_top mt5"</span>&gt;</div><div class="line">  &lt;h2&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/guestbook.jspx"</span> target=<span class="string">"_blank"</span>&gt;网友留言&lt;/a&gt;&lt;/h2&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"w96"</span>&gt;</div><div class="line">  [@cms_guestbook_list count=<span class="string">'10'</span>]</div><div class="line">    [<span class="selector-id">#list</span> tag_list as m]</div><div class="line">      &lt;<span class="selector-tag">dl</span> class=<span class="string">"gb"</span>&gt;</div><div class="line">        &lt;dt&gt;&lt;span&gt;[$&#123;m<span class="selector-class">.ctg</span><span class="selector-class">.name</span>!&#125;]&lt;/span&gt;$&#123;m.titleHtml!&#125;&lt;/dt&gt;</div><div class="line">        &lt;dd&gt;$&#123;m.contentHtml!&#125;&lt;/dd&gt;</div><div class="line">      &lt;/dl&gt;</div><div class="line">    [/#list]     </div><div class="line">  [/@cms_guestbook_list] </div><div class="line">&lt;/div&gt;</div><div class="line"> </div><div class="line"></div><div class="line"><span class="number">8</span>.[@cms_content_page]内容列表分页标签</div><div class="line">参数:</div><div class="line">tagId: TAG ID 允许多个TAG ID，用“，”分开。和tagNames之间二选一，ID优先级更高</div><div class="line">tagName: TAG NAME 允许多个TAG NAME ，用“，”分开</div><div class="line">topicId：专题ID</div><div class="line">channelId : 栏目ID，允许多个栏目ID，用“，”分开。和channelpath之间二选一，ID优先级更高</div><div class="line">channelPath : 栏目路径，允许多个栏目路径，用“，”分开</div><div class="line">channelOption : 栏目选项，用于单栏目情况下。 <span class="number">0</span> ：自身栏目 <span class="number">1</span> ：包含子栏目 <span class="number">2</span>: 包含副栏目</div><div class="line">siteId：站点ID，可选，允许多个站点ID，用“，”分开</div><div class="line">typeId：类型ID，可选，允许多个类型ID，用“，”分开</div><div class="line">Recommend：是否推荐。 <span class="number">0</span> ：所有都推荐 <span class="number">1</span> ：推荐 <span class="number">2</span> ：不推荐，默认所有</div><div class="line">title：标题，可以为null</div><div class="line">image：标题图片， <span class="number">0</span> ：所有 <span class="number">1</span> ：有 <span class="number">2</span> ：没有。默认所有</div><div class="line">orderBy :排序方式 <span class="number">0</span>：ID降序 <span class="number">1</span>：ID升序 <span class="number">2</span>：发布时间降序 <span class="number">3</span>：发布时间升序 <span class="number">4</span>：固定级别降序，发布时间降序 <span class="number">5</span>：固定级别降序，发布时间升序 <span class="number">6</span>：日访问降序（推荐）<span class="number">7</span>：周访问降序 <span class="number">8</span>：月访问降序 <span class="number">9</span>：总访问降序 <span class="number">10</span>：日评论降序（推荐） <span class="number">11</span>：周评论降序 <span class="number">12</span>：月评论降序 <span class="number">13</span>：总评论降序 <span class="number">14</span>：日下载降序（推荐）<span class="number">15</span>：周下载降序 <span class="number">16</span>：月下载降序 <span class="number">17</span>：总下载降序 <span class="number">18</span>：日顶降序（推荐） <span class="number">19</span>：周顶降序 <span class="number">20</span>：月顶降序 <span class="number">21</span>：总顶降序</div><div class="line">excludeId：不包含的文章ID，用于按tag查询相关文章</div><div class="line"></div><div class="line">作用：对显示的文章列表进行分页</div><div class="line">eg：</div><div class="line">[@cms_content_page channelId=channel<span class="selector-class">.id</span> count=<span class="string">'4'</span> sysPage=’<span class="number">1</span>’ titLen=<span class="string">'15'</span> append=<span class="string">'...'</span> orderBy=<span class="string">'2'</span> dateFormat=<span class="string">'MM-dd'</span> channelOption=<span class="string">'1'</span>]</div><div class="line">  [<span class="selector-id">#list</span> tag_pagination<span class="selector-class">.list</span> as a]</div><div class="line">  &lt;ul&gt;</div><div class="line">    &lt;li&gt;</div><div class="line">      &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;a.url&#125;"</span> title=<span class="string">"$&#123;a.title&#125;"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">        [@text_cut s=<span class="selector-tag">a</span><span class="selector-class">.title</span> len=titLen append=append/]</div><div class="line">      &lt;/a&gt;</div><div class="line">      [$&#123;a.date?string(dateFormat)&#125;]</div><div class="line">    &lt;/li&gt;</div><div class="line">  &lt;/ul&gt;</div><div class="line">  [/#list]</div><div class="line">[/@cms_content_page]</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">9</span>.[@cms_content_list]文章列表标签</div><div class="line">参数:</div><div class="line">d：文章ID，允许多个文章的ID，用“，”分开。排斥其他所有删选参数</div><div class="line">tagId:TAG ID 允许多个TAG ID，用“，”分开。和tagNames之间二选一，ID优先级更高。</div><div class="line">tagName: TAG NAME 允许多个TAG NAME ，用“，”分开。</div><div class="line">topicId：专题ID</div><div class="line">channelId:栏目ID，允许多个栏目ID，用“，”分开。和channelpath之间二选一，ID优先级更高。</div><div class="line">channelPath:栏目路径，允许多个栏目路径，用“，”分开。</div><div class="line">channelOption:栏目选项，用于单栏目情况下。 <span class="number">0</span> ：自身栏目 <span class="number">1</span> ：包含子栏目 <span class="number">2</span>: 包含副栏目</div><div class="line">siteId：站点ID，可选，允许多个站点ID，用“，”分开。</div><div class="line">typeId：类型ID，可选，允许多个类型ID，用“，”分开。</div><div class="line">Recommend：是否推荐。 <span class="number">0</span> ：所有都推荐 <span class="number">1</span> ：推荐 <span class="number">2</span> ：不推荐，默认所有</div><div class="line">title：标题，可以为null</div><div class="line">image：标题图片， <span class="number">0</span> ：所有 <span class="number">1</span> ：有 <span class="number">2</span> ：没有。默认所有</div><div class="line">orderBy :排序方式 <span class="number">0</span>：ID降序 <span class="number">1</span>：ID升序 <span class="number">2</span>：发布时间降序 <span class="number">3</span>：发布时间升序 <span class="number">4</span>：固定级别降序，发布时间降序 <span class="number">5</span>：固定级别降序，发布时间升序 <span class="number">6</span>：日访问降序（推荐）<span class="number">7</span>：周访问降序 <span class="number">8</span>：月访问降序 <span class="number">9</span>：总访问降序 <span class="number">10</span>：日评论降序（推荐） <span class="number">11</span>：周评论降序 <span class="number">12</span>：月评论降序 <span class="number">13</span>：总评论降序 <span class="number">14</span>：日下载降序（推荐）<span class="number">15</span>：周下载降序 <span class="number">16</span>：月下载降序 <span class="number">17</span>：总下载降序 <span class="number">18</span>：日顶降序（推荐） <span class="number">19</span>：周顶降序 <span class="number">20</span>：月顶降序 <span class="number">21</span>：总顶降序</div><div class="line">excludeId：不包含的文章ID，用于按tag查询相关文章</div><div class="line">style_list：文章列表显示样式</div><div class="line">文字列表</div><div class="line">lineHeight：行高；【行高】</div><div class="line">headMarkImg: 列表头图片；【图片地址】</div><div class="line">headMark: 列表头编号；【<span class="number">1</span>：小黑点；<span class="number">2</span>：小红点；<span class="number">3</span>：单箭头；<span class="number">4</span>：双箭头】</div><div class="line">bottomLine: 下划线；【<span class="number">0</span>：无；<span class="number">1</span>：有】不能为空。</div><div class="line">dateFormat: 日期格式；【java日期格式，如：yyyy-MM-dd】</div><div class="line">datePosition: 日期位置；【<span class="number">1</span>：后面左边；<span class="number">2</span>：后面右边；<span class="number">3</span>：前面】不能为空</div><div class="line">ctgForm: 类别；【<span class="number">0</span>：无；<span class="number">1</span>：栏目；<span class="number">2</span>：站点】不能为空</div><div class="line">showTitleStyle：显示标题样式；【<span class="number">0</span>：不显示；<span class="number">1</span>：显示】不能为空</div><div class="line">useShortTitle: 是否使用简短标题；【<span class="number">0</span>：不使用；<span class="number">1</span>：使用】不能为空</div><div class="line">titLen: 标题长度；【英文字母按半个计算】为空则不截断</div><div class="line">target: 是否新窗口打开；【<span class="number">0</span>：原窗口；<span class="number">1</span>：新窗口】不能为空</div><div class="line">styleList：文章列表显示样式</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"w250 fr"</span>&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"rb_right_top"</span>&gt;</div><div class="line">    &lt;h2&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"#"</span> target=<span class="string">"_blank"</span>&gt;热门资讯排行榜&lt;/a&gt;&lt;/h2&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"rb_right_div"</span>&gt;  </div><div class="line">    &lt;<span class="selector-tag">ul</span> class=<span class="string">"order"</span>&gt;</div><div class="line">      [@cms_content_list count=<span class="string">'10'</span> titLen=<span class="string">'15'</span> orderBy=<span class="string">'9'</span> channelOption=<span class="string">'1'</span>]</div><div class="line">        [<span class="selector-id">#list</span> tag_list as a]</div><div class="line">          &lt;li&gt;</div><div class="line">            &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;a.url&#125;"</span> title=<span class="string">"$&#123;a.title&#125;"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">              [@text_cut s=<span class="selector-tag">a</span><span class="selector-class">.title</span> len=titLen append=append/]</div><div class="line">            &lt;/a&gt;</div><div class="line">          &lt;/li&gt;</div><div class="line">        [/#list]</div><div class="line">      [/@cms_content_list]</div><div class="line">    &lt;/ul&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">10</span>.[@cms_content]文章标签对象</div><div class="line">参数:</div><div class="line">id: 文章ID</div><div class="line">next:下一篇</div><div class="line">channeled:l栏目ID</div><div class="line">作用：显示某篇文章</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"other box"</span> align=<span class="string">"center"</span>&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"ding fl"</span> onclick=<span class="string">"Cms.up('$&#123;base&#125;',$&#123;content.id&#125;,$&#123;content.ups&#125;);"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">span</span> id=<span class="string">"ups"</span>&gt;&lt;/span&gt;</div><div class="line">    &lt;p&gt;顶&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"cai fl"</span> onclick=<span class="string">"Cms.down('$&#123;base&#125;',$&#123;content.id&#125;,$&#123;content.downs&#125;);"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">span</span> id=<span class="string">"downs"</span>&gt;&lt;/span&gt;</div><div class="line">    &lt;p&gt;踩&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;ul&gt;</div><div class="line">    &lt;li&gt;</div><div class="line">      &lt;strong&gt;上一篇：&lt;/strong&gt;</div><div class="line">      [@cms_content id=content.id next='1' channelId=channel.id]</div><div class="line">        [#if tag_bean??]</div><div class="line">          &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;tag_bean.url&#125;"</span>&gt;</div><div class="line">            $&#123;tag_bean.title&#125;</div><div class="line">          &lt;/a&gt;[#<span class="keyword">else</span>]没有了</div><div class="line">        [/#<span class="keyword">if</span>]</div><div class="line">      [/@cms_content]</div><div class="line">    &lt;/li&gt;</div><div class="line">    &lt;li&gt;</div><div class="line">      &lt;strong&gt;下一篇：&lt;/strong&gt;</div><div class="line">      [@cms_content id=content.id next='0' channelId=channel.id]</div><div class="line">        [#if tag_bean??]</div><div class="line">          &lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;tag_bean.url&#125;"</span>&gt;</div><div class="line">            $&#123;tag_bean.title&#125;</div><div class="line">          &lt;/a&gt;</div><div class="line">        [#<span class="keyword">else</span>]</div><div class="line">          没有了</div><div class="line">        [/#<span class="keyword">if</span>]</div><div class="line">      [/@cms_content]</div><div class="line">    &lt;/li&gt;</div><div class="line">  &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">11</span>.[@cms_vote]投票标签</div><div class="line">参数:</div><div class="line">id:投票ID 可以为空，为空则获取站点的默认投票</div><div class="line">siteId:站点ID  默认为当前站点</div><div class="line">作用：实现网络调查投票模块</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"w250 fr"</span>&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"pink_right_top"</span>&gt;&lt;h2&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"#"</span>&gt;网友投票&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;</div><div class="line">  &lt;<span class="selector-tag">div</span> class=<span class="string">"pink_right_div"</span> style=<span class="string">"min-height:240px;"</span>&gt;</div><div class="line">    &lt;<span class="selector-tag">div</span> class=<span class="string">"w98"</span>&gt;</div><div class="line">      [@cms_vote]</div><div class="line">        [#if !tag_bean??]</div><div class="line">          &lt;div&gt;没有默认投票主题&lt;/div&gt;</div><div class="line">        [#<span class="keyword">else</span>]</div><div class="line">          &lt;<span class="selector-tag">form</span> name=<span class="string">"votes"</span> action=<span class="string">"$&#123;base&#125;/vote.jspx"</span> method=<span class="string">"post"</span> target=<span class="string">"_blank"</span>&gt;</div><div class="line">            &lt;<span class="selector-tag">table</span> <span class="attribute">width</span>=<span class="string">"100%"</span> border=<span class="string">"0"</span> cellspacing=<span class="string">"5"</span> cellpadding=<span class="string">"0"</span>&gt;</div><div class="line">              &lt;tr&gt;</div><div class="line">                &lt;td height="30" colspan="2" align="left"&gt;$&#123;tag_bean.title?html&#125;</div><div class="line">                  &lt;<span class="selector-tag">input</span> type=<span class="string">"hidden"</span> name=<span class="string">"voteId"</span> value=<span class="string">"$&#123;tag_bean.id&#125;"</span>/&gt;&lt;/td&gt;</div><div class="line">              &lt;/tr&gt;</div><div class="line">              [<span class="selector-id">#if</span> tag_bean<span class="selector-class">.multiSelect</span> gt <span class="number">1</span>]</div><div class="line">                [<span class="selector-id">#list</span> tag_bean<span class="selector-class">.items</span> as item]</div><div class="line">                  &lt;tr&gt;</div><div class="line">                    &lt;<span class="selector-tag">td</span> <span class="attribute">width</span>=<span class="string">"9%"</span> height=<span class="string">"20"</span> align=<span class="string">"center"</span>&gt;&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"itemIds"</span> value=<span class="string">"$&#123;item.id&#125;"</span> onClick=<span class="string">"check_votes($&#123;tag_bean.multiSelect&#125;)"</span> id=<span class="string">"$&#123;item.id&#125;"</span>/&gt;&lt;/td&gt;</div><div class="line">                    &lt;td width="91%" align="left"&gt;$&#123;item.title?html&#125;&lt;/td&gt;</div><div class="line">                  &lt;/tr&gt;</div><div class="line">                [/#list]</div><div class="line">              [#<span class="keyword">else</span>]</div><div class="line">                [<span class="selector-id">#list</span> tag_bean<span class="selector-class">.items</span> as item]</div><div class="line">                  &lt;tr&gt;</div><div class="line">                    &lt;<span class="selector-tag">td</span> <span class="attribute">width</span>=<span class="string">"9%"</span> height=<span class="string">"20"</span> align=<span class="string">"center"</span>&gt;&lt;input type=<span class="string">"radio"</span> name=<span class="string">"itemIds"</span> value=<span class="string">"$&#123;item.id&#125;"</span>/&gt;&lt;/td&gt;</div><div class="line">                    &lt;td width="91%" align="left"&gt;$&#123;item.title?html&#125;&lt;/td&gt;</div><div class="line">                  &lt;/tr&gt;</div><div class="line">                [/#list]</div><div class="line">              [/#<span class="keyword">if</span>]</div><div class="line">              &lt;tr&gt;</div><div class="line">                &lt;<span class="selector-tag">td</span> <span class="attribute">height</span>=<span class="string">"30"</span> colspan=<span class="string">"2"</span> align=<span class="string">"center"</span>&gt;&lt;input type=<span class="string">"submit"</span> value=<span class="string">"投票"</span> onClick=<span class="string">"return check_votes($&#123;tag_bean.multiSelect&#125;)"</span>/&gt;</div><div class="line">                  &amp;nbsp; &lt;a href="$&#123;base&#125;/vote_result.jspx?voteId=$&#123;tag_bean.id&#125;" target="_blank"&gt;查看投票结果&lt;/a&gt;&lt;/td&gt;</div><div class="line">              &lt;/tr&gt;</div><div class="line">            &lt;/table&gt;</div><div class="line">          &lt;/form&gt;</div><div class="line">        [/#<span class="keyword">if</span>]</div><div class="line">       [/@cms_vote]</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;<span class="selector-tag">div</span> class=<span class="string">"pink_right_low"</span>&gt;&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">12</span>.[@cms_topic_page]专题分页标签</div><div class="line">参数:</div><div class="line">channelId:栏目ID</div><div class="line">recommend：是否推荐</div><div class="line">作用：对页面显示的专题列表进行分页</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"pagebar"</span> style=<span class="string">"margin:30px auto;"</span>&gt; </div><div class="line">  [@cms_topic_page count=<span class="string">'2'</span> descLen=<span class="string">'50'</span> append=<span class="string">'...'</span>]</div><div class="line">    &lt;<span class="selector-tag">div</span> class=<span class="string">"pagebar"</span> &gt;</div><div class="line">      [<span class="selector-id">#list</span> tag_pagination<span class="selector-class">.list</span> as t]</div><div class="line">        &lt;<span class="selector-tag">dl</span> class=<span class="string">"list line zt"</span>&gt;</div><div class="line">          &lt;dt&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/topic/$&#123;t.id&#125;.jspx"</span> target=<span class="string">"_blank"</span>&gt;$&#123;t.name&#125;&lt;/a&gt;&lt;/dt&gt;</div><div class="line">          &lt;<span class="selector-tag">dd</span> class=<span class="string">"pic"</span>&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/topic/$&#123;t.id&#125;.jspx"</span>&gt;&lt;<span class="selector-tag">img</span> src=<span class="string">"$&#123;t.titleImg!site.defImg&#125;"</span>/&gt;&lt;/a&gt;&lt;/dd&gt;</div><div class="line">          &lt;<span class="selector-tag">dd</span> class=<span class="string">"text"</span>&gt;[@text_cut s=t<span class="selector-class">.description</span> len=descLen append=append/]&lt;/dd&gt;</div><div class="line">        &lt;/dl&gt;    </div><div class="line">      [/#list]</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">      [@cms_pagination sysPage=<span class="string">'1'</span>/]</div><div class="line">    &lt;/div&gt;</div><div class="line">  [/@cms_topic_page]    </div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">13</span>.[@cms_topic_list]专题列表标签</div><div class="line">参数:</div><div class="line">channelId:栏目ID</div><div class="line">recommend：是否推荐</div><div class="line">作用：显示专题列表</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">table</span> <span class="attribute">width</span>=<span class="string">"980"</span> border=<span class="string">"0"</span> align=<span class="string">"center"</span> cellpadding=<span class="string">"1"</span> cellspacing=<span class="string">"1"</span>&gt;</div><div class="line">  &lt;tr&gt;</div><div class="line">    &lt;<span class="selector-tag">td</span> align=<span class="string">"right"</span>  <span class="attribute">background</span>=<span class="string">"/$&#123;res&#125;/img/topic/lmbj.gif"</span>&gt;&lt;img src=<span class="string">"/$&#123;res&#125;/img/topic/lm_2.gif"</span>/&gt;&lt;/td&gt;</div><div class="line">    &lt;<span class="selector-tag">td</span> <span class="attribute">width</span>=<span class="string">"990"</span> align=<span class="string">"left"</span> background=<span class="string">"/$&#123;res&#125;/img/topic/lmbj.gif"</span>&gt;&lt;h2&gt;热门专题&lt;/h2&gt;&lt;/td&gt;</div><div class="line">  &lt;/tr&gt;</div><div class="line">  &lt;tr&gt;</div><div class="line">    &lt;<span class="selector-tag">td</span> colspan=<span class="string">"2"</span> bgcolor=<span class="string">"#FFFFFF"</span>&gt;    </div><div class="line">      [@cms_topic_list count=<span class="string">'4'</span> descLen=<span class="string">'36'</span> append=<span class="string">'...'</span>]</div><div class="line">        [<span class="selector-id">#list</span> tag_list as t] </div><div class="line">          &lt;<span class="selector-tag">dl</span> class=<span class="string">"list line zt box"</span>&gt;</div><div class="line">            &lt;dt&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/topic/$&#123;t.id&#125;.jspx"</span> target=<span class="string">"_blank"</span>&gt;$&#123;t.name&#125;&lt;/a&gt;&lt;/dt&gt;</div><div class="line">            &lt;<span class="selector-tag">dd</span> class=<span class="string">"pic"</span>&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;base&#125;/topic/$&#123;t.id&#125;.jspx"</span>&gt;&lt;<span class="selector-tag">img</span> src=<span class="string">"$&#123;t.titleImg!site.defImg&#125;"</span>/&gt;&lt;/a&gt;&lt;/dd&gt;</div><div class="line">            &lt;<span class="selector-tag">dd</span> class=<span class="string">"text"</span>&gt;[@text_cut s=t<span class="selector-class">.description</span> len=descLen append=append/]&lt;/dd&gt;</div><div class="line">          &lt;/dl&gt;</div><div class="line">        [/#list]</div><div class="line">      [/@cms_topic_list]   </div><div class="line">    &lt;/td&gt;</div><div class="line">  &lt;/tr&gt;</div><div class="line">&lt;/table&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">14</span>.[@cms_comment_page]评论分页标签</div><div class="line">参数:</div><div class="line">siteId:站点id</div><div class="line">contentId：内容ID</div><div class="line">greaterThen: 评论内容最大支持大于多少</div><div class="line">checked: 是否需要审核</div><div class="line">recommend:是否推荐</div><div class="line">orderBy:排列顺序：<span class="number">0</span> ：按评论时间降序 <span class="number">1</span> ：按评论时间升序。默认降序</div><div class="line">作用：对评论列表进行分页</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"pagebar"</span>&gt;</div><div class="line">  [@cms_comment_page contentId=contentId count=<span class="string">'6'</span> orderBy=<span class="string">'1'</span>]   </div><div class="line">    &lt;<span class="selector-tag">dl</span> class=<span class="string">"rmpl"</span>&gt;</div><div class="line">      [#if tag_pagination.list?size = 0]</div><div class="line">        &lt;dt&gt;&lt;span&gt;暂无相关评论！&lt;/span&gt;&lt;/dt&gt;</div><div class="line">      [#<span class="keyword">else</span>]</div><div class="line">        [<span class="selector-id">#list</span> tag_pagination<span class="selector-class">.list</span> as c]</div><div class="line">          &lt;dt&gt;&lt;span&gt;$&#123;(c<span class="selector-class">.commentUser</span><span class="selector-class">.username</span>)!<span class="string">"匿名网友"</span>&#125;&lt;/span&gt;于 $&#123;c.createTime&#125; 评论道:&lt;/dt&gt;</div><div class="line">          &lt;dd&gt;$&#123;c.textHtml!&#125;&lt;/dd&gt;</div><div class="line">          &lt;<span class="selector-tag">dd</span> class=<span class="string">"line"</span>&gt;&lt;/dd&gt;</div><div class="line">        [/#list]</div><div class="line">        &lt;<span class="selector-tag">div</span> class=<span class="string">"pagebar"</span>&gt;[@cms_pagination sysPage=<span class="string">'1'</span>/]&lt;/div&gt;</div><div class="line">      [/#<span class="keyword">if</span>]</div><div class="line">    &lt;/dl&gt;    </div><div class="line">  [/@cms_comment_page]   </div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"><span class="number">15</span>.[@cms_comment_list]评论列表标签</div><div class="line">参数:</div><div class="line">siteId:站点id</div><div class="line">contentId：内容ID</div><div class="line">greaterThen: 评论内容最大支持大于多少</div><div class="line">checked: 是否需要审核</div><div class="line">recommend:是否推荐</div><div class="line">orderBy:排列顺序：<span class="number">0</span> ：按评论时间降序 <span class="number">1</span> ：按评论时间升序。默认降序</div><div class="line">作用：显示评论列表</div><div class="line">eg:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"blue_right_top"</span>&gt;&lt;h2&gt;&lt;<span class="selector-tag">a</span> href=<span class="string">"#"</span> target=<span class="string">"_blank"</span>&gt;热门评论&lt;/a&gt;&lt;/h2&gt;&lt;/div&gt;</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"blue_right_div"</span>&gt;</div><div class="line">  [@cms_comment_list siteId=<span class="string">'1'</span> count=<span class="string">'5'</span> recommend=<span class="string">'1'</span> textLen=<span class="string">'50'</span> append=<span class="string">'...'</span>]</div><div class="line">  &lt;<span class="selector-tag">dl</span> class=<span class="string">"rmpl"</span>&gt;</div><div class="line">  [<span class="selector-id">#list</span> tag_list as c]</div><div class="line">    &lt;dt&gt;&lt;span&gt;$&#123;(c<span class="selector-class">.commentUser</span><span class="selector-class">.username</span>)!<span class="string">"匿名网友"</span>&#125;&lt;/span&gt;对&lt;<span class="selector-tag">a</span> href=<span class="string">"$&#123;c.content.url&#125;"</span> target=<span class="string">"_blank"</span>&gt;$&#123;c<span class="selector-class">.content</span><span class="selector-class">.title</span>&#125;&lt;/a&gt;评论道:&lt;/dt&gt;</div><div class="line">    &lt;dd&gt;[@text_cut s=c<span class="selector-class">.textHtml</span> len=textLen append=append/]&lt;/dd&gt;</div><div class="line">    &lt;<span class="selector-tag">dd</span> class=<span class="string">"line"</span>&gt;&lt;/dd&gt;</div><div class="line">  [/#list]</div><div class="line">  &lt;/dl&gt;</div><div class="line">  [/@cms_comment_list]</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"><span class="number">16</span>.[@cms_channel]栏目对象标签</div><div class="line">参数:</div><div class="line">id：栏目ID</div><div class="line">path：栏目路径</div><div class="line">siteId: 站点ID，存在时获取该站点栏目，不存在时获取当前站点栏目</div><div class="line">eg:</div><div class="line">[@cms_channel id=<span class="string">'1'</span>]</div><div class="line">  &lt;ahref=<span class="string">"$&#123;tag_bean.url&#125;"</span> target=<span class="string">"_blank"</span>&gt;$&#123;tag_bean.name&#125;&lt;/a&gt;</div><div class="line">[/@cms_channel]</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作记录/" rel="tag">#工作记录</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/18/用字体替换icon/" rel="next" title="用字体替换icon">
+                <i class="fa fa-chevron-left"></i> 用字体替换icon
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/18/Ajax初识（ajax+http+json）/" rel="prev" title="Ajax初识">
+                Ajax初识 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/18/创建自己的网站（动态）/"
+           data-title="创建自己的网站（动态）" data-url="http://yoursite.com/2016/10/18/创建自己的网站（动态）/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建"><span class="nav-number">1.</span> <span class="nav-text">创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步，创建静态模板"><span class="nav-number">1.1.</span> <span class="nav-text">第一步，创建静态模板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Jeecms-v7的内置标签"><span class="nav-number">1.1.1.</span> <span class="nav-text">Jeecms v7的内置标签</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二部，使用模板"><span class="nav-number">1.2.</span> <span class="nav-text">第二部，使用模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步，配置后台"><span class="nav-number">1.3.</span> <span class="nav-text">第三步，配置后台</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JEECMS-v7标签（共16个）"><span class="nav-number">2.</span> <span class="nav-text">JEECMS v7标签（共16个）</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

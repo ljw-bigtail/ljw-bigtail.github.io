@@ -1,0 +1,872 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="书籍是人类进步的阶梯，这本是电梯。">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《JavaScript设计模式》笔记 —— Part1">
+<meta property="og:url" content="http://yoursite.com/2016/11/03/《JavaScript设计模式》笔记 —— Part1/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="书籍是人类进步的阶梯，这本是电梯。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-12-22T13:14:29.603Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《JavaScript设计模式》笔记 —— Part1">
+<meta name="twitter:description" content="书籍是人类进步的阶梯，这本是电梯。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/11/03/《JavaScript设计模式》笔记 —— Part1/"/>
+
+
+  <title> 《JavaScript设计模式》笔记 —— Part1 | BigTail </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">BigTail</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《JavaScript设计模式》笔记 —— Part1
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-03T00:00:00+08:00" content="2016-11-03">
+              2016-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/03/《JavaScript设计模式》笔记 —— Part1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/03/《JavaScript设计模式》笔记 —— Part1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>书籍是人类进步的阶梯，这本是电梯。</p>
+<a id="more"></a>
+<h2 id="Part-1·面对对象编程"><a href="#Part-1·面对对象编程" class="headerlink" title="Part 1·面对对象编程"></a>Part 1·面对对象编程</h2><h3 id="灵活的语言——JavaScript"><a href="#灵活的语言——JavaScript" class="headerlink" title="灵活的语言——JavaScript"></a>灵活的语言——JavaScript</h3><blockquote>
+<p>JavaScript中，一切皆对象，这不仅仅是一个概念，还表示了一种思路。过去的我并没有真切的运用到代码中，直到这里，我才明白：为什么要使用这个；如何去使用这个。</p>
+</blockquote>
+<ul>
+<li>在企业应用中，由于js库的特性，我们尽量不要重复使用全局变量，因为很有可能大家对变量的声明含义会使变量重复。</li>
+<li>全局变量并不仅仅是在函数外部声明的<code>var a = 0;</code>，还包含了<code>var move = function(){}</code>这样声明的函数。</li>
+<li>尽量少使用全局变量，因为全局变量在使用完之后不会自动销毁，不但占据多余的内存，还有可能干扰后续代码的使用。</li>
+</ul>
+<p><strong>第一类型</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一种，最普通的函数结构，也是干扰力度最大的一种，bad choice</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">name</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//name函数</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">age</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//age函数</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第二种，上一种的变形，先声明，但还是声明了多余变量，还不是好选择</span></div><div class="line"><span class="keyword">var</span> name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//name函数</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> age = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//age函数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>第二类型</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第三种，把函数声明在对象里，作为对象的方法</span></div><div class="line"><span class="keyword">var</span> box = &#123;</div><div class="line">	name : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//name函数</span></div><div class="line">    &#125;</div><div class="line">    age : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//age函数</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第四种，上一种的变形，足够满足需求，但是这样的对象并不能重复使用</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	box.name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//name函数</span></div><div class="line">    &#125;</div><div class="line">    box.age = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//age函数</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>第三类型</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第五种，通过新声明对象的返回来确定函数的使用，不错的选择</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> &#123;</div><div class="line">    	box.name : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          	<span class="comment">//name函数</span></div><div class="line">      	&#125;</div><div class="line">      	box.age : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">          	<span class="comment">//age函数</span></div><div class="line">    	&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第六种，这个是我的接受度最高的，但是使用时一定要new</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//name函数</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.age = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//age函数</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> box();</div><div class="line">a.name();</div></pre></td></tr></table></figure></p>
+<p><strong>第四类型</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第七种，这个是我之前学习“爱心鱼游戏”所使用的方法，是非常完善的一种</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">box.prototype.name = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//name函数</span></div><div class="line">&#125;</div><div class="line">box.prototype.age = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//age函数</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第八种，上一种的变形。但不能与上一种混用，否则会覆盖</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">box.prototype = &#123;</div><div class="line">	box.name : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="comment">//name函数</span></div><div class="line">    &#125;</div><div class="line">    box.age : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      	<span class="comment">//age函数</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> box();</div><div class="line">a.name();</div></pre></td></tr></table></figure></p>
+<p><strong>第五类型</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第九种，高级的、链式的、简洁的调用方式</span></div><div class="line"><span class="keyword">var</span> box = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">box.prototype = &#123;</div><div class="line">	box.name : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        <span class="comment">//name函数</span></div><div class="line">    &#125;</div><div class="line">    box.age : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">       <span class="comment">//age函数</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> box();</div><div class="line">a.name().age();</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>终于明白了JavaScript的灵活到底是个什么意思，这让我更加爱上了这门语言。</p>
+</blockquote>
+<h3 id="写到的都是看到的——面对对象编程"><a href="#写到的都是看到的——面对对象编程" class="headerlink" title="写到的都是看到的——面对对象编程"></a>写到的都是看到的——面对对象编程</h3><h4 id="面向过程与面向对象"><a href="#面向过程与面向对象" class="headerlink" title="面向过程与面向对象"></a>面向过程与面向对象</h4><p>JavaScript是面向对象的语言，不像其他面向对象语言那么拘束，JavaScript有着得天独到的优势——自由。<br>面向过程的语言，是C。（我的编程思想就是从C学来的。）</p>
+<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>意义就是把需要的东西作为个体表示出来，不是平摊开来的。<br>要把所有与之有关联的都放在一起，就是把变量、函数等放在相关的对象内，这样变量就不会相互污染。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这种，是可以被其他的调用的</span></div><div class="line">book.prototype = &#123;</div><div class="line">	a : <span class="literal">true</span>,</div><div class="line">    b : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//这种，是不可以的，undefined</span></div><div class="line">book.aaa = <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><h5 id="类式继承"><a href="#类式继承" class="headerlink" title="类式继承"></a>类式继承</h5><p>JavaScript中没有现成的机制，但是可以通过【第一个类的实例赋值给第二个类的原型】来实现具体继承机制。<br>继承后，子类可以使用父类的方法，如果方法名重复，则优先用子类的方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//父</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.superValue = <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">SuperClass.prototype.getsuperValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.superValue;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//子</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.subValue = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line">SubClass.prototype.getsubValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="comment">// body...</span></div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.subValue;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//继承</span></div><div class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass();</div><div class="line"></div><div class="line"><span class="comment">//使用</span></div><div class="line"><span class="keyword">var</span> instance = <span class="keyword">new</span> SubClass();</div><div class="line"><span class="built_in">console</span>.log(instance.getsuperValue); <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(instance.getsubValue); <span class="comment">//false</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>问题：如果push值进去会影响父类，导致其他实例化对象也会出现这个值。解决办法：用构造函数继承。</p>
+</blockquote>
+<h5 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h5><p>这种方法，避免了父类被污染的深坑。<br>但是，有产生了一种新的问题：这样每个实例都是单独拥有方法而不能共用，违背了<strong>代码复用原则</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> id;</div><div class="line"><span class="comment">//声明父类</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params">id</span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.books = [<span class="string">'JavaScript'</span>,<span class="string">'css'</span>,<span class="string">'html'</span>];</div><div class="line">	<span class="keyword">this</span>.id = id;</div><div class="line">&#125;</div><div class="line">SuperClass.prototype.showBooks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.books;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//声明子类</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="comment">//继承</span></div><div class="line">	SuperClass.call(<span class="keyword">this</span>,id);  <span class="comment">//这个函数就像替身术一样，替代了push对父类的污染</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> SubClass(<span class="number">1</span>);</div><div class="line"><span class="keyword">var</span> instance2 = <span class="keyword">new</span> SubClass(<span class="number">2</span>);</div><div class="line"></div><div class="line">instance1.books.push(<span class="string">"设计模式"</span>)</div><div class="line"><span class="built_in">console</span>.log(instance1.books); <span class="comment">//["JavaScript", "css", "html", "设计模式"]</span></div><div class="line"><span class="built_in">console</span>.log(instance2.books); <span class="comment">//["JavaScript", "css", "html"]</span></div></pre></td></tr></table></figure>
+<h5 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h5><p>这种方式结合了前两种的优点。<br>既保证了父类不被影响，又重复利用了方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name,time;</div><div class="line"><span class="comment">//声明父类</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">	<span class="comment">//值类型共有属性</span></div><div class="line">	<span class="keyword">this</span>.name = name;</div><div class="line">	<span class="comment">//引用类型红有属性</span></div><div class="line">	<span class="keyword">this</span>.books = [<span class="string">'JavaScript'</span>,<span class="string">'css'</span>,<span class="string">'html'</span>];</div><div class="line">&#125;</div><div class="line">SuperClass.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//声明子类</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">name,time</span>) </span>&#123;</div><div class="line">	<span class="comment">//构造函数式继承父类name属性</span></div><div class="line">	SuperClass.call(<span class="keyword">this</span>,name);</div><div class="line">	<span class="comment">//子类中新郑共有属性</span></div><div class="line">	<span class="keyword">this</span>.time = time;</div><div class="line">&#125;</div><div class="line"><span class="comment">//类式继承</span></div><div class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass();</div><div class="line"><span class="comment">//子类原型方法</span></div><div class="line">SubClass.prototype.getTime = <span class="function"><span class="keyword">function</span>(<span class="params">first_argument</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.time);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> SubClass(<span class="string">"aaa book"</span>,<span class="number">2016</span>);</div><div class="line"><span class="keyword">var</span> instance2 = <span class="keyword">new</span> SubClass(<span class="string">"bbb book"</span>,<span class="number">2017</span>);</div><div class="line">instance1.books.push(<span class="string">"设计模式"</span>)</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(instance1.books); 	<span class="comment">//["JavaScript", "css", "html", "设计模式"]</span></div><div class="line">instance1.getTime();	<span class="comment">//2016</span></div><div class="line">instance1.getName();	<span class="comment">//aaa book</span></div><div class="line"><span class="built_in">console</span>.log(instance2.books); 	<span class="comment">//VM1217:34 ["JavaScript", "css", "html"]</span></div><div class="line">instance2.getTime();	<span class="comment">//2017</span></div><div class="line">instance2.getName();	<span class="comment">//bbb book</span></div></pre></td></tr></table></figure>
+<h5 id="More"><a href="#More" class="headerlink" title="More"></a>More</h5><p>除了这些个继承方法，还有更多的。</p>
+<ul>
+<li>原型式继承：根据已有的对象创建一个新的对象，同时不必创建新的自定义对象类型。（在对象内创建）。</li>
+<li>寄生式继承：原型式继承的拓展。先声明基对象，然后通过原型继承方式创建新对象，然后拓展新对象，最后返回新对象。</li>
+<li>寄生组合式继承：先创建父类，以及原型方法，然后创建子类，并在构造函数中实现构造函数式继承，然后用寄生式继承父类，随后再添加一些子类的方法。（这个我看不太明白）</li>
+</ul>
+<h4 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h4><p>原理：通过循环复制出多个父类的属性。（extend方法的延伸）</p>
+<p><strong>单继承</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> extend = <span class="function"><span class="keyword">function</span> (<span class="params">target,source</span>) </span>&#123;</div><div class="line">	<span class="comment">//遍历源对象的属性</span></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> property <span class="keyword">in</span> source) &#123;</div><div class="line">		<span class="comment">//复制</span></div><div class="line">		target[property] = source[property];</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//返回目标对象</span></div><div class="line">	<span class="keyword">return</span> target;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>多继承</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mix = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> i = <span class="number">1</span>,					<span class="comment">//从第二个参数开始为被继承对象</span></div><div class="line">		len = <span class="built_in">arguments</span>.length,	<span class="comment">//获取参数长度</span></div><div class="line">		target = <span class="built_in">arguments</span>[<span class="number">0</span>],	<span class="comment">//第一个对象为目标对象</span></div><div class="line">		arg;					<span class="comment">//缓存参数对象</span></div><div class="line">	<span class="comment">//遍历</span></div><div class="line">	<span class="keyword">for</span> (; i &lt; len; i++) &#123;</div><div class="line">		<span class="comment">//缓存源对象</span></div><div class="line">		arg = <span class="built_in">arguments</span>[i];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> property <span class="keyword">in</span> arg) &#123;</div><div class="line">			<span class="comment">//复制</span></div><div class="line">			target[property] = source[property];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//返回目标对象</span></div><div class="line">	<span class="keyword">return</span> target;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>多态：同一方法在参数不同的情况下做出不同的效果。</p>
+<p> <em>相比之下，多态属于一条比较简单的特性，用简单的逻辑即可实现。</em></p>
+<p>简单的逻辑：就是通过判断的参数的对应位置是否有值，来对该值设置默认值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//有参数时返回参数值，无参数时返回1。</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">name</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> oa = a?a:<span class="number">1</span>;</div><div class="line">	<span class="keyword">return</span> a;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>复杂的逻辑：通过function的默认参数arguments来确定各个参数的值，随之做出不同反应。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">arr</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//无参时</span></div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//1参时</span></div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//2参时</span></div><div class="line">	&#125;</div><div class="line">	<span class="keyword">this</span>.arr = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">switch</span>(<span class="built_in">arguments</span>.length)&#123;</div><div class="line">			<span class="keyword">case</span> <span class="number">0</span>: <span class="keyword">return</span> a();</div><div class="line">			<span class="keyword">case</span> <span class="number">1</span>: <span class="keyword">return</span> b();</div><div class="line">			<span class="keyword">case</span> <span class="number">2</span>: <span class="keyword">return</span> c();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/30/正则表达式的匹配/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/04/HTML的补充/" rel="prev" title="HTML的补充">
+                HTML的补充 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/03/《JavaScript设计模式》笔记 —— Part1/"
+           data-title="《JavaScript设计模式》笔记 —— Part1" data-url="http://yoursite.com/2016/11/03/《JavaScript设计模式》笔记 —— Part1/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陆家伟" />
+          <p class="site-author-name" itemprop="name">陆家伟</p>
+          <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">35</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/BigTail/" title="BigTail-博客园" target="_blank">BigTail-博客园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/netxiaohui" title="Andyahui—阿辉" target="_blank">Andyahui—阿辉</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-1·面对对象编程"><span class="nav-number">1.</span> <span class="nav-text">Part 1·面对对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#灵活的语言——JavaScript"><span class="nav-number">1.1.</span> <span class="nav-text">灵活的语言——JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写到的都是看到的——面对对象编程"><span class="nav-number">1.2.</span> <span class="nav-text">写到的都是看到的——面对对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#面向过程与面向对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">面向过程与面向对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.2.2.</span> <span class="nav-text">封装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.2.3.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类式继承"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">类式继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数继承"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">构造函数继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#组合继承"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">组合继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#More"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">More</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多继承"><span class="nav-number">1.2.4.</span> <span class="nav-text">多继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态"><span class="nav-number">1.2.5.</span> <span class="nav-text">多态</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ljw-bigtail"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
