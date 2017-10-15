@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="BigTail">
 <meta property="og:description" content="无知(。・＿・。)ﾉ这两天练习使用公司二次开发后的后台管理系统。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T07:34:36.079Z">
+<meta property="og:updated_time" content="2017-10-15T08:46:43.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="发布二次开发后的网站管理系统">
 <meta name="twitter:description" content="无知(。・＿・。)ﾉ这两天练习使用公司二次开发后的后台管理系统。">
@@ -366,16 +366,17 @@
       
         <p>无知(。・＿・。)ﾉ<br>这两天练习使用公司二次开发后的后台管理系统。</p>
 <a id="more"></a>
-<h2 id="啰嗦一下"><a href="#啰嗦一下" class="headerlink" title="啰嗦一下"></a>啰嗦一下</h2><p>之前把系统环境配好了，我以为我需要做的是：在这个后台进行某些操作，生成新的页面（改css之类的）。实际上，是把公司二次开发的源码用eclipse在tomcat上连接数据库，跑起来。（这里出现了两个压缩包，一个是官方的正式系统，一个是未打包的公司二次开发的数据文件）（之前一直理解是都可以在tomcat存放应用的文件夹放置，实际上需要用eclipse run as server）。<br>之前一直有问题，在网上查了之后，决定把这些记录下来，便于今后使用。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ol>
+<h1 id="啰嗦一下"><a href="#啰嗦一下" class="headerlink" title="啰嗦一下"></a>啰嗦一下</h1><p>之前把系统环境配好了，我以为我需要做的是：在这个后台进行某些操作，生成新的页面（改css之类的）。实际上，是把公司二次开发的源码用eclipse在tomcat上连接数据库，跑起来。（这里出现了两个压缩包，一个是官方的正式系统，一个是未打包的公司二次开发的数据文件）（之前一直理解是都可以在tomcat存放应用的文件夹放置，实际上需要用eclipse run as server）。</p>
+<p>之前一直有问题，在网上查了之后，决定把这些记录下来，便于今后使用。</p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ol>
 <li>安装jdk，配置环境变量</li>
 <li>安装tomcat，配置环境变量</li>
 <li>安装eclipse，配置选项</li>
 <li>安装MySql，创建数据库</li>
 </ol>
-<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">jdk1.6 — 百度云</a></p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>按步骤来，之间要注意并记录下的是安装路径（第一次是jdk的路径，第二次是jre的路径），推荐放在D盘根目录下（D:/Java/）。</p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>我的电脑 - 右键 - 属性 - 高级系统设置 - 高级 - 环境变量</p>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">jdk1.6 — 百度云</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>按步骤来，之间要注意并记录下的是安装路径（第一次是jdk的路径，第二次是jre的路径），推荐放在D盘根目录下（D:/Java/）。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>我的电脑 - 右键 - 属性 - 高级系统设置 - 高级 - 环境变量</p>
 <table>
 <thead>
 <tr>
@@ -398,10 +399,12 @@
 </tr>
 </tbody>
 </table>
-<p>Tips：<br>Path环境变量可能原来有内容，如果有，就在参数前面加一个 “ ; ” 。<br>配置后的检查办法是，Win+R，cmd，回车，运行命令<code>java -version</code>，可以查看jdk版本。</p>
-<h3 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h3><h4 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h4><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">tomcat 6 绿色版 — 百度云</a></p>
-<h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>绿色版不用安装，直接复制到位就可以了（D:/tomcat/）</p>
-<h4 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h4><table>
+<p>Tips：</p>
+<p>Path环境变量可能原来有内容，如果有，就在参数前面加一个 “ ; ” 。</p>
+<p>配置后的检查办法是，Win+R，cmd，回车，运行命令<code>java -version</code>，可以查看jdk版本。</p>
+<h2 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h2><h3 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h3><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">tomcat 6 绿色版 — 百度云</a></p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><p>绿色版不用安装，直接复制到位就可以了（D:/tomcat/）</p>
+<h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><table>
 <thead>
 <tr>
 <th>环境变量</th>
@@ -423,16 +426,25 @@
 </tr>
 </tbody>
 </table>
-<p>Tips：<br>环境变量和JDK一样。<br>绿色版是不用担心注册表的，但之前用过安装版的tomcat的一定要打开注册表，Ctrl+F搜索tomcat然后删除。</p>
-<h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><h4 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h4><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">mysql 5.5.28 绿色版 — 百度云</a></p>
-<h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><p>next，勾选，next，选择Custom，设置路径（D:/MySQL/MySQL Server 5.5/），next，设置路径（同前一个），next。<br>选择Detailed Configuration，next，Server Machine，next，next，Manual Setting（数字改成2000），next，两项都打勾，Manuel Selected ···（选择utf-8），next，勾选Include···，next，Modify···，输入密码两次，next，等待。</p>
-<h4 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h4><p>打开MySQL 5.5 Command Line Client，然后输入登录密码。<br>输入以下命令：<br>    create database 库名;<br>    use 数据库;<br>    source sql文件路径;</p>
-<blockquote>
+<p>Tips：</p>
+<p>环境变量和JDK一样。</p>
+<p>绿色版是不用担心注册表的，但之前用过安装版的tomcat的一定要打开注册表，Ctrl+F搜索tomcat然后删除。</p>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h3 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h3><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">mysql 5.5.28 绿色版 — 百度云</a></p>
+<h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h3><p>next，勾选，next，选择Custom，设置路径（D:/MySQL/MySQL Server 5.5/），next，设置路径（同前一个），next。</p>
+<p>选择Detailed Configuration，next，Server Machine，next，next，Manual Setting（数字改成2000），next，两项都打勾，Manuel Selected ···（选择utf-8），next，勾选Include···，next，Modify···，输入密码两次，next，等待。</p>
+<h3 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h3><p>打开MySQL 5.5 Command Line Client，然后输入登录密码。</p>
+<p>输入以下命令：</p>
+<pre><code>create database 库名;
+
+use 数据库;
+
+source sql文件路径;
+</code></pre><blockquote>
 <p>文件最好放在根目录。<br>根据sql文件的大小可能会等待很久（我等了一下午）。</p>
 </blockquote>
-<h3 id="eclipse"><a href="#eclipse" class="headerlink" title="eclipse"></a>eclipse</h3><h4 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h4><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">eclipse 绿色版 — 百度云</a></p>
-<h4 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h4><p>解压就好，绿色版的。</p>
-<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><ul>
+<h2 id="eclipse"><a href="#eclipse" class="headerlink" title="eclipse"></a>eclipse</h2><h3 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h3><p><a href="http://pan.baidu.com/s/1pLzZT8J" target="_blank" rel="external">eclipse 绿色版 — 百度云</a></p>
+<h3 id="安装-3"><a href="#安装-3" class="headerlink" title="安装"></a>安装</h3><p>解压就好，绿色版的。</p>
+<h3 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h3><ul>
 <li>配置eclipse：打开eclipse，选择Window - Preferences，Java - Installed JREs，add，Standard VM，Next，Directory（选择jdk路径），Finish，勾选Name为jdk的；左侧列表，选择Server - Runtime Environments，add，Apache - tomcat6.0，next，选择Browse（tomcat路径），下拉列表里选择Workbench default JRE，Finish，点击OK。</li>
 <li>导入项目源码：File - Import，General - ExisIting Projects into Workspace，next，第一个是导入文件夹，第二个是导入压缩包，根据需求都可以，勾选Copy projects into workspace，Finish。</li>
 <li>配置项目：在项目上右键 - Properties，Resource - Text file encoding - other - UTF-8， Java Build Path - Libraries中查看是否有问题包（双击JRE System Library - Workspace default JRE - Finish） - Order and Export（Select All） - OK。</li>
@@ -636,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#啰嗦一下"><span class="nav-number">1.</span> <span class="nav-text">啰嗦一下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载"><span class="nav-number">2.1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.1.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tomcat"><span class="nav-number">2.2.</span> <span class="nav-text">tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">2.3.</span> <span class="nav-text">mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eclipse"><span class="nav-number">2.4.</span> <span class="nav-text">eclipse</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-3"><span class="nav-number">2.4.3.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#啰嗦一下"><span class="nav-number">1.</span> <span class="nav-text">啰嗦一下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK"><span class="nav-number">2.1.</span> <span class="nav-text">JDK</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">2.1.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">2.1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.1.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tomcat"><span class="nav-number">2.2.</span> <span class="nav-text">tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">2.3.</span> <span class="nav-text">mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-2"><span class="nav-number">2.3.3.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eclipse"><span class="nav-number">2.4.</span> <span class="nav-text">eclipse</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-3"><span class="nav-number">2.4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-3"><span class="nav-number">2.4.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-3"><span class="nav-number">2.4.3.</span> <span class="nav-text">配置</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

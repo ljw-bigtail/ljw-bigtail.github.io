@@ -101,20 +101,20 @@
 
 
 
-<meta name="description" content="&amp;lt;–more–&amp;gt; 之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。 &amp;lt;–more!–&amp;gt; 原由先说一下overflow:hidden。这句代码的原本含义是裁切掉超出的部分，但是float之后的元素">
+<meta name="description" content="之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。 今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。">
 <meta name="keywords" content="CSS,BFC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BFC">
 <meta property="og:url" content="http://yoursite.com/2017/07/19/BFC/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="&amp;lt;–more–&amp;gt; 之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。 &amp;lt;–more!–&amp;gt; 原由先说一下overflow:hidden。这句代码的原本含义是裁切掉超出的部分，但是float之后的元素">
+<meta property="og:description" content="之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。 今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/26/595082c4930e5.jpg">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/26/595082c4ac481.jpg">
-<meta property="og:updated_time" content="2017-10-15T07:34:34.606Z">
+<meta property="og:updated_time" content="2017-10-15T08:43:36.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BFC">
-<meta name="twitter:description" content="&amp;lt;–more–&amp;gt; 之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。 &amp;lt;–more!–&amp;gt; 原由先说一下overflow:hidden。这句代码的原本含义是裁切掉超出的部分，但是float之后的元素">
+<meta name="twitter:description" content="之前听说过听说过清除浮动的各种方法中有一个overflow:hidden，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。 今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。">
 <meta name="twitter:image" content="https://ooo.0o0.ooo/2017/06/26/595082c4930e5.jpg">
 
 
@@ -345,15 +345,18 @@
       
 
       
-        <p>&lt;–more–&gt;</p>
-<p>之前听说过听说过清除浮动的各种方法中有一个<code>overflow:hidden</code>，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。<br>今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。</p>
-<p>&lt;–more!–&gt;</p>
-<h2 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h2><p>先说一下<code>overflow:hidden</code>。<br>这句代码的原本含义是裁切掉超出的部分，但是float之后的元素已经不占据流的位置， 没有撑开父元素（前提是父元素的<code>height:auto</code>），那就会裁掉float的这一部分。</p>
-<p>这是我的一种理解，没有延伸出去的思考可以就到这里了。<br>但是，至此我还没了解BFC的概念。</p>
-<h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p>BFC（Block Formatting Context）（块级格式化上下文），Web页面中盒模型布局的CSS渲染模式。<br>说定义的时候就是各种感到难理解，我看了一点相关的知识之后，发现实际上就是这样的：触发了BFC之后就会使得本盒子与外界盒子之间互不影响，最显眼的情况可以看一下这张图。</p>
+        <p>之前听说过听说过清除浮动的各种方法中有一个<code>overflow:hidden</code>，但是一直是认为这是一个“偏门”的方法，并不能作为一个很重要的点来使用。</p>
+<p>今天又遇到了这个点，于是百度了一下这个方法的原理，然后就打开了新世界的大门——BFC。</p>
+<a id="more"></a>
+<h1 id="原由"><a href="#原由" class="headerlink" title="原由"></a>原由</h1><p>先说一下<code>overflow:hidden</code>。</p>
+<p>这句代码的原本含义是裁切掉超出的部分，但是float之后的元素已经不占据流的位置， 没有撑开父元素（前提是父元素的<code>height:auto</code>），那就会裁掉float的这一部分。</p>
+<p>这是我的一种理解，没有延伸出去的思考可以就到这里了。</p>
+<p>但是，至此我还没了解BFC的概念。</p>
+<h1 id="What"><a href="#What" class="headerlink" title="What"></a>What</h1><p>BFC（Block Formatting Context）（块级格式化上下文），Web页面中盒模型布局的CSS渲染模式。</p>
+<p>说定义的时候就是各种感到难理解，我看了一点相关的知识之后，发现实际上就是这样的：触发了BFC之后就会使得本盒子与外界盒子之间互不影响，最显眼的情况可以看一下这张图。</p>
 <p><img src="https://ooo.0o0.ooo/2017/06/26/595082c4930e5.jpg" alt="未触发BFC时的margin处理方式"></p>
 <p><img src="https://ooo.0o0.ooo/2017/06/26/595082c4ac481.jpg" alt="触发了BFC后，向下不会再影响"></p>
-<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>说了效果，就该再说一下如何为一个容器添加一个触发BFC的样式。</p>
+<h1 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h1><p>说了效果，就该再说一下如何为一个容器添加一个触发BFC的样式。</p>
 <ul>
 <li><code>display</code>，值为一下几种：<code>table-cell、table-caption、flex、inline-block、inline-flex</code></li>
 <li><code>overflow</code>，值不为visible时：<code>auto、scroll、hidden</code></li>
@@ -361,7 +364,7 @@
 <li><code>float</code>，除了none时：<code>left、right</code>，影响布局</li>
 <li><code>&lt;fieldset&gt;</code>，该标签（元素）</li>
 </ul>
-<h2 id="How"><a href="#How" class="headerlink" title="How"></a>How</h2><p>说道用法，就得先了解BFC的特性，前面的图片描述了其中一条特性：</p>
+<h1 id="How"><a href="#How" class="headerlink" title="How"></a>How</h1><p>说道用法，就得先了解BFC的特性，前面的图片描述了其中一条特性：</p>
 <ul>
 <li>内部的Box会在垂直方向上，依次排列</li>
 <li>Box垂直方向的距离由margin决定，属于同一个BFC的两个相邻Box的margin会叠加</li>
@@ -370,7 +373,7 @@
 <li>BFC是一个独立容器，内部元素不影响外界元素</li>
 <li>计算高度时，浮动元素也参与计算</li>
 </ul>
-<h3 id="To-Do"><a href="#To-Do" class="headerlink" title="To Do"></a>To Do</h3><p>以前在使用的时候并没有突出注意到BFC的存在，甚至用过，但是不知道这是BFC，哈…</p>
+<h2 id="To-Do"><a href="#To-Do" class="headerlink" title="To Do"></a>To Do</h2><p>以前在使用的时候并没有突出注意到BFC的存在，甚至用过，但是不知道这是BFC，哈…</p>
 <p>在调整样式的过程中，还是需要去了解原理，然后再使用，避免样式覆盖而产生的莫名其妙，或是去尽量精简代码以实现更优异的编码习惯。</p>
 
       
@@ -565,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原由"><span class="nav-number">1.</span> <span class="nav-text">原由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What"><span class="nav-number">2.</span> <span class="nav-text">What</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why"><span class="nav-number">3.</span> <span class="nav-text">Why</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How"><span class="nav-number">4.</span> <span class="nav-text">How</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#To-Do"><span class="nav-number">4.1.</span> <span class="nav-text">To Do</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原由"><span class="nav-number">1.</span> <span class="nav-text">原由</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What"><span class="nav-number">2.</span> <span class="nav-text">What</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Why"><span class="nav-number">3.</span> <span class="nav-text">Why</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How"><span class="nav-number">4.</span> <span class="nav-text">How</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#To-Do"><span class="nav-number">4.1.</span> <span class="nav-text">To Do</span></a></li></ol></li></ol></div>
             
 
           </div>

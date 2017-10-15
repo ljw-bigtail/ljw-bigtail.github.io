@@ -101,18 +101,18 @@
 
 
 
-<meta name="description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。未完待续。">
+<meta name="description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。 未完待续。">
 <meta name="keywords" content="JavaScript,Ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ajax初识">
 <meta property="og:url" content="http://yoursite.com/2016/10/18/Ajax初识（ajax+http+json）/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。未完待续。">
+<meta property="og:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。 未完待续。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T07:34:38.125Z">
+<meta property="og:updated_time" content="2017-10-15T08:12:34.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax初识">
-<meta name="twitter:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。未完待续。">
+<meta name="twitter:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。 未完待续。">
 
 
 
@@ -364,17 +364,19 @@
       
 
       
-        <p>我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。<br>未完待续。</p>
+        <p>我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。</p>
+<p>未完待续。</p>
 <a id="more"></a>
-<h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>过去是提交表单刷新，如果出现错误需要等服务器返回验证才能再次更正，原因是缺少XMLHttpRequest对象。<br>现在有了XMLHttpRequest对象，就可以用于后台和服务器交换数据，并且不刷新页面，实现异步。</p>
-<h3 id="实现异步"><a href="#实现异步" class="headerlink" title="实现异步"></a>实现异步</h3><ol>
+<h1 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h1><h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><p>过去是提交表单刷新，如果出现错误需要等服务器返回验证才能再次更正，原因是缺少XMLHttpRequest对象。</p>
+<p>现在有了XMLHttpRequest对象，就可以用于后台和服务器交换数据，并且不刷新页面，实现异步。</p>
+<h2 id="实现异步"><a href="#实现异步" class="headerlink" title="实现异步"></a>实现异步</h2><ol>
 <li>用HTML、CSS表示页面；</li>
 <li>用XMLHttpRequest和Web服务器进行交换数据的异步交换；</li>
 <li>用JavaScript操作DOM，实现局部刷新。</li>
 </ol>
-<h3 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h3><h4 id="创建XMLHttpRequest对象"><a href="#创建XMLHttpRequest对象" class="headerlink" title="创建XMLHttpRequest对象"></a>创建XMLHttpRequest对象</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//普通写法</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="comment">//兼容写法</span></div><div class="line"><span class="keyword">var</span> request;</div><div class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</div><div class="line">	request = <span class="keyword">new</span> XMLHttpRequest();<span class="comment">//IE7+,FF,Chrome,Opera,SF</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	request = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);<span class="comment">//IE5、IE6</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="XMLHttpRequest发送请求"><a href="#XMLHttpRequest发送请求" class="headerlink" title="XMLHttpRequest发送请求"></a>XMLHttpRequest发送请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//按逻辑顺序</span></div><div class="line">open(method,url,asyns);</div><div class="line">setRequestHeader(“请求头属性”,“请求头参数”);</div><div class="line">send(string);</div><div class="line"><span class="comment">//POST中不可缺少的代码</span></div><div class="line">request.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div></pre></td></tr></table></figure>
-<h4 id="详解方法"><a href="#详解方法" class="headerlink" title="详解方法"></a>详解方法</h4><ul>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="创建XMLHttpRequest对象"><a href="#创建XMLHttpRequest对象" class="headerlink" title="创建XMLHttpRequest对象"></a>创建XMLHttpRequest对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//普通写法</span></div><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line"><span class="comment">//兼容写法</span></div><div class="line"><span class="keyword">var</span> request;</div><div class="line"><span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</div><div class="line">	request = <span class="keyword">new</span> XMLHttpRequest();<span class="comment">//IE7+,FF,Chrome,Opera,SF</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	request = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);<span class="comment">//IE5、IE6</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="XMLHttpRequest发送请求"><a href="#XMLHttpRequest发送请求" class="headerlink" title="XMLHttpRequest发送请求"></a>XMLHttpRequest发送请求</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//按逻辑顺序</span></div><div class="line">open(method,url,asyns);</div><div class="line">setRequestHeader(“请求头属性”,“请求头参数”);</div><div class="line">send(string);</div><div class="line"><span class="comment">//POST中不可缺少的代码</span></div><div class="line">request.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div></pre></td></tr></table></figure>
+<h3 id="详解方法"><a href="#详解方法" class="headerlink" title="详解方法"></a>详解方法</h3><ul>
 <li>创建请求：open(method,url,asyns)</li>
 </ul>
 <table>
@@ -420,11 +422,22 @@
 </tr>
 </tbody>
 </table>
-<h4 id="XMLHttpRequest取得响应"><a href="#XMLHttpRequest取得响应" class="headerlink" title="XMLHttpRequest取得响应"></a>XMLHttpRequest取得响应</h4><p>responseText：获取字符串形式的响应数据<br>responseXML：获取XML形式的响应数据<br>status和statusText：以数字和文本形式返回HTTP状态码<br>getAllResponseHeader()：获取所有的响应报头<br>getResponseHeader()：查询响应中某个字段的值</p>
-<p>readyState属性<br>0：请求未初始化，open还未调用<br>1：服务器连接已经建立，open已经调用<br>2：请求已接收，也就是接收到头信息了<br>3：请求处理中，也即是接收到响应主体了<br>4：请求完成，且响应完成</p>
+<h3 id="XMLHttpRequest取得响应"><a href="#XMLHttpRequest取得响应" class="headerlink" title="XMLHttpRequest取得响应"></a>XMLHttpRequest取得响应</h3><p>responseText：获取字符串形式的响应数据</p>
+<p>responseXML：获取XML形式的响应数据</p>
+<p>status和statusText：以数字和文本形式返回HTTP状态码</p>
+<p>getAllResponseHeader()：获取所有的响应报头</p>
+<p>getResponseHeader()：查询响应中某个字段的值</p>
+<hr>
+<p>readyState属性</p>
+<p>0：请求未初始化，open还未调用</p>
+<p>1：服务器连接已经建立，open已经调用</p>
+<p>2：请求已接收，也就是接收到头信息了</p>
+<p>3：请求处理中，也即是接收到响应主体了</p>
+<p>4：请求完成，且响应完成</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> request = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">request.open(<span class="string">"GET"</span>,<span class="string">"get.php"</span>,<span class="literal">true</span>);</div><div class="line">request.send();</div><div class="line">request.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">//判断是否成功取得服务器响应</span></div><div class="line">    <span class="keyword">if</span>(request.readyState === <span class="number">4</span> &amp;&amp; request.status === <span class="number">200</span>)&#123;</div><div class="line">    	<span class="comment">//功能代码</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>需要软件：XAMPP v3.2.2、Fiddler4<br>需要文件：测试用的php文件（<a href="http://pan.baidu.com/s/1nuWX6Gh" target="_blank" rel="external">百度网盘</a>）</p>
-<h4 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h4><ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>需要软件：XAMPP v3.2.2、Fiddler4</p>
+<p>需要文件：测试用的php文件（<a href="http://pan.baidu.com/s/1nuWX6Gh" target="_blank" rel="external">百度网盘</a>）</p>
+<h3 id="测试步骤"><a href="#测试步骤" class="headerlink" title="测试步骤"></a>测试步骤</h3><ol>
 <li>打开XAMPP，开启Apache服务，点击Start。如果端口冲突，点击Config-httpd.conf，配置端口号；</li>
 <li>把php文件放在xampp里（C:\xampp\htdocs\ajaxDemo），在浏览器中打开（ <a href="http://localhost:8081/ajaxDemo/server.php" target="_blank" rel="external">http://localhost:8081/ajaxDemo/server.php</a> ），会显示参数错误（后面会用fiddler模拟）；</li>
 <li>打开Fiddler，点击右侧的Composer；</li>
@@ -434,15 +447,15 @@
 <li>测试完成。</li>
 </ol>
 <p>*规定：信息填写完后，回车或Execute，就可以发送信息了。</p>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>json是一种方便的数据格式。</p>
-<h3 id="json规则"><a href="#json规则" class="headerlink" title="json规则"></a>json规则</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>“名称”：“值对”，</p>
-<h4 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h4><ul>
+<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p>json是一种方便的数据格式。</p>
+<h2 id="json规则"><a href="#json规则" class="headerlink" title="json规则"></a>json规则</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>“名称”：“值对”，</p>
+<h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><ul>
 <li><code>eval( &#39;(&#39; + jsonData + &#39;)&#39; );</code>，解析并执行（如果json内有function）。</li>
 <li><code>JSON.parse(jsonData);</code>，仅解析。*推荐</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//基本的json</span></div><div class="line"><span class="keyword">var</span> jsonData = <span class="string">'&#123;</span></div><div class="line"><span class="string">	“staff”:[</span></div><div class="line"><span class="string">    	&#123;"name":"张三","age":"12"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"李四","age":"13"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"王五","age":"14"&#125;</span></div><div class="line"><span class="string">    ]</span></div><div class="line"><span class="string">&#125;'</span>;</div><div class="line"><span class="comment">//解析方法1</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">eval</span>( <span class="string">'('</span> + jsonData + <span class="string">')'</span> );</div><div class="line"><span class="comment">//解析方法2</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">JSON</span>.parse(jsonData);</div><div class="line"><span class="comment">//使用方法</span></div><div class="line"><span class="comment">//jsonObj.staff[0].name;</span></div></pre></td></tr></table></figure>
-<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>用来与服务器交互数据的一种协议。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>用来与服务器交互数据的一种协议。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
 <li>简历TCP连接</li>
 <li>Web浏览器向Web服务器发送请求命令</li>
 <li>Web浏览器发送请求头信息</li>
@@ -451,43 +464,43 @@
 <li>Web服务器向浏览器发送数据</li>
 <li>Web服务器关闭TCP连接</li>
 </ol>
-<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><ol>
+<h2 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h2><ol>
 <li>HTTP请求的方法或动作，（GET或者POST）。</li>
 <li>正在请求的URL，（地址）。</li>
 <li>请求头，（包含客户端环境信息，身份验证等）。</li>
 <li>请求体，（包含查询字符串，表单信息）。</li>
 <li>请求头与请求体中间存在一个空行表示分隔。</li>
 </ol>
-<h3 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h3><ul>
+<h2 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h2><ul>
 <li>GET：一般用于信息查询获取，查询内容对任何人可见，使用URL传递参数，对发送信息的数量有限制（2000字符内）。</li>
 <li>POST：发送信，一般用于修改服务器的资源，对于发送信息无限制。</li>
 </ul>
-<h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><ul>
+<h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><ul>
 <li>1XX：信息类，表示收到请求，正在处理；</li>
 <li>2XX：成功，表示成功被接收；</li>
 <li>3XX：重定向，表示请求不成功，客户需要采取进一步的错误；</li>
 <li>4XX：客户端错误，表示请求有错误；</li>
 <li>5XX：服务器错误，表示服务器不能完成处理请求。</li>
 </ul>
-<h4 id="常见的有"><a href="#常见的有" class="headerlink" title="常见的有"></a>常见的有</h4><pre><code>100：请求已经接受，请继续发送其余请求
-200：成功
-202：已经接受请求，但未处理完成
-205：没有新内容，强制清除表单内容
-301：客户请求的文档在其他地方，并返回新URL
-302：同301，但是新URL是临时的
-303：请求方法错误，原来是POST，改成GET
-304：服务器发现缓存未更改，让浏览器读缓存
-400：语法错误
-403：资源不可用
-404：无法找到资源
-414：URL太长
-500：服务器跪了
-501：服务器不支持这个功能
-502：服务器作为网关或代理访问下一个服务器，但收到了非法应答
-503：服务器维护或高负载未能应答
-504：类似502，服务器未收到应答
-505：服务器不支持HTTP的版本
-</code></pre><h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><p>一种创建动态交互站点的服务端脚本语言</p>
+<h3 id="常见的有"><a href="#常见的有" class="headerlink" title="常见的有"></a>常见的有</h3><p>100：请求已经接受，请继续发送其余请求</p>
+<p>200：成功</p>
+<p>202：已经接受请求，但未处理完成</p>
+<p>205：没有新内容，强制清除表单内容</p>
+<p>301：客户请求的文档在其他地方，并返回新URL</p>
+<p>302：同301，但是新URL是临时的</p>
+<p>303：请求方法错误，原来是POST，改成GET</p>
+<p>304：服务器发现缓存未更改，让浏览器读缓存</p>
+<p>400：语法错误</p>
+<p>403：资源不可用</p>
+<p>404：无法找到资源</p>
+<p>414：URL太长</p>
+<p>500：服务器跪了</p>
+<p>501：服务器不支持这个功能</p>
+<p>502：服务器作为网关或代理访问下一个服务器，但收到了非法应答</p>
+<p>503：服务器维护或高负载未能应答</p>
+<p>504：类似502，服务器未收到应答</p>
+<p>505：服务器不支持HTTP的版本</p>
+<h1 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h1><p>一种创建动态交互站点的服务端脚本语言</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="keyword">echo</span> hello;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
 
       
@@ -521,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/17/深入闭包（优缺点）/" rel="next" title="深入闭包（优缺点）">
-                <i class="fa fa-chevron-left"></i> 深入闭包（优缺点）
+              <a href="/2016/10/18/用字体替换icon/" rel="next" title="用字体替换icon">
+                <i class="fa fa-chevron-left"></i> 用字体替换icon
               </a>
             
           </div>
@@ -531,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/18/《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记/" rel="prev" title="《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记">
-                《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/18/css的优先级——权重规则/" rel="prev" title="css的优先级——权重规则">
+                css的优先级——权重规则 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -684,7 +697,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#异步"><span class="nav-number">1.</span> <span class="nav-text">异步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现状"><span class="nav-number">1.1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现异步"><span class="nav-number">1.2.</span> <span class="nav-text">实现异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体步骤"><span class="nav-number">1.3.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建XMLHttpRequest对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建XMLHttpRequest对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttpRequest发送请求"><span class="nav-number">1.3.2.</span> <span class="nav-text">XMLHttpRequest发送请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#详解方法"><span class="nav-number">1.3.3.</span> <span class="nav-text">详解方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttpRequest取得响应"><span class="nav-number">1.3.4.</span> <span class="nav-text">XMLHttpRequest取得响应</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">1.4.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试步骤"><span class="nav-number">1.4.1.</span> <span class="nav-text">测试步骤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON"><span class="nav-number">2.</span> <span class="nav-text">JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#json规则"><span class="nav-number">2.1.</span> <span class="nav-text">json规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析方法"><span class="nav-number">2.1.2.</span> <span class="nav-text">解析方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">3.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">3.2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求"><span class="nav-number">3.3.</span> <span class="nav-text">HTTP请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP请求方法"><span class="nav-number">3.4.</span> <span class="nav-text">HTTP请求方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP状态码"><span class="nav-number">3.5.</span> <span class="nav-text">HTTP状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的有"><span class="nav-number">3.5.1.</span> <span class="nav-text">常见的有</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">4.</span> <span class="nav-text">PHP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异步"><span class="nav-number">1.</span> <span class="nav-text">异步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">1.1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现异步"><span class="nav-number">1.2.</span> <span class="nav-text">实现异步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体步骤"><span class="nav-number">1.3.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建XMLHttpRequest对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建XMLHttpRequest对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest发送请求"><span class="nav-number">1.3.2.</span> <span class="nav-text">XMLHttpRequest发送请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#详解方法"><span class="nav-number">1.3.3.</span> <span class="nav-text">详解方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMLHttpRequest取得响应"><span class="nav-number">1.3.4.</span> <span class="nav-text">XMLHttpRequest取得响应</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">1.4.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试步骤"><span class="nav-number">1.4.1.</span> <span class="nav-text">测试步骤</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSON"><span class="nav-number">2.</span> <span class="nav-text">JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#json规则"><span class="nav-number">2.1.</span> <span class="nav-text">json规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析方法"><span class="nav-number">2.1.2.</span> <span class="nav-text">解析方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP"><span class="nav-number">3.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">3.2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP请求"><span class="nav-number">3.3.</span> <span class="nav-text">HTTP请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP请求方法"><span class="nav-number">3.4.</span> <span class="nav-text">HTTP请求方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP状态码"><span class="nav-number">3.5.</span> <span class="nav-text">HTTP状态码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的有"><span class="nav-number">3.5.1.</span> <span class="nav-text">常见的有</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP"><span class="nav-number">4.</span> <span class="nav-text">PHP</span></a></li></ol></div>
             
 
           </div>

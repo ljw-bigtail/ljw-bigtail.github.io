@@ -111,7 +111,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-23/51926324.jpg">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-23/71745349.jpg">
-<meta property="og:updated_time" content="2017-10-15T07:34:35.269Z">
+<meta property="og:updated_time" content="2017-10-15T07:59:07.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS第二节-盒模型">
 <meta name="twitter:description" content="盒子里面就是一片新天地。">
@@ -369,48 +369,50 @@
       
         <p>盒子里面就是一片新天地。</p>
 <a id="more"></a>
-<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><h3 id="盒模型包含什么"><a href="#盒模型包含什么" class="headerlink" title="盒模型包含什么"></a>盒模型包含什么</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-23/51926324.jpg" alt="css盒模型主视图"></p>
+<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><h2 id="盒模型包含什么"><a href="#盒模型包含什么" class="headerlink" title="盒模型包含什么"></a>盒模型包含什么</h2><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-23/51926324.jpg" alt="css盒模型主视图"></p>
 <p>如上图所示，css盒模型主要说明了三个属性：border、margin、padding。在平常的使用中，这三个属性是非常非常常用的，所以一定要理解盒模型。</p>
-<h3 id="盒模型是怎样的"><a href="#盒模型是怎样的" class="headerlink" title="盒模型是怎样的"></a>盒模型是怎样的</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-23/71745349.jpg" alt="css盒模型侧视图"></p>
+<h2 id="盒模型是怎样的"><a href="#盒模型是怎样的" class="headerlink" title="盒模型是怎样的"></a>盒模型是怎样的</h2><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-23/71745349.jpg" alt="css盒模型侧视图"></p>
 <p>我理解的盒模型，就是像套娃一样，一层层的叠加起来，主要关注的应该是叠加的次序，也就是层级。</p>
 <ul>
 <li>margin，是最外层的盒子，表示了与其他盒子之间的距离，就像快递里面的填充物，把里面的小盒子与外面的大盒子分隔开。</li>
 <li>background，是盒子里面底部的颜色，又因为background分为两种填充：颜色（background-color）、图像（background-image），可能是因为人们更趋向于彩色，所以当既设置颜色又设置图像时，优先显示图像。</li>
 <li>border，这是边框，继续按照快递的说法，就是小盒子的壁。</li>
 <li>padding，这是小盒子与内容之间的距离，快递说法里面，这就是我们要买的东西与盒子之间的填充物。</li>
-<li>padding里面就是我们实际想表示的内容。</li>
-</ul>
+<li><p>padding里面就是我们实际想表示的内容。</p>
 <blockquote>
 <p>要注意的是，按照快递说法理解时，最外面的大盒子是不显示的。</p>
 </blockquote>
-<h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h3><p>这里有一个非常关键的地方，就是大小的问题：在显示多列布局时，总会控制模块宽度，但一定不能简单的以为每块的宽度就是 width。正确的显示应该是：border-left + padding-left + width + padding-right + border-right</p>
+</li>
+</ul>
+<h1 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h1><p>这里有一个非常关键的地方，就是大小的问题：在显示多列布局时，总会控制模块宽度，但一定不能简单的以为每块的宽度就是 width。正确的显示应该是：border-left + padding-left + width + padding-right + border-right</p>
 <blockquote>
 <p>margin只占宽度不计入。 </p>
 </blockquote>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>margin:top right bottom left;</p>
+<h1 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h1><h2 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>margin:top right bottom left;</p>
 <blockquote>
 <p>因为上下左右，分别有四个边距值，所以最多设置四个值。<br>为什么是最多呢？因为还有两种情况。</p>
 </blockquote>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.div1</span>&#123;<span class="attribute">margin</span>: <span class="number">20px</span>;&#125;  <span class="comment">/*四个位置都是一样的就可以简写*/</span></div><div class="line"><span class="selector-class">.div2</span>&#123;<span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">15px</span>;&#125;  <span class="comment">/*当上下、左右各自一样时，可以这样简写*/</span></div><div class="line"><span class="selector-class">.div3</span>&#123;<span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">30px</span> <span class="number">15px</span> <span class="number">25px</span>;&#125;  <span class="comment">/*默认的四个值*/</span></div></pre></td></tr></table></figure>
 <p>还有一种写法：就是<code>margin：top right bottom;</code>，这样没有写left的值，但是还可以正确显示，因为此时left值被认为与right值一致。</p>
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><ol>
+<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><ol>
 <li>存在相邻的margin时，产生的效果不是叠加，而是选取二者中较大值。</li>
 <li>当margin的值选择为百分比时，表示包含块的宽度的百分之几（当文字顺序为上至下，表示包含块高度的百分比。</li>
 <li>margin: 0 auto;表示水平居中。</li>
 </ol>
-<h3 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><p>padding:top right bottom reft;</p>
+<h2 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h2><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>padding:top right bottom reft;</p>
 <blockquote>
 <p>与margin填的值一样</p>
 </blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.div1</span>&#123;<span class="attribute">padding</span>: <span class="number">20px</span>;&#125;  <span class="comment">/*四个位置都是一样的就可以简写*/</span></div><div class="line">.div2&#123;padding 20px 15px;&#125;  /*当上下、左右各自一样时，可以这样简写*/</div><div class="line">.div3&#123;padding 20px 30px 15px 25px;&#125;  /*默认的四个值*/</div></pre></td></tr></table></figure>
-<h4 id="注意点-1"><a href="#注意点-1" class="headerlink" title="注意点"></a>注意点</h4><ol>
+<h3 id="注意点-1"><a href="#注意点-1" class="headerlink" title="注意点"></a>注意点</h3><ol>
 <li>当padding值为百分比时，其含义为父元素宽度的百分之几</li>
 <li>当为负值时：X；padding不支持负值。</li>
 </ol>
-<h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><p> border分为三组属性：color、width、style，每个属性前可以加方位值left、right、top、bottom。</p>
-<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><p>可以简写：border: 1px solid #ccc;<br>也可以分开写：</p>
+<h2 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h2><p>border分为三组属性：color、width、style，每个属性前可以加方位值left、right、top、bottom。</p>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p>可以简写：border: 1px solid #ccc;</p>
+<p>也可以分开写：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="attribute">border-top-width</span>: <span class="number">15px</span>;</div><div class="line">	<span class="attribute">border-right-width</span>: <span class="number">5px</span>;</div><div class="line">	<span class="attribute">border-bottom-width</span>: <span class="number">15px</span>;</div><div class="line">	<span class="attribute">border-left-width</span>: <span class="number">5px</span>;</div><div class="line">    </div><div class="line">	<span class="attribute">border-top-style</span>: hidden;</div><div class="line">	<span class="attribute">border-right-style</span>: dotted;</div><div class="line">	<span class="attribute">border-bottom-style</span>: none;</div><div class="line">	<span class="attribute">border-left-style</span>: solid;</div><div class="line">    </div><div class="line">	<span class="attribute">border-top-color</span>: <span class="number">#ccc</span>;</div><div class="line">	<span class="attribute">border-right-color</span>: <span class="number">#bbb</span>;</div><div class="line">	<span class="attribute">border-bottom-color</span>: <span class="number">#aaa</span>;</div><div class="line">	<span class="attribute">border-left-color</span>: <span class="number">#999</span>;  </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
-<p>这里还比较简单，只有style的值比较多，不过常用的就是solid（实线）、dotted（点状线）、double（双实线）。</p>
+<h3 id="注意点-2"><a href="#注意点-2" class="headerlink" title="注意点"></a>注意点</h3><p>这里还比较简单，只有style的值比较多，不过常用的就是solid（实线）、dotted（点状线）、double（双实线）。</p>
 
       
     </div>
@@ -604,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#盒模型"><span class="nav-number">1.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型包含什么"><span class="nav-number">1.1.</span> <span class="nav-text">盒模型包含什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型是怎样的"><span class="nav-number">1.2.</span> <span class="nav-text">盒模型是怎样的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值"><span class="nav-number">1.3.</span> <span class="nav-text">数值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#外边距margin"><span class="nav-number">2.1.</span> <span class="nav-text">外边距margin</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意点"><span class="nav-number">2.1.2.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内边距"><span class="nav-number">2.2.</span> <span class="nav-text">内边距</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意点-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#边框"><span class="nav-number">2.3.</span> <span class="nav-text">边框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">语法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#盒模型"><span class="nav-number">1.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#盒模型包含什么"><span class="nav-number">1.1.</span> <span class="nav-text">盒模型包含什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#盒模型是怎样的"><span class="nav-number">1.2.</span> <span class="nav-text">盒模型是怎样的</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数值"><span class="nav-number">2.</span> <span class="nav-text">数值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#属性"><span class="nav-number">3.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#外边距margin"><span class="nav-number">3.1.</span> <span class="nav-text">外边距margin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">3.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点"><span class="nav-number">3.1.2.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内边距"><span class="nav-number">3.2.</span> <span class="nav-text">内边距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边框"><span class="nav-number">3.3.</span> <span class="nav-text">边框</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">注意点</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

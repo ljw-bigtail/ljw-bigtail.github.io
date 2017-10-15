@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="BigTail">
 <meta property="og:description" content="之前写过一片对于闭包的理解，感觉还是有些内容没有写到位，所以再添加一些想起来的内容。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T07:34:32.726Z">
+<meta property="og:updated_time" content="2017-10-15T08:06:39.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入闭包（优缺点）">
 <meta name="twitter:description" content="之前写过一片对于闭包的理解，感觉还是有些内容没有写到位，所以再添加一些想起来的内容。">
@@ -366,17 +366,17 @@
       
         <p>之前写过一片对于闭包的理解，感觉还是有些内容没有写到位，所以再添加一些想起来的内容。</p>
 <a id="more"></a>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ul>
 <li>灵活</li>
 <li>封装</li>
 </ul>
-<h4 id="灵活"><a href="#灵活" class="headerlink" title="灵活"></a>灵活</h4><p>经常会无意使用闭包，例如在函数内封装匿名函数。</p>
-<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>为了防止对变量的修改，封装在函数内部<code>(function(){/*声明*/})</code>，对这些变量的调用方法就只能用规定的方法。</p>
+<h2 id="灵活"><a href="#灵活" class="headerlink" title="灵活"></a>灵活</h2><p>经常会无意使用闭包，例如在函数内封装匿名函数。</p>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>为了防止对变量的修改，封装在函数内部<code>(function(){/*声明*/})</code>，对这些变量的调用方法就只能用规定的方法。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> _userId = <span class="number">123123</span>;</div><div class="line">    <span class="keyword">var</span> <span class="keyword">export</span> = &#123;&#125;;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">converter</span>(<span class="params">userId</span>) </span>&#123;</div><div class="line">    	<span class="keyword">return</span> +userId;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">export</span>.getUserId = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="keyword">return</span> converter(_userId);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">window</span>.export = <span class="keyword">export</span>;</div><div class="line">&#125;());</div><div class="line"><span class="comment">/*******************************************/</span></div><div class="line"><span class="keyword">export</span>.getUserId();  <span class="comment">//123123</span></div><div class="line"><span class="keyword">export</span>._userId;  <span class="comment">//undefined</span></div><div class="line"><span class="keyword">export</span>.converter;  <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>常见错误<br>循环闭包：给多个元素循环绑定事件，用for循环时，不会成功，因为当第一次执行时，i就已经变成最大值，所以不能成功绑定每个元素。<br>解决办法：用闭包方法，在for循环内使用立即执行函数，<code>!function(i){/*执行函数*/}(i);</code>。</p>
 </blockquote>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><ul>
 <li>空间浪费</li>
 <li>内存泄漏</li>
 <li>性能消耗</li>
@@ -426,8 +426,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/18/Ajax初识（ajax+http+json）/" rel="prev" title="Ajax初识">
-                Ajax初识 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/18/用字体替换icon/" rel="prev" title="用字体替换icon">
+                用字体替换icon <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -579,7 +579,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#灵活"><span class="nav-number">1.1.</span> <span class="nav-text">灵活</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装"><span class="nav-number">1.2.</span> <span class="nav-text">封装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">2.</span> <span class="nav-text">缺点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#优点"><span class="nav-number">1.</span> <span class="nav-text">优点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#灵活"><span class="nav-number">1.1.</span> <span class="nav-text">灵活</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装"><span class="nav-number">1.2.</span> <span class="nav-text">封装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#缺点"><span class="nav-number">2.</span> <span class="nav-text">缺点</span></a></li></ol></div>
             
 
           </div>

@@ -101,18 +101,18 @@
 
 
 
-<meta name="description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+<meta name="description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。 我认为，理解思路才是最重要的。 比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
 <meta name="keywords" content="JavaScript,jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery基础+++">
 <meta property="og:url" content="http://yoursite.com/2016/11/22/jQuery基础+++/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+<meta property="og:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。 我认为，理解思路才是最重要的。 比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T07:34:38.059Z">
+<meta property="og:updated_time" content="2017-10-15T08:34:47.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery基础+++">
-<meta name="twitter:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。我认为，理解思路才是最重要的。比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
+<meta name="twitter:description" content="到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。 我认为，理解思路才是最重要的。 比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······">
 
 
 
@@ -364,9 +364,11 @@
       
 
       
-        <p>到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。<br>我认为，理解思路才是最重要的。<br>比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······</p>
+        <p>到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。</p>
+<p>我认为，理解思路才是最重要的。</p>
+<p>比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······</p>
 <a id="more"></a>
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h3 id="显示和隐藏"><a href="#显示和隐藏" class="headerlink" title="显示和隐藏"></a>显示和隐藏</h3><ul>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><h2 id="显示和隐藏"><a href="#显示和隐藏" class="headerlink" title="显示和隐藏"></a>显示和隐藏</h2><ul>
 <li>隐藏元素，不仅仅是<code>display = none;</code>，还控制了各个属性（宽度、高度、透明度）。<br>参数可选，如果不填，就是直接隐藏，还可以填写 “fast” / “slow” 用来表示不同速度（200ms / 600ms）的隐藏动画，还可以直接填写时间数字，单位是毫秒。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//hide( option );</span></div><div class="line">hide( slow );</div><div class="line">hide( <span class="number">3000</span> );</div></pre></td></tr></table></figure>
@@ -377,38 +379,45 @@
 <p>Tips：组合使用，效果更好</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(“button”).hide(<span class="number">3000</span>).show(<span class="number">3000</span>);    <span class="comment">//先隐藏在显示</span></div><div class="line"></div><div class="line"><span class="comment">//反复推拉效果或闪烁效果······</span></div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$(“div”).hide(<span class="number">1000</span>).show(<span class="number">1000</span>);</div><div class="line">&#125;,<span class="number">2000</span>);</div></pre></td></tr></table></figure>
 <ul>
-<li>显示隐藏切换，toggle()。<br>方法监视元素是否是隐藏状态，如果是隐藏状态，点击后就执行show()；如果是显示状态，点击后执行hide()。</li>
+<li>显示隐藏切换，toggle()。</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">toggle( [ duration ],[ complete ] );  //切换方法的持续时间、动画执行完的回调方法</div><div class="line"></div><div class="line"><span class="comment">//原理</span></div><div class="line"><span class="function"><span class="title">if</span><span class="params">( display === true )</span></span>&#123;</div><div class="line">	$("elem").show();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>( <span class="attribute">display</span> === false )&#123;</div><div class="line">	$("elem").hide();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="上卷下拉"><a href="#上卷下拉" class="headerlink" title="上卷下拉"></a>上卷下拉</h3><ul>
-<li>下拉效果，控制元素的height在设定的时间内变大，还需要在css里设置<code>display:none;</code>，<br>参数与toggle的使用一样。但不填时，默认参数为400.以上两点是slide()与上面方法的区别。</li>
+<p>方法监视元素是否是隐藏状态，如果是隐藏状态，点击后就执行show()；如果是显示状态，点击后执行hide()。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">toggle( [ duration ],[ complete ] );  <span class="comment">//切换方法的持续时间、动画执行完的回调方法</span></div><div class="line"></div><div class="line"><span class="comment">//原理</span></div><div class="line"><span class="keyword">if</span>( display === <span class="literal">true</span> )&#123;</div><div class="line">	$(<span class="string">"elem"</span>).show();</div><div class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>( display === <span class="literal">false</span> )&#123;</div><div class="line">	$(<span class="string">"elem"</span>).hide();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="上卷下拉"><a href="#上卷下拉" class="headerlink" title="上卷下拉"></a>上卷下拉</h2><ul>
+<li><p>下拉效果，控制元素的height在设定的时间内变大，还需要在css里设置<code>display:none;</code>。</p>
+<p>参数与toggle的使用一样。但不填时，默认参数为400.以上两点是slide()与上面方法的区别。</p>
+</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideDown( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
 <ul>
-<li>上卷效果，基本与slideDown()的使用方法一致，但还可以设置缓动函数（运动速度的改变函数）。<br>仅调用jQuery时，缓动函数可以有两种：”swing”（默认），”linear”，还可以通过<a href="http://jqueryui.com/easing/" target="_blank" rel="external">调用插件</a>使用新的缓动函数。</li>
+<li>上卷效果，基本与slideDown()的使用方法一致，但还可以设置缓动函数（运动速度的改变函数）。</li>
 </ul>
+<p>仅调用jQuery时，缓动函数可以有两种：”swing”（默认），”linear”，还可以通过<a href="http://jqueryui.com/easing/" target="_blank" rel="external">调用插件</a>使用新的缓动函数。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideUp( [ duration ],[ easing ],[ complte ] )</div></pre></td></tr></table></figure>
 <ul>
 <li>上卷或下拉切换的方法，与toggle()方法类似。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slideToggle( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
-<h3 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h3><ul>
+<h2 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h2><ul>
 <li>淡出效果，根据时间控制元素的透明度（0% ~ 100%）。<br>参数与上面一致。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeOut( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
 <ul>
-<li>淡入效果，如果元素本身可见，不进行任何操作。<br>参数与上面一致。</li>
+<li>淡入效果，如果元素本身可见，不进行任何操作。</li>
 </ul>
+<p>参数与上面一致。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeIn( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
 <ul>
 <li>淡入淡出切换的方法，与toggle()方法类似。</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeToggle( [ duration ],[ complete ] );</div></pre></td></tr></table></figure>
 <ul>
-<li>可控的淡入效果，控制元素的透明度显示到指定的百分比。<br>参数中的opacity控制元素的透明度，其他与前面的一致。</li>
+<li>可控的淡入效果，控制元素的透明度显示到指定的百分比。</li>
 </ul>
+<p>参数中的opacity控制元素的透明度，其他与前面的一致。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeTo( [ duration ],[ opacity ],[ complete ] );</div></pre></td></tr></table></figure>
-<h3 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h3><h4 id="USE1"><a href="#USE1" class="headerlink" title="USE1"></a>USE1</h4><p>animate( properties , [ duration ] , [ easing ] , [ complete ] );<br>参数：属性，运动时间，运动变化关系，回调函数。</p>
+<h2 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h2><h3 id="USE1"><a href="#USE1" class="headerlink" title="USE1"></a>USE1</h3><p>animate( properties , [ duration ] , [ easing ] , [ complete ] );</p>
+<p>参数：属性，运动时间，运动变化关系，回调函数。</p>
 <blockquote>
 <p>以当前元素属性为动画起点，以参数中的属性为终点，以后面的数字为时间（ms）做变化，默认变化为线性关系。</p>
 </blockquote>
@@ -419,24 +428,29 @@
 <li>如果填写单位，格式为<code>{width: &quot;50px&quot;,height: &quot;10em&quot;}</code>;</li>
 <li>属性值还能使用”show”，”hide”，“toggle”，分别表示为”控制元素的显示”，”控制元素的显示”，“控制元素的显隐切换”。</li>
 </ol>
-<h4 id="USE2"><a href="#USE2" class="headerlink" title="USE2"></a>USE2</h4><p>animate( properties , options );<br>参数：属性，选项。</p>
+<h3 id="USE2"><a href="#USE2" class="headerlink" title="USE2"></a>USE2</h3><p>animate( properties , options );</p>
+<p>参数：属性，选项。</p>
 <blockquote>
 <p>实际上就是把后面的可选参数集合在一起了。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).animate(&#123;</div><div class="line">	width: <span class="string">'200px'</span>,</div><div class="line">    opacity: <span class="number">0</span></div><div class="line">&#125;,&#123;</div><div class="line">	duration: <span class="number">3000</span>,</div><div class="line">    spacialEasing: &#123;</div><div class="line">    	width: <span class="string">'linear'</span>,</div><div class="line">     	opacity: <span class="string">'easeOutBounce'</span></div><div class="line">    &#125;</div><div class="line">    complete: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    	<span class="built_in">console</span>.log(<span class="string">"Done"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h4 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h4><p>执行时，当前动画被暂停。</p>
+<h3 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h3><p>执行时，当前动画被暂停。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.stop();  <span class="comment">//停止当前动画（第一个）。只能再次启动动画。</span></div><div class="line">.stop(<span class="literal">true</span>);  <span class="comment">//停止全部动画（每一个）。</span></div><div class="line">.stop();  <span class="comment">//停止动画，直接显示第一个动画的目标。</span></div></pre></td></tr></table></figure>
-<h2 id="jQuery核心"><a href="#jQuery核心" class="headerlink" title="jQuery核心"></a>jQuery核心</h2><h3 id="遍历-each"><a href="#遍历-each" class="headerlink" title="遍历-each()"></a>遍历-each()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//遍历元素，然后进行回调操作。</span></div><div class="line">jQuery.each( array/object , callback );</div></pre></td></tr></table></figure>
+<h1 id="jQuery核心"><a href="#jQuery核心" class="headerlink" title="jQuery核心"></a>jQuery核心</h1><h2 id="遍历-each"><a href="#遍历-each" class="headerlink" title="遍历-each()"></a>遍历-each()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//遍历元素，然后进行回调操作。</span></div><div class="line">jQuery.each( array/object , callback );</div></pre></td></tr></table></figure>
 <p>callback中可以传进去两个参数：index，value。</p>
-<h3 id="查找-inArray"><a href="#查找-inArray" class="headerlink" title="查找-inArray()"></a>查找-inArray()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//传递一个值，在array中进行查找，可以在fromIndex中写搜索的起始索引。</span></div><div class="line">jQuery.inArray( value , array , [ fromIndex ] );</div></pre></td></tr></table></figure>
+<h2 id="查找-inArray"><a href="#查找-inArray" class="headerlink" title="查找-inArray()"></a>查找-inArray()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//传递一个值，在array中进行查找，可以在fromIndex中写搜索的起始索引。</span></div><div class="line">jQuery.inArray( value , array , [ fromIndex ] );</div></pre></td></tr></table></figure>
 <p> 还可以通过判断返回值<code>!= -1</code>来确定是否存在改值。</p>
-<h3 id="去空白-trim"><a href="#去空白-trim" class="headerlink" title="去空白-trim()"></a>去空白-trim()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'div'</span>));  <span class="comment">//去除div中的空格</span></div></pre></td></tr></table></figure>
+<h2 id="去空白-trim"><a href="#去空白-trim" class="headerlink" title="去空白-trim()"></a>去空白-trim()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.trim($(<span class="string">'div'</span>));  <span class="comment">//去除div中的空格</span></div></pre></td></tr></table></figure>
 <p>移除所有的换行符、空格、制表符，不移除字符串中间的空白字符</p>
-<h3 id="获取DOM-get"><a href="#获取DOM-get" class="headerlink" title="获取DOM-get()"></a>获取DOM-get()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).get(<span class="number">1</span>);  <span class="comment">//找到对应索引值的元素</span></div></pre></td></tr></table></figure>
+<h2 id="获取DOM-get"><a href="#获取DOM-get" class="headerlink" title="获取DOM-get()"></a>获取DOM-get()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).get(<span class="number">1</span>);  <span class="comment">//找到对应索引值的元素</span></div></pre></td></tr></table></figure>
 <p>从获取的元素中筛选出索引值与参数对应的元素，参数为负值时，表示倒数。</p>
-<h3 id="获取索引-index"><a href="#获取索引-index" class="headerlink" title="获取索引-index()"></a>获取索引-index()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>). index();  <span class="comment">//获取查找到元素的索引</span></div></pre></td></tr></table></figure>
-<p>参数没有时，获取第一个。<br>参数中填写获取元素的语句，可以是JS的，还可以是JQ的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>jQuery的基础就到这里了，目前的状态在会用、理解思路上。<br>暂时还没有时间看源码，以后用的多了再看。<br>jQuery确实方便，但是在更多时候，我认为原生更好用。<br>加油！！！</p>
+<h2 id="获取索引-index"><a href="#获取索引-index" class="headerlink" title="获取索引-index()"></a>获取索引-index()</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>). index();  <span class="comment">//获取查找到元素的索引</span></div></pre></td></tr></table></figure>
+<p>参数没有时，获取第一个。</p>
+<p>参数中填写获取元素的语句，可以是JS的，还可以是JQ的。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>jQuery的基础就到这里了，目前的状态在会用、理解思路上。</p>
+<p>暂时还没有时间看源码，以后用的多了再看。</p>
+<p>jQuery确实方便，但是在更多时候，我认为原生更好用。</p>
+<p>加油！！！</p>
 
       
     </div>
@@ -632,7 +646,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">1.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#显示和隐藏"><span class="nav-number">1.1.</span> <span class="nav-text">显示和隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上卷下拉"><span class="nav-number">1.2.</span> <span class="nav-text">上卷下拉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#淡入淡出"><span class="nav-number">1.3.</span> <span class="nav-text">淡入淡出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义动画"><span class="nav-number">1.4.</span> <span class="nav-text">自定义动画</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#USE1"><span class="nav-number">1.4.1.</span> <span class="nav-text">USE1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#USE2"><span class="nav-number">1.4.2.</span> <span class="nav-text">USE2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停止动画"><span class="nav-number">1.4.3.</span> <span class="nav-text">停止动画</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery核心"><span class="nav-number">2.</span> <span class="nav-text">jQuery核心</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历-each"><span class="nav-number">2.1.</span> <span class="nav-text">遍历-each()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找-inArray"><span class="nav-number">2.2.</span> <span class="nav-text">查找-inArray()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#去空白-trim"><span class="nav-number">2.3.</span> <span class="nav-text">去空白-trim()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取DOM-get"><span class="nav-number">2.4.</span> <span class="nav-text">获取DOM-get()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取索引-index"><span class="nav-number">2.5.</span> <span class="nav-text">获取索引-index()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动画"><span class="nav-number">1.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#显示和隐藏"><span class="nav-number">1.1.</span> <span class="nav-text">显示和隐藏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上卷下拉"><span class="nav-number">1.2.</span> <span class="nav-text">上卷下拉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#淡入淡出"><span class="nav-number">1.3.</span> <span class="nav-text">淡入淡出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义动画"><span class="nav-number">1.4.</span> <span class="nav-text">自定义动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#USE1"><span class="nav-number">1.4.1.</span> <span class="nav-text">USE1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#USE2"><span class="nav-number">1.4.2.</span> <span class="nav-text">USE2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#停止动画"><span class="nav-number">1.4.3.</span> <span class="nav-text">停止动画</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery核心"><span class="nav-number">2.</span> <span class="nav-text">jQuery核心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#遍历-each"><span class="nav-number">2.1.</span> <span class="nav-text">遍历-each()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找-inArray"><span class="nav-number">2.2.</span> <span class="nav-text">查找-inArray()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去空白-trim"><span class="nav-number">2.3.</span> <span class="nav-text">去空白-trim()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取DOM-get"><span class="nav-number">2.4.</span> <span class="nav-text">获取DOM-get()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取索引-index"><span class="nav-number">2.5.</span> <span class="nav-text">获取索引-index()</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
