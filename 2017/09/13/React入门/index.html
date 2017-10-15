@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|MONACO:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript,React," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="http://odmo6x3ig.bkt.clouddn.com/16-10-26/88276422-favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="React开发的入门与学习">
+<meta name="keywords" content="JavaScript,React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React入门">
+<meta property="og:url" content="http://yoursite.com/2017/09/13/React入门/index.html">
+<meta property="og:site_name" content="BigTail">
+<meta property="og:description" content="React开发的入门与学习">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/17-9-13/74724630.jpg">
+<meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/17-9-18/20600536.jpg">
+<meta property="og:updated_time" content="2017-10-15T07:34:38.507Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React入门">
+<meta name="twitter:description" content="React开发的入门与学习">
+<meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/17-9-13/74724630.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/13/React入门/"/>
+
+
+
+
+
+  <title>React入门 | BigTail</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BigTail</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Level-菜鸡</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/React入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陆家伟">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BigTail">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T00:00:00+08:00">
+                2017-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>React开发的入门与学习</p>
+<a id="more"></a>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>React是一个JavaScript库。</p>
+<p>React是一个用来构建界面的JavaScript库。</p>
+<p>React是一个使用JSX语法、状态机制、生命周期等功能的JavaScript库。</p>
+<hr>
+<p>使用React主要还是为了写组件，为了在下一个项目中使用到。难点在于数据流与组件之间的关系与影响。</p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>包括了如何开始项目与编辑项目</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>常见的方法有这么几种：第一个是使用官方出的create-react-app脚手架；第二个是在本地引入React的静态资源库，直接书写；第三种是自己组织项目架构然后在node中跑服务。</p>
+<h3 id="脚手架"><a href="#脚手架" class="headerlink" title="脚手架"></a>脚手架</h3><p>在node中引入脚手架：<code>yarn add create-react-app</code>，然后根据提示来即可。自带热更新！</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/17-9-13/74724630.jpg" alt="脚手架生成的目录"></p>
+<p>目录中src存放着组件，但是由于刚开始学习，思路还没有转换过来，我把文件按照css/js/img来划分的，这样并没有实现组件化。</p>
+<p>我想的合理的方法应该是把组件的css/js/img分开存放，再次调用的时候就能很方便的使用之前写的组件了。</p>
+<p>另，这个项目是拿npm跑的，并没有yarn的<code>yarn.lock</code>等文件。</p>
+<h3 id="静态资源库"><a href="#静态资源库" class="headerlink" title="静态资源库"></a>静态资源库</h3><p>在html文件中引入react.js、react-dom.jd、browser.js，然后就算是搭起了环境。没有热更新，但是可以通过其他中间件来实现。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line"> </div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</div><div class="line">    &lt;meta http-equiv=<span class="string">"X-UA-Compatible"</span> content=<span class="string">"ie=edge"</span>&gt;</div><div class="line">    &lt;title&gt;Document&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">    &lt;script src="https:/</span><span class="regexp">/cdn.bootcss.com/</span>react/<span class="number">15.6</span><span class="number">.1</span>/react.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">    &lt;script src="</span>https:<span class="comment">//cdn.bootcss.com/react/15.6.1/react-dom.js"&gt;&lt;/script&gt;</span></div><div class="line">    &lt;script src=<span class="string">"http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/head&gt;</span></div><div class="line"><span class="regexp"> </span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">    &lt;div id="reactContainer"&gt;&lt;/</span>div&gt;</div><div class="line">    &lt;script type=<span class="string">"text/babel"</span>&gt;</div><div class="line">        <span class="keyword">var</span>  Text = React.createClass(&#123;</div><div class="line">            render:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>)</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">Text</span>/&gt;</span></span>,<span class="built_in">document</span>.getElementById(<span class="string">"reactContainer"</span>));</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div><div class="line"> </div><div class="line">&lt;<span class="regexp">/html&gt;</span></div></pre></td></tr></table></figure>
+<p>需要注意的有以下几点：</p>
+<ul>
+<li>type = “text/babel”</li>
+<li>return的DOM需要包在一个标签里</li>
+<li>JSX语法</li>
+</ul>
+<h4 id="热更新的方法"><a href="#热更新的方法" class="headerlink" title="热更新的方法"></a>热更新的方法</h4><p>通过加入live-server中间件来实现自动更新。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">yarn add -g live-server</div><div class="line"></div><div class="line">live-server</div><div class="line">live-server --port=4000</div></pre></td></tr></table></figure>
+<h3 id="自组织"><a href="#自组织" class="headerlink" title="自组织"></a>自组织</h3><p>这个就比较复杂了，完全的自定目录结构。</p>
+<p>感觉不是很方便。</p>
+<h2 id="开发环境-Sublime"><a href="#开发环境-Sublime" class="headerlink" title="开发环境(Sublime)"></a>开发环境(Sublime)</h2><h3 id="HBuilder"><a href="#HBuilder" class="headerlink" title="HBuilder"></a>HBuilder</h3><p>没有对应插件，差评。</p>
+<h3 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h3><p>自带控制台，好评。</p>
+<h3 id="Sublime"><a href="#Sublime" class="headerlink" title="Sublime"></a>Sublime</h3><p>我安装了两个插件。</p>
+<ul>
+<li><code>jsformat</code> - 代码格式化</li>
+<li><code>Babel</code> - 代码高亮</li>
+</ul>
+<p>另：</p>
+<p>jsformat可以配置为保存时立即整理格式，需要在Settings-user中输入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;e4x&quot;: true,</div><div class="line">  &quot;format_on_save&quot;: true,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>babel可以设置为默认</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">View - Syntax - Open all with··· - Babel - Javascript(Babel)</div></pre></td></tr></table></figure>
+<h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><p>写React组件可以使用简单的dom来实现，但是想要做更多的交互效果，还是需要使用React提供的各个知识点。</p>
+<p>包括切换状态的State、组件外传入时使用的props、生命周期等。</p>
+<h2 id="State"><a href="#State" class="headerlink" title="State"></a>State</h2><p>使用State的前提自然是要设置初始化状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getInitialState()&#123;</div><div class="line">    return &#123;</div><div class="line">        stateName:false</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>初始化好之后，就需要在不同的情况下对State进行设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">this.setState(&#123;</div><div class="line">    stateName:!this.state.stateName</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h2><p>Props就是获取调用组件时传递的属性值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">let HelloBox=React.createClass(&#123;</div><div class="line">    render:function()&#123;</div><div class="line">        return &lt;div&gt;&#123;&apos;Hello &apos;+this.props.myattr&#125;&lt;/div&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">ReactDOM.render(&lt;HelloBox myattr=&quot;world&quot;/&gt;,document.getElementById(&quot;demo&quot;));</div></pre></td></tr></table></figure>
+<p>一般，使用props来传递类名、颜色、回调等信息。</p>
+<blockquote>
+<p>与State的区别在于Props在组件外进行修改，State在组件内部进行修改</p>
+</blockquote>
+<p>还可以设置默认值！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getDefaultProps：function()&#123;</div><div class="line">    return &#123;</div><div class="line">        propName: propValue</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="PropsTypes"><a href="#PropsTypes" class="headerlink" title="PropsTypes"></a>PropsTypes</h3><p>Props的属性验证。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">proTypes:&#123;</div><div class="line">    propName: React.PropTypes.string.isRequired</div><div class="line">&#125;</div><div class="line"></div><div class="line">//除了字符串验证，还有array、bool、func、number、object、symbol等等</div></pre></td></tr></table></figure>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>实例化阶段 —–&gt; 活动阶段 —–&gt; 销毁阶段</p>
+<p>正在实例化时：<code>componentWillMount()</code></p>
+<p>实例化完成：<code>componentDidMount()</code></p>
+<p>正在被重新渲染时：<code>componentWillUpdate(object nextProps, object nextState)</code></p>
+<p>重新渲染完成：<code>componentDidUpdate(object prevProps, object prevState)</code></p>
+<p>正在被移除：<code>componentWillUnmount()</code></p>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</div><div class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</div><div class="line">    &lt;title&gt;ㄟ( ▔, ▔ )ㄏ  　&lt;/title&gt;</div><div class="line">    &lt;script src=&quot;https://cdn.bootcss.com/react/15.6.1/react.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=&quot;https://cdn.bootcss.com/react/15.6.1/react-dom.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=&quot;http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;script type=&quot;text/babel&quot;&gt;</div><div class="line">      var Hello = React.createClass(&#123;</div><div class="line">          getInitialState:function()&#123;</div><div class="line">            return &#123;</div><div class="line">              opacity:1.0,</div><div class="line">              left:0,</div><div class="line">              top:0</div><div class="line">            &#125;</div><div class="line">          &#125;,</div><div class="line">          componentDidMount:function()&#123;</div><div class="line">            setInterval(function()&#123;</div><div class="line">              var opacity = this.state.opacity;</div><div class="line">              var left = this.state.left;</div><div class="line">              opacity -= 0.005;</div><div class="line">              if(opacity&lt;0.1)&#123;</div><div class="line">                opacity = 1;</div><div class="line">              &#125;</div><div class="line">              left += 1;</div><div class="line">              if( left &gt;= document.body.clientWidth )&#123;</div><div class="line">                left = 0;</div><div class="line">              &#125;</div><div class="line">              this.setState(&#123;</div><div class="line">                opacity: opacity,</div><div class="line">                left: left</div><div class="line">              &#125;);</div><div class="line">            &#125;.bind(this),10);</div><div class="line">          &#125;,</div><div class="line">          render:function()&#123;</div><div class="line">            return (</div><div class="line">              &lt;div style=&#123;&#123;</div><div class="line">                opacity:this.state.opacity,</div><div class="line">                left:this.state.left+&apos;px&apos;,</div><div class="line">                position:&quot;fixed&quot;</div><div class="line">              &#125;&#125;&gt;</div><div class="line">                &#123;this.props.name&#125;</div><div class="line">              &lt;/div&gt;</div><div class="line">            )</div><div class="line">          &#125;,</div><div class="line">      &#125;);</div><div class="line">      ReactDOM.render(</div><div class="line">          &lt;Hello name=&quot;world&quot; name=&apos;Demo&apos;/&gt;,</div><div class="line">          document.getElementById(&apos;demo&apos;)</div><div class="line">      )</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h2 id="子属性"><a href="#子属性" class="headerlink" title="子属性"></a>子属性</h2><p>this.props.chilren的使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var List=React.createClass(&#123; </div><div class="line">    render:function()&#123; </div><div class="line">        return(</div><div class="line">            &lt;ul&gt;&#123; </div><div class="line">                React.Children.map(this.props.children,function(e)&#123; </div><div class="line">                    return(&lt;li&gt;&#123;e&#125;&lt;/li&gt;);</div><div class="line">                &#125;)</div><div class="line">            &#125;&lt;/ul&gt;</div><div class="line">        ) </div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">ReactDOM.render(</div><div class="line">&lt;List&gt;</div><div class="line">    &lt;span&gt;1&lt;/span&gt;</div><div class="line">    &lt;span&gt;2&lt;/span&gt;</div><div class="line">    &lt;span&gt;3&lt;/span&gt;</div><div class="line">&lt;/List&gt;, document.getElementById(&quot;demo&quot;) );</div></pre></td></tr></table></figure>
+<p>实际上是把组件中的dom作为一个数组存放，在上面代码中，this.props.children的值为：<br><img src="http://odmo6x3ig.bkt.clouddn.com/17-9-18/20600536.jpg" alt="console.log(this.props.children)"></p>
+<p>另，如果没有子节点，返回<code>undfined</code>;如果只有一个子节点，返回Object的值。</p>
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><p>通过标记来获取真实的dom节点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var InputBox = React.createClass(&#123;</div><div class="line">    handleClick:function()&#123;</div><div class="line">        this.refs.input.focus();</div><div class="line">    &#125;,</div><div class="line">    render:function()&#123;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;input type=&quot;text&quot; ref=&quot;input&quot; /&gt;</div><div class="line">                &lt;input type=&quot;button&quot; onClick=&#123;this.handleClick&#125;/&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">    &lt;InputBox/&gt;,</div><div class="line">    document.getElementById(&quot;demo&quot;)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h2><p>都说Fetch要秒杀Ajax，所以这里写个fetch的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">handleClick() &#123;</div><div class="line">	const data = &#123;</div><div class="line">	    data1: &quot;1&quot;</div><div class="line">	&#125;;</div><div class="line">	const url = &quot;/api/getUserList&quot;;</div><div class="line">	fetch(url, &#123;</div><div class="line">			method: &quot;POST&quot;,</div><div class="line">			headers: &#123;</div><div class="line">				&apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;</div><div class="line">			&#125;,</div><div class="line">			body: data</div><div class="line">		&#125;)</div><div class="line">		.then(response =&gt; response.json())</div><div class="line">		.then(data =&gt; console.log(data))</div><div class="line">		.catch(e =&gt; console.log(&quot;报错信息：&quot;, e))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/31/React+Node In YSP/" rel="next" title="React+Node In YSP">
+                <i class="fa fa-chevron-left"></i> React+Node In YSP
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/avatar.jpg"
+              alt="陆家伟" />
+          
+            <p class="site-author-name" itemprop="name">陆家伟</p>
+            <p class="site-description motion-element" itemprop="description">正在学习前端，为着目标奋斗！</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ljw-bigtail" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ljwbigtail" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>Weibo</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">2.1.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#脚手架"><span class="nav-number">2.1.1.</span> <span class="nav-text">脚手架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源库"><span class="nav-number">2.1.2.</span> <span class="nav-text">静态资源库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#热更新的方法"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">热更新的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自组织"><span class="nav-number">2.1.3.</span> <span class="nav-text">自组织</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发环境-Sublime"><span class="nav-number">2.2.</span> <span class="nav-text">开发环境(Sublime)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HBuilder"><span class="nav-number">2.2.1.</span> <span class="nav-text">HBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VS-Code"><span class="nav-number">2.2.2.</span> <span class="nav-text">VS Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublime"><span class="nav-number">2.2.3.</span> <span class="nav-text">Sublime</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发"><span class="nav-number">3.</span> <span class="nav-text">开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#State"><span class="nav-number">3.1.</span> <span class="nav-text">State</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Props"><span class="nav-number">3.2.</span> <span class="nav-text">Props</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PropsTypes"><span class="nav-number">3.2.1.</span> <span class="nav-text">PropsTypes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">3.3.</span> <span class="nav-text">生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo"><span class="nav-number">3.3.1.</span> <span class="nav-text">Demo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子属性"><span class="nav-number">3.4.</span> <span class="nav-text">子属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ref"><span class="nav-number">3.5.</span> <span class="nav-text">ref</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax"><span class="nav-number">3.6.</span> <span class="nav-text">Ajax</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陆家伟</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

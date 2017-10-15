@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="BigTail">
 <meta property="og:description" content="我认为，闭包就是去读取函数外（另一个函数内）的变量。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-11-06T06:09:58.847Z">
+<meta property="og:updated_time" content="2017-10-15T07:34:33.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解闭包（Closure）">
 <meta name="twitter:description" content="我认为，闭包就是去读取函数外（另一个函数内）的变量。">
@@ -340,16 +340,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/20/理解闭包（Closuce）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/理解闭包（Closuce）/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -387,23 +377,23 @@
 <li>在函数内部可以直接使用全局变量</li>
 <li>在函数外部无法读取内部变量</li>
 </ul>
-<p>还有一点</p>
-<ul>
-<li><p>如果在函数内部使用变量而未声明，则变量为全局变量。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	a = <span class="number">1</span>; </div><div class="line">&#125;</div><div class="line">test();</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p> 闭包就是去读取函数外部（另一个函数内）的变量。</p>
-<p> 就好像是为了解决可用作用域与逻辑中作用域不同的一种办法。</p>
-<p> 按照代码的逻辑理解，闭包就像是把函数套着使用（在函数内部有另一个函数），因为很多时候为了明确的实现逻辑，我们会把详细的步骤圈起来，然后在全局环境下使用（详细步骤太复杂，如果我们不用闭包的思想（就像人不呼吸一样），思路就会乱掉）。</p>
-<p> 我想起了一个笑话：</p>
+<blockquote>
+<p>还有一点，如果在函数内部使用变量而未声明，则变量为全局变量。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    a = <span class="number">1</span>; </div><div class="line">&#125;</div><div class="line">test();</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div></pre></td></tr></table></figure>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包就是去读取函数外部（另一个函数内）的变量。</p>
+<p>就好像是为了解决可用作用域与逻辑中作用域不同的一种办法。</p>
+<p>按照代码的逻辑理解，闭包就像是把函数套着使用（在函数内部有另一个函数），因为很多时候为了明确的实现逻辑，我们会把详细的步骤圈起来，然后在全局环境下使用（详细步骤太复杂，如果我们不用闭包的思想（就像人不呼吸一样），思路就会乱掉）。</p>
+<p>我想起了一个笑话：</p>
 <blockquote>
 <p>大象进冰箱，分几步？<br>1.开门<br>2.把大象塞进去<br>3.关门</p>
 </blockquote>
-<p>我们不会去深究到底是怎么做的，我们需要的是实现的流程（逻辑）。<br>闭包就实现了这个。</p>
+<p>我们不会去深究到底是怎么做的，我们需要的是实现的流程（逻辑）。</p>
+<p>闭包就实现了这个。</p>
 <p>在实际开发中，我们没有刻意去强调闭包的概念，但是我们一直使用它，就像人离不开空气，鱼离不开水一样。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p><a src="http://kb.cnblogs.com/page/110782/">In computer science, a closure is a function together with a referencing environment for the nonlocal names (free variables) of that function.</a><br>在计算机科学中，闭包是一个函数，连同一个引用环境的非局部名称（自由变量）的函数。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><a href="http://kb.cnblogs.com/page/110782/" target="_blank" rel="external">In computer science, a closure is a function together with a referencing environment for the nonlocal names (free variables) of that function.</a></p>
+<blockquote>
+<p>在计算机科学中，闭包是一个函数，连同一个引用环境的非局部名称（自由变量）的函数。</p>
 </blockquote>
 <p>我认为：闭包是一种思想，解决了实际变量作用域与逻辑变量作用域有差别的问题，我们不需要追求闭包到底是什么，只是需要理解并使用闭包的思想。</p>
 
@@ -469,25 +459,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/20/理解闭包（Closuce）/"
-     data-title="理解闭包（Closure）"
-     data-content=""
-     data-url="http://yoursite.com/2016/09/20/理解闭包（Closuce）/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -498,10 +469,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/09/20/理解闭包（Closuce）/"
-           data-title="理解闭包（Closure）" data-url="http://yoursite.com/2016/09/20/理解闭包（Closuce）/">
-      </div>
     
   </div>
 
@@ -553,7 +520,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -564,7 +531,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -575,7 +542,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -769,41 +736,25 @@
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"ljw-bigtail"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-      
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.2"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+
+
+
+	
+
+
+
+
+
   
 
 
 
 
 
-
-
-
+  
 
 
 

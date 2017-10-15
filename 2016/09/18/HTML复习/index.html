@@ -101,20 +101,20 @@
 
 
 
-<meta name="description" content="罗列能用到的HTML知识，包括部分标签、属性、事件。">
+<meta name="description" content="罗列一下可能用到的HTML知识， 包括标签、属性、事件等···">
 <meta name="keywords" content="HTML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML 复习">
 <meta property="og:url" content="http://yoursite.com/2016/09/18/HTML复习/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="罗列能用到的HTML知识，包括部分标签、属性、事件。">
+<meta property="og:description" content="罗列一下可能用到的HTML知识， 包括标签、属性、事件等···">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-17/10642533.jpg">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-18/79856766.jpg">
-<meta property="og:updated_time" content="2016-11-06T05:54:08.908Z">
+<meta property="og:updated_time" content="2017-10-15T07:34:36.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML 复习">
-<meta name="twitter:description" content="罗列能用到的HTML知识，包括部分标签、属性、事件。">
+<meta name="twitter:description" content="罗列一下可能用到的HTML知识， 包括标签、属性、事件等···">
 <meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-17/10642533.jpg">
 
 
@@ -343,16 +343,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/18/HTML复习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/18/HTML复习/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -377,32 +367,192 @@
       
 
       
-        <p>罗列能用到的HTML知识，包括部分标签、属性、事件。</p>
+        <p>罗列一下可能用到的HTML知识，</p>
+<p>包括标签、属性、事件等···</p>
 <a id="more"></a>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-17/10642533.jpg" class="full-image" title="HTML复习.mind"></p>
-<h3 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h3><h4 id="发展过程"><a href="#发展过程" class="headerlink" title="发展过程"></a>发展过程</h4><p>过去用table系布局，由于难以维护，所以改用div布局。但是由于页面内的 div 太多，而且在控制div时，使用了很多class，非常混乱，所以现在W3CSchool在推广语义化（把div换成附加含义的新标签）。</p>
-<h4 id="新结构"><a href="#新结构" class="headerlink" title="新结构"></a>新结构</h4><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-18/79856766.jpg" title="语义化结构图"></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><h2 id="基本标签"><a href="#基本标签" class="headerlink" title="基本标签"></a>基本标签</h2><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-17/10642533.jpg" class="full-image" title="HTML复习.mind"></p>
+<h2 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h2><h3 id="发展过程"><a href="#发展过程" class="headerlink" title="发展过程"></a>发展过程</h3><p>旧网站常用<code>table</code>布局（我猜测可能是因为Dreamweaver），但是这种DOM经常难以实现设计稿，所以，现在的网站大多改用<code>div</code>布局。</p>
+<p>为了实现效果，页面内会出现大量<code>div</code>，由于<code>div</code>数量太多、使用大量class等方法导致源码非常混乱，不方便维护。</p>
+<p>所以，HTML的语义化才会作为一个最最基本的思想，融入到代码中。</p>
+<h3 id="什么是语义化"><a href="#什么是语义化" class="headerlink" title="什么是语义化"></a>什么是语义化</h3><p>说白了就是把原来难以区分的标签用各种新标签去代替。</p>
+<p>为了区分原来的标签，大家会使用注释，现在的标签省去了注释，以英文单词实现了最基本的结构。</p>
+<h3 id="新结构"><a href="#新结构" class="headerlink" title="新结构"></a>新结构</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-18/79856766.jpg" alt="语义化结构图"></p>
 <ul>
-<li>header标签：理解为页眉或者标题栏，用来放置选项、搜索框等</li>
-<li>nav标签：理解为导航栏，用来放置跳转的信息（页面主要位置的跳转）</li>
-<li>article标签：理解为拥有完整结构的独立部分，里面可以放置新的一整套结构（header、footer等），用来显示一篇文章、一个信息栏、一套按钮等</li>
-<li>section标签：理解为文章的一节（eg:包含h3标签+p标签）， 用来显示文章拥有子标题的部分内容（不只一段）</li>
-<li>aside标签：理解为附加信息栏，用来显示文章的作者等信息，或者显示侧边栏（常见）、侧边导航、广告等</li>
-<li>footer标签：理解为页脚，用来显示页面信息，版权，友情连接等信息</li>
+<li><code>header</code>标签：理解为页眉或者标题栏，用来放置选项、搜索框等</li>
+<li><code>nav</code>标签：理解为导航栏，用来放置跳转的信息（页面主要位置的跳转）</li>
+<li><code>article</code>标签：理解为拥有完整结构的独立部分，里面可以放置新的一整套结构（<code>header</code>、<code>footer</code>等），用来显示一篇文章、一个信息栏、一套按钮等</li>
+<li><code>section</code>标签：理解为文章的一节（eg:包含<code>h3</code>标签+<code>p</code>标签）， 用来显示文章拥有子标题的部分内容（不只一段）</li>
+<li><code>aside</code>标签：理解为附加信息栏，用来显示文章的作者等信息，或者显示侧边栏（常见）、侧边导航、广告等</li>
+<li><code>footer</code>标签：理解为页脚，用来显示页面信息，版权，友情连接等信息</li>
 </ul>
 <hr>
 <ul>
-<li>group标签：当不只有一个h1~h6标签时，要把这几个标题标签都放进hgroup标签内</li>
-<li>time标签：用来显示时间，便于搜索引擎搜索</li>
-<li>mark标签：用来显示突出的文本</li>
-<li>figure标签：用来包含独立的流内容（照片，代码等）</li>
-<li>figcaption标签：用来显示figure的标题，放在figure标签内部，可以再开头或者结尾</li>
+<li><code>group</code>标签：当不只有一个<code>h1</code>~<code>h6</code>标签时，要把这几个标题标签都放进<code>hgroup</code>标签内</li>
+<li><code>time</code>标签：用来显示时间，便于搜索引擎搜索</li>
+<li><code>mark</code>标签：用来显示突出的文本</li>
+<li><code>figure</code>标签：用来包含独立的流内容（照片，代码等）</li>
+<li><code>figcaption</code>标签：用来显示<code>figure</code>的标题，放在<code>figure</code>标签内部，可以再开头或者结尾</li>
 </ul>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">常见属性 | 作用效果</div><div class="line">------- | ---------------------</div><div class="line">class   | 规定元素的一个或多个类名</div><div class="line">id      | 规定元素的唯一 id</div><div class="line">style   | 规定元素的行内 CSS 样式</div><div class="line">title   | 规定有关元素的额外信息</div></pre></td></tr></table></figure>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="window事件"><a href="#window事件" class="headerlink" title="window事件"></a>window事件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">常见事件   | 作用条件</div><div class="line">--------- | -----------------------</div><div class="line">onload    |	页面结束加载之后触发</div><div class="line">onerror	  | 在错误发生时运行的脚本</div><div class="line">onoffline | 当文档离线时运行的脚本</div><div class="line">onunload  | 一旦页面已下载时触发</div></pre></td></tr></table></figure>
-<h3 id="Mouse事件"><a href="#Mouse事件" class="headerlink" title="Mouse事件"></a>Mouse事件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">常见事件      | 作用条件</div><div class="line">------------ | -----------------------------</div><div class="line">onmousedown  | 元素上按下鼠标按钮时触发。</div><div class="line">onmouseup    | 元素上释放鼠标按钮时触发。</div><div class="line">onclick      | 元素上发生鼠标点击时触发。</div><div class="line">------------ | -----------------------------</div><div class="line">onmousemove  | 鼠标指针移动到元素上时触发。</div><div class="line">onmouseover  | 当鼠标指针移动到元素上时触发。</div><div class="line">onmouseout   | 鼠标指针移出元素时触发。</div><div class="line">------------ | -----------------------------</div><div class="line">onmousewheel | 当鼠标滚轮正在被滚动时运行的脚本。</div><div class="line">onscroll     | 当元素滚动条被滚动时运行的脚本。</div></pre></td></tr></table></figure>
-<h3 id="KeyBoard事件"><a href="#KeyBoard事件" class="headerlink" title="KeyBoard事件"></a>KeyBoard事件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">常见事件    | 作用条件</div><div class="line">---------- | ------------------</div><div class="line">onkeydown  | 在用户按下按键时触发</div><div class="line">onkeypress | 在用户敲击按钮时触发</div><div class="line">onkeyup    | 当用户释放按键时触发</div></pre></td></tr></table></figure>
-<h3 id="Form事件"><a href="#Form事件" class="headerlink" title="Form事件"></a>Form事件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">常见事件     | 作用条件</div><div class="line">----------- | ---------------------------</div><div class="line">onblur      | 元素失去焦点时运行的脚本</div><div class="line">onfocus     | 元素获得焦点时运行的脚本</div><div class="line">----------- | ---------------------------</div><div class="line">onchange    | 在元素值被改变时运行的脚本</div><div class="line">onforminput | 当表单获得用户输入时运行的脚本</div><div class="line">onsubmit    | 在提交表单时触发</div></pre></td></tr></table></figure>
+<h1 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h1><p>常见的属性如下所示，不同的标签有着不用的属性，例如：value、placeholder、disabled等。另外，在必要的时候我们可以自定义属性（语法为<code>data-name</code>）来帮助操作。</p>
+<table>
+<thead>
+<tr>
+<th>常见属性</th>
+<th>作用效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>规定元素的一个或多个类名</td>
+</tr>
+<tr>
+<td>id</td>
+<td>规定元素的唯一 id</td>
+</tr>
+<tr>
+<td>style</td>
+<td>规定元素的行内 CSS 样式</td>
+</tr>
+<tr>
+<td>title</td>
+<td>规定有关元素的额外信息</td>
+</tr>
+</tbody>
+</table>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><p>在不同的情况下可以触发相应的方法。</p>
+<h2 id="window事件"><a href="#window事件" class="headerlink" title="window事件"></a>window事件</h2><table>
+<thead>
+<tr>
+<th>常见事件</th>
+<th>作用条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onload</td>
+<td>页面结束加载之后触发</td>
+</tr>
+<tr>
+<td>onerror</td>
+<td>在错误发生时运行的脚本</td>
+</tr>
+<tr>
+<td>onoffline</td>
+<td>当文档离线时运行的脚本</td>
+</tr>
+<tr>
+<td>onunload</td>
+<td>一旦页面已下载时触发</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Mouse事件"><a href="#Mouse事件" class="headerlink" title="Mouse事件"></a>Mouse事件</h2><table>
+<thead>
+<tr>
+<th>常见事件</th>
+<th>作用条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onmousedown</td>
+<td>元素上按下鼠标按钮时触发</td>
+</tr>
+<tr>
+<td>onmouseup</td>
+<td>元素上释放鼠标按钮时触发</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>元素上发生鼠标点击时触发</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标指针移动到元素上时触发</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>当鼠标指针移动到元素上时触发</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标指针移出元素时触发</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onmousewheel</td>
+<td>当鼠标滚轮正在被滚动时运行的脚本</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>当元素滚动条被滚动时运行的脚本</td>
+</tr>
+</tbody>
+</table>
+<h2 id="KeyBoard事件"><a href="#KeyBoard事件" class="headerlink" title="KeyBoard事件"></a>KeyBoard事件</h2><table>
+<thead>
+<tr>
+<th>常见事件</th>
+<th>作用条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onkeydown</td>
+<td>在用户按下按键时触发</td>
+</tr>
+<tr>
+<td>onkeypress</td>
+<td>在用户敲击按钮时触发</td>
+</tr>
+<tr>
+<td>onkeyup</td>
+<td>当用户释放按键时触发</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Form事件"><a href="#Form事件" class="headerlink" title="Form事件"></a>Form事件</h2><table>
+<thead>
+<tr>
+<th>常见事件</th>
+<th>作用条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onblur</td>
+<td>元素失去焦点时运行的脚本</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>元素获得焦点时运行的脚本</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>onchange</td>
+<td>在元素值被改变时运行的脚本</td>
+</tr>
+<tr>
+<td>onforminput</td>
+<td>当表单获得用户输入时运行的脚本</td>
+</tr>
+<tr>
+<td>onsubmit</td>
+<td>在提交表单时触发</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -464,25 +614,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/18/HTML复习/"
-     data-title="HTML 复习"
-     data-content=""
-     data-url="http://yoursite.com/2016/09/18/HTML复习/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -493,10 +624,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/09/18/HTML复习/"
-           data-title="HTML 复习" data-url="http://yoursite.com/2016/09/18/HTML复习/">
-      </div>
     
   </div>
 
@@ -548,7 +675,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -559,7 +686,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -570,7 +697,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -619,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标签"><span class="nav-number">1.</span> <span class="nav-text">标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本标签"><span class="nav-number">1.1.</span> <span class="nav-text">基本标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语义化"><span class="nav-number">1.2.</span> <span class="nav-text">语义化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发展过程"><span class="nav-number">1.2.1.</span> <span class="nav-text">发展过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">新结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">3.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#window事件"><span class="nav-number">3.1.</span> <span class="nav-text">window事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mouse事件"><span class="nav-number">3.2.</span> <span class="nav-text">Mouse事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KeyBoard事件"><span class="nav-number">3.3.</span> <span class="nav-text">KeyBoard事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Form事件"><span class="nav-number">3.4.</span> <span class="nav-text">Form事件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标签"><span class="nav-number">1.</span> <span class="nav-text">标签</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本标签"><span class="nav-number">1.1.</span> <span class="nav-text">基本标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语义化"><span class="nav-number">1.2.</span> <span class="nav-text">语义化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发展过程"><span class="nav-number">1.2.1.</span> <span class="nav-text">发展过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是语义化"><span class="nav-number">1.2.2.</span> <span class="nav-text">什么是语义化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新结构"><span class="nav-number">1.2.3.</span> <span class="nav-text">新结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件"><span class="nav-number">3.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#window事件"><span class="nav-number">3.1.</span> <span class="nav-text">window事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mouse事件"><span class="nav-number">3.2.</span> <span class="nav-text">Mouse事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KeyBoard事件"><span class="nav-number">3.3.</span> <span class="nav-text">KeyBoard事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Form事件"><span class="nav-number">3.4.</span> <span class="nav-text">Form事件</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -764,41 +891,25 @@
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"ljw-bigtail"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-      
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.2"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+
+
+
+	
+
+
+
+
+
   
 
 
 
 
 
-
-
-
+  
 
 
 

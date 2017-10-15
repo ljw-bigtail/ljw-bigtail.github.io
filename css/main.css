@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #67124d;
+  background: #7d1fc1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1940,20 +1940,25 @@ pre .javascript .function {
 .footer {
   font-size: 14px;
   color: #999;
+  background: rgba(200,200,200,0.5);
 }
 .footer img {
   border: none;
 }
-.footer-inner {
+.footer-inner,
+.copyright {
   text-align: center;
+  line-height: 50px;
 }
 .with-love {
   display: inline-block;
   margin: 0 5px;
+  color: #ff2a2a;
 }
 .powered-by,
-.theme-info {
-  display: inline-block;
+.theme-info,
+.post-meta-divider {
+  display: none;
 }
 .cc-license {
   margin-top: 10px;

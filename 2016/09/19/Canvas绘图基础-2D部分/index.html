@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Canvas,HTML," />
+  <meta name="keywords" content="Canvas," />
 
 
 
@@ -101,19 +101,19 @@
 
 
 
-<meta name="description" content="Canvas超级有意思，从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
-<meta name="keywords" content="Canvas,HTML">
+<meta name="description" content="Canvas超级有意思， 从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
+<meta name="keywords" content="Canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Canvas绘图基础-2D部分">
 <meta property="og:url" content="http://yoursite.com/2016/09/19/Canvas绘图基础-2D部分/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="Canvas超级有意思，从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
+<meta property="og:description" content="Canvas超级有意思， 从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-18/85187341.jpg">
-<meta property="og:updated_time" content="2016-11-06T06:38:14.809Z">
+<meta property="og:updated_time" content="2017-10-15T07:34:38.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Canvas绘图基础-2D部分">
-<meta name="twitter:description" content="Canvas超级有意思，从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
+<meta name="twitter:description" content="Canvas超级有意思， 从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)">
 <meta name="twitter:image" content="http://odmo6x3ig.bkt.clouddn.com/16-9-18/85187341.jpg">
 
 
@@ -342,16 +342,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/09/19/Canvas绘图基础-2D部分/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/19/Canvas绘图基础-2D部分/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -376,71 +366,123 @@
       
 
       
-        <p>Canvas超级有意思，从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)</p>
+        <p>Canvas超级有意思，</p>
+<p>从最开始的线条，到后面优秀的动画、游戏，都可以用Canvas实现，这应该是WebAPP的趋势吧。(☆▽☆)</p>
 <a id="more"></a>
-<h2 id="基本的概念"><a href="#基本的概念" class="headerlink" title="基本的概念"></a>基本的概念</h2><h3 id="Canvas元素"><a href="#Canvas元素" class="headerlink" title="Canvas元素"></a>Canvas元素</h3><p>HTML5的新标签，可以通过JavaScript动态绘制实现各种图形。 </p>
-<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>IE 9+、FF 1.5+、Safari 2+、Opera 9+、Chrome</p>
-<ul>
-<li>如果担心浏览器到底是否支持Canvas，可以通过以下代码判定是否可以获取绘图环境，再进行绘制。</li>
-</ul>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="Canvas元素"><a href="#Canvas元素" class="headerlink" title="Canvas元素"></a>Canvas元素</h2><p>HTML5的新标签，可以通过JavaScript动态绘制实现各种图形。 </p>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p>IE 9+、FF 1.5+、Safari 2+、Opera 9+、Chrome</p>
+<blockquote>
+<p>如果担心浏览器到底是否支持Canvas，可以通过以下代码判定是否可以获取绘图环境，再进行绘制。</p>
+</blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line"><span class="keyword">if</span>(canvas.getContext)&#123;</div><div class="line">	<span class="keyword">var</span> context = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h3><p>Canvas包含几组API：2D上下文，文本API，WebGL（3D环境）等。</p>
-<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>1.设置 <canvas\>的width和height值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id = <span class="string">"canvas"</span> width = <span class="string">"400px"</span> height=<span class="string">"400px"</span>&gt;</div><div class="line">	浏览器不支持Canvas。<span class="comment">//浏览器不支持时显示这里的文本</span></div><div class="line">&lt;<span class="regexp">/canvas&gt;</span></div></pre></td></tr></table></figure></canvas\></p>
-<p>2.<canvas\>还支持CSS样式，一般用border把Canvas圈出来，如果不添加CSS时则与<div\>一样，在网页中看不到。<br>3.想要在Canvas上绘制，就必须要得到绘制环境（绘图上下文）<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var canvas = document.getElementById(&quot;canvas&quot;);//获取标签</div><div class="line">var context = canvas.getContext(&quot;2d&quot;);</div><div class="line">//在上面兼容性里有更详细的代码。</div></pre></td></tr></table></figure></div\></canvas\></p>
-<p>4.准备就绪，就可以开始绘制了。</p>
-<h2 id="2D绘制"><a href="#2D绘制" class="headerlink" title="2D绘制"></a>2D绘制</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>1.填充（fillStyle）：用指定的样式填充图形<br>2.描边（strokeStyle）：在图形边缘划线</p>
+<h2 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h2><p>Canvas包含几组API：2D上下文，文本API，WebGL（3D环境）等。</p>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><ol>
+<li>设置<code>&lt;canvas&gt;</code>的width和height值；</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span> = <span class="string">"canvas"</span> <span class="attr">width</span> = <span class="string">"400px"</span> <span class="attr">height</span>=<span class="string">"400px"</span>&gt;</span></div><div class="line">	浏览器不支持Canvas。</div><div class="line">	浏览器不支持时显示这里的文本。</div><div class="line"><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li><code>&lt;canvas&gt;</code>还支持CSS样式，一般用border把Canvas圈出来，如果不添加CSS时则与<div\>一样，在网页中看不到；</div\></li>
+<li>想要在Canvas上绘制，就必须要得到绘制环境（绘图上下文）；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//在上面兼容性里有更详细的代码。 </div><div class="line">var canvas = document.getElementById(&quot;canvas&quot;);//获取标签</div><div class="line">var context = canvas.getContext(&quot;2d&quot;);</div></pre></td></tr></table></figure>
+<ol>
+<li>准备就绪，就可以开始绘制了。</li>
+</ol>
+<h1 id="2D绘制"><a href="#2D绘制" class="headerlink" title="2D绘制"></a>2D绘制</h1><p>绘制过程中需要使用方法来绘制线条、图形，而这些的限制规则是各个形状对应的属性。</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><ol>
+<li>填充（fillStyle）：用指定的样式填充图形；</li>
+<li>描边（strokeStyle）：在图形边缘划线；</li>
+</ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">context.fillStyle = color;</div><div class="line">context.strokeStyle = color;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>样式：可以是颜色（CSS允许的各种形式都可以，例如颜色名、十六进制码、rgba等）、渐变（线性渐变、径向渐变）、图像（截取的图片、加载的图片）</p>
+<p>样式：可以是颜色（CSS允许的各种形式都可以，例如颜色名、十六进制码、rgba等）、渐变（线性渐变、径向渐变）、图像（截取的图片、加载的图片）；</p>
 </blockquote>
-<p>3.描边线条的宽度（lineWidth）：值可以是任意整数<br>4.线条末端样式（lineCap）：值可以是”butt“（平头，默认）、“round”（圆头）、“square”（方头）<br>5.线条连接样式（lineJoin）：值可以是“round”（圆角）、“bevel”（斜交）、“miter”（斜接，默认）<br><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-18/85187341.jpg" title="lineJoin"></p>
-<h3 id="绘制矩形-方法"><a href="#绘制矩形-方法" class="headerlink" title="绘制矩形(方法)"></a>绘制矩形(方法)</h3><p>唯一可以直接在2D环境中绘制的形状。</p>
+<ol>
+<li>描边线条的宽度（lineWidth）：值可以是任意整数；</li>
+<li>线条末端样式（lineCap）：值可以是<code>butt</code>（平头，默认）、<code>round</code>（圆头）、<code>square</code>（方头）；</li>
+<li>线条连接样式（lineJoin）：值可以是<code>round</code>（圆角）、<code>bevel</code>（斜交）、<code>miter</code>（斜接，默认）。</li>
+</ol>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-18/85187341.jpg" alt="lineJoin"></p>
+<h2 id="绘制矩形-方法"><a href="#绘制矩形-方法" class="headerlink" title="绘制矩形(方法)"></a>绘制矩形(方法)</h2><p>唯一可以直接在2D环境中绘制的形状，其他的形状都需要自封装函数。</p>
 <ul>
-<li>fillRect() 是填充指定的矩形</li>
-<li>strokeRect() 是绘制指定的矩形边框</li>
-<li>clearRect() 是清除指定的矩形区域</li>
+<li><code>fillRect()</code>是填充指定的矩形</li>
+<li><code>strokeRect()</code>是绘制指定的矩形边框</li>
+<li><code>clearRect()</code>是清除指定的矩形区域</li>
 </ul>
-<p>两个函数均传入四个参数，依次是矩形起点x、y坐标、矩形宽、矩形高。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">context.fillStyle = <span class="string">"#CCC"</span>;</div><div class="line">context.fillRect(x,y,a,h);</div><div class="line">context.strokeRect(x,y,a,h);</div></pre></td></tr></table></figure>
-<h3 id="配置路径"><a href="#配置路径" class="headerlink" title="配置路径"></a>配置路径</h3><h4 id="路径方法"><a href="#路径方法" class="headerlink" title="路径方法"></a>路径方法</h4><p>1.弧线arc()：<br>    传入的参数依次是：圆心x、y坐标，半径，起始角度，终止角度，是否按逆时针方向<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arc(x,y,radius,startAngle,endAngle,counterclockwise);</div></pre></td></tr></table></figure></p>
-<p>2.弧线arcTo()：<br>    传入的参数依次是起点x、y坐标，终点x、y坐标，半径<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arcTo(x1,y1,x2,y2,radius);</div></pre></td></tr></table></figure></p>
-<p>3.直线lineTo()：<br>传入的参数有终点x、y坐标（直线起点是当前绘制最后的点可以通过moveTo()更改）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lineTo(x,y);</div></pre></td></tr></table></figure></p>
-<p>4.移动端点moveTo()：<br>传入的参数是目的点x、y坐标<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">moveTo(x,y);</div></pre></td></tr></table></figure></p>
-<p>5.矩形rect()：<br>传入参数依次是起点x、y坐标，矩形宽，矩形高<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rect(x,y,width,height);</div></pre></td></tr></table></figure></p>
-<p>6.二次贝塞尔曲线和三次贝塞尔曲线：<br>目的就是不使用单调的圆弧曲线，尽量使用复杂、自由的曲线。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二次贝塞尔曲线</span></div><div class="line"><span class="comment">//参数依次是：控制点x、y坐标，终点x、y坐标</span></div><div class="line">quadraticCurveTo(cx,cy,x,y);</div><div class="line"></div><div class="line"><span class="comment">//三次贝塞尔曲线</span></div><div class="line"><span class="comment">//参数依次是：第一控制点x、y坐标，第二控制点x、y坐标，终点x、y坐标</span></div><div class="line">bezierCurveTo(c1x,c1y,c2x,c2y,x,y);</div></pre></td></tr></table></figure></p>
+<p>这三个函数均传入四个参数，依次是矩形起点x、y坐标、矩形宽、矩形高。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">context.fillStyle = <span class="string">"#CCC"</span>;</div><div class="line"></div><div class="line">context.fillRect(x,y,a,h);</div><div class="line">context.strokeRect(x,y,a,h);</div><div class="line">context.clearRect(x,y,a,h);</div></pre></td></tr></table></figure>
+<h2 id="配置路径"><a href="#配置路径" class="headerlink" title="配置路径"></a>配置路径</h2><h3 id="路径方法"><a href="#路径方法" class="headerlink" title="路径方法"></a>路径方法</h3><ol>
+<li>弧线arc()：传入的参数依次是：圆心x、y坐标，半径，起始角度，终止角度，是否按逆时针方向</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arc(x,y,radius,startAngle,endAngle,counterclockwise);</div></pre></td></tr></table></figure>
+<ol>
+<li>弧线arcTo()：传入的参数依次是起点x、y坐标，终点x、y坐标，半径</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arcTo(x1,y1,x2,y2,radius);</div></pre></td></tr></table></figure>
+<ol>
+<li>直线lineTo()：传入的参数有终点x、y坐标（直线起点是当前绘制最后的点可以通过moveTo()更改）</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lineTo(x,y);</div></pre></td></tr></table></figure>
+<ol>
+<li>移动端点moveTo()：传入的参数是目的点x、y坐标</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">moveTo(x,y);</div></pre></td></tr></table></figure>
+<ol>
+<li>矩形rect()：传入参数依次是起点x、y坐标，矩形宽，矩形高</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rect(x,y,width,height);</div></pre></td></tr></table></figure>
+<ol>
+<li>二次贝塞尔曲线和三次贝塞尔曲线：目的就是不使用单调的圆弧曲线，尽量使用复杂、自由的曲线</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//二次贝塞尔曲线</span></div><div class="line"><span class="comment">//参数依次是：控制点x、y坐标，终点x、y坐标</span></div><div class="line">quadraticCurveTo(cx,cy,x,y);</div><div class="line"></div><div class="line"><span class="comment">//三次贝塞尔曲线</span></div><div class="line"><span class="comment">//参数依次是：第一控制点x、y坐标，第二控制点x、y坐标，终点x、y坐标</span></div><div class="line">bezierCurveTo(c1x,c1y,c2x,c2y,x,y);</div></pre></td></tr></table></figure>
 <blockquote>
-<p>我们可以通过PS绘制时自由拉动控制点来更改曲线的形状，在用参考线确定坐标即可。<br>留个坑，过一阵写一篇具体分析的文。</p>
+<p>由于参数不是很好确定，我们可以通过使用PS绘制，然后自由拉动控制点来更改曲线的形状，再用参考线确定各点坐标即可。</p>
 </blockquote>
-<h4 id="绘制方法"><a href="#绘制方法" class="headerlink" title="绘制方法"></a>绘制方法</h4><p>当路径设置好后，需要进行绘制（描边、填充、剪切）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">stroke();<span class="comment">//描边</span></div><div class="line">fill();<span class="comment">//填充</span></div><div class="line">clip();<span class="comment">//剪切</span></div></pre></td></tr></table></figure></p>
-<h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><h4 id="文本配置"><a href="#文本配置" class="headerlink" title="文本配置"></a>文本配置</h4><p>1.字体样式（font）：<br>传入参数依次是：文本样式（bold等css中可用的选项）、大小、字体<br>2.文本对齐方式（textAlign)：<br>传入的参数：start （左对齐，默认）、end（右对齐）、center（居中）<br>3.文本基线（textBaseline）：<br>传入的参数：top（上）、middle（中）、bottom（下）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">context.font = <span class="string">"bold 20px Arial"</span>;</div><div class="line">context.textAlign = <span class="string">"center"</span>;</div><div class="line">context.textBaseline = <span class="string">"middle"</span></div></pre></td></tr></table></figure></p>
-<h4 id="绘制方法-1"><a href="#绘制方法-1" class="headerlink" title="绘制方法"></a>绘制方法</h4><p>当文本设置好后，需要进行绘制（描边、填充）<br>传入的参数依次是：文本内容，x、y坐标，（最大像素宽度）可选<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fillText(“文字内容”,x,y);<span class="comment">//填充，写字，常见</span></div><div class="line">strokeText(“文字内容”,x,y,maxWidth);<span class="comment">//描边，少见</span></div></pre></td></tr></table></figure></p>
+<h3 id="绘制方法"><a href="#绘制方法" class="headerlink" title="绘制方法"></a>绘制方法</h3><p>当路径设置好后，需要进行绘制（描边、填充、剪切）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">stroke();  <span class="comment">//描边</span></div><div class="line">fill();  <span class="comment">//填充</span></div><div class="line">clip();  <span class="comment">//剪切</span></div></pre></td></tr></table></figure>
+<h2 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h2><h3 id="文本配置"><a href="#文本配置" class="headerlink" title="文本配置"></a>文本配置</h3><ol>
+<li>字体样式（font）：传入参数依次是：文本样式（bold等css中可用的选项）、大小、字体</li>
+<li>文本对齐方式（textAlign)：传入的参数：<code>start</code>（左对齐，默认）、<code>end</code>（右对齐）、<code>center</code>（居中）</li>
+<li>文本基线（textBaseline）：传入的参数：<code>top</code>（上）、<code>middle</code>（中）、<code>bottom</code>（下）</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">context.font = <span class="string">"bold 20px Arial"</span>;</div><div class="line">context.textAlign = <span class="string">"center"</span>;</div><div class="line">context.textBaseline = <span class="string">"middle"</span>;</div></pre></td></tr></table></figure>
+<h3 id="绘制方法-1"><a href="#绘制方法-1" class="headerlink" title="绘制方法"></a>绘制方法</h3><p>当文本设置好后，需要进行绘制（描边、填充）</p>
+<p>传入的参数依次是：文本内容，x、y坐标，（最大像素宽度）可选</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fillText(<span class="string">"文字内容"</span>,x,y);               <span class="comment">//填充，写字，常见</span></div><div class="line">strokeText(<span class="string">"文字内容"</span>,x,y,maxWidth);    <span class="comment">//描边，少见</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>measureText(“文本”)方法辅助确定文本大小，返回width</p>
 </blockquote>
-<h3 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h3><p>原理就是矩阵变换，都可以根据最基本的方法进行矩阵计算来得到。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">rotate(angle);<span class="comment">//围绕原点旋转，参数为旋转角度</span></div><div class="line">scale(sX,sY);<span class="comment">//缩放，参数为X、Y轴缩放倍数</span></div><div class="line">translate(x,y);<span class="comment">//平移，参数为X、Y轴平移大小</span></div><div class="line"><span class="comment">/*---------------------------------------------*/</span></div><div class="line">transform(m1_1,m1_2,m2_1,m2_2,dx,dy);<span class="comment">//矩阵变换（MATLAB类似）</span></div><div class="line">setTransform(m1_1,m1_2,m2_1,m2_2,dx,dy);<span class="comment">//恢复默认矩阵</span></div></pre></td></tr></table></figure></p>
+<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p>原理就是矩阵变换，都可以根据最基本的方法进行矩阵计算来得到。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">rotate(angle);  <span class="comment">//围绕原点旋转，参数为旋转角度</span></div><div class="line">scale(sX,sY);   <span class="comment">//缩放，参数为X、Y轴缩放倍数</span></div><div class="line">translate(x,y); <span class="comment">//平移，参数为X、Y轴平移大小</span></div><div class="line"></div><div class="line"><span class="comment">/*---------------------------------------------*/</span></div><div class="line"></div><div class="line">transform(m1_1,m1_2,m2_1,m2_2,dx,dy);    <span class="comment">//矩阵变换（MATLAB类似）</span></div><div class="line">setTransform(m1_1,m1_2,m2_1,m2_2,dx,dy); <span class="comment">//恢复默认矩阵</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>save();保存当前绘制参数<br>restore();恢复到上一次保存的参数</p>
 </blockquote>
-<h3 id="阴影属性"><a href="#阴影属性" class="headerlink" title="阴影属性"></a>阴影属性</h3><p>1.阴影颜色（shadowColor）<br>2.X轴偏移量（shadowOffsetX）<br>3.Y轴偏移量（shadowOffsetY）<br>4.模糊度（shadowBlur）</p>
+<h3 id="阴影属性"><a href="#阴影属性" class="headerlink" title="阴影属性"></a>阴影属性</h3><ol>
+<li>阴影颜色（shadowColor）</li>
+<li>X轴偏移量（shadowOffsetX）</li>
+<li>Y轴偏移量（shadowOffsetY）</li>
+<li>模糊度（shadowBlur）</li>
+</ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">context.shadowColor = <span class="string">"red"</span>;</div><div class="line">context.shadowOffsetX = <span class="number">5</span>;</div><div class="line">context.shadowOffsetY = <span class="number">6</span>;</div><div class="line">context.shadowBlur = <span class="number">2</span>;</div></pre></td></tr></table></figure>
-<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><blockquote>
+<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><blockquote>
 <p>创建渐变给一个变量，然后在fillStyle后使用。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//线性渐变</span></div><div class="line"><span class="comment">//参数：渐变起点坐标，渐变终点坐标</span></div><div class="line">createLinearGradient(x1,y1,x2,y2);</div><div class="line"></div><div class="line"><span class="comment">//径向渐变</span></div><div class="line"><span class="comment">//参数：渐变起点坐标、圆心，渐变终点坐标、圆心</span></div><div class="line">createRadialGradient(x1,y1,radius1,x2,y2,radius2);</div><div class="line"></div><div class="line"><span class="comment">//添加渐变点</span></div><div class="line"><span class="comment">//参数：渐变百分比点（写成小数，0~1），渐变颜色</span></div><div class="line">addColorStop(num,<span class="string">"color"</span>);</div></pre></td></tr></table></figure>
-<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><h4 id="绘制图像"><a href="#绘制图像" class="headerlink" title="绘制图像"></a>绘制图像</h4><p>drawImage(x,y,a,b);绘制图像（图像不可以跨域），参数依次是：图像起始点X、Y坐标，图像大小（可选）</p>
+<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><h3 id="绘制图像"><a href="#绘制图像" class="headerlink" title="绘制图像"></a>绘制图像</h3><p><code>drawImage(x,y,a,b)</code>绘制图像（图像不可以跨域），参数依次是：图像起始点X、Y坐标，图像大小（可选）</p>
 <blockquote>
 <p>扩展应用：序列帧动画</p>
 </blockquote>
-<h4 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h4><p>模式就是把图像切片，做成对象，然后通过填充重复（repeat）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//制作图片对象</span></div><div class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.image[<span class="number">0</span>],</div><div class="line">	pattern = context.createPattern(image,<span class="string">"repeat"</span>);</div><div class="line"><span class="comment">//绘制</span></div><div class="line">context.filStyle = pattern;</div><div class="line">context.fillRect(<span class="number">10</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>);</div></pre></td></tr></table></figure></p>
-<h4 id="使用图像数据（ImageData）"><a href="#使用图像数据（ImageData）" class="headerlink" title="使用图像数据（ImageData）"></a>使用图像数据（ImageData）</h4><ul>
+<h3 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h3><p>模式就是把图像切片，做成对象，然后通过填充重复（repeat）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//制作图片对象</span></div><div class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.image[<span class="number">0</span>],</div><div class="line">    pattern = context.createPattern(image,<span class="string">"repeat"</span>);</div><div class="line">	</div><div class="line"><span class="comment">//绘制</span></div><div class="line">context.filStyle = pattern;</div><div class="line">context.fillRect(<span class="number">10</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">100</span>);</div></pre></td></tr></table></figure>
+<h3 id="使用图像数据（ImageData）"><a href="#使用图像数据（ImageData）" class="headerlink" title="使用图像数据（ImageData）"></a>使用图像数据（ImageData）</h3><ul>
 <li>类似于MATLAB，对图像进行处理（某种算法）。</li>
 <li>图像中每一个点都由R、G、B、A组成，所有的点组成的数组，通过某种算法（灰度过滤器等）计算后，得到新的图片并输出。</li>
-<li>ImageData对象有三个属性：width、height、data。</li>
+<li><code>ImageData</code>对象有三个属性：width、height、data。</li>
 <li>data是一个数组，保存着RGBA的值</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//得到图像数据，保存为数组</span></div><div class="line"><span class="keyword">var</span> imageData = context.getImageData(<span class="number">10</span>,<span class="number">5</span>,<span class="number">50</span>,<span class="number">50</span>);</div><div class="line"><span class="comment">//获取对象的属性</span></div><div class="line"><span class="keyword">var</span> w = imageData.width;</div><div class="line"><span class="keyword">var</span> h = imageData.height; </div><div class="line"><span class="keyword">var</span> data = imageData.data,</div><div class="line">	r = data[<span class="number">0</span>],</div><div class="line">    g = data[<span class="number">1</span>],</div><div class="line">	b = data[<span class="number">2</span>],</div><div class="line">	a = data[<span class="number">3</span>];</div></pre></td></tr></table></figure>
-<h3 id="合成（图像叠加）"><a href="#合成（图像叠加）" class="headerlink" title="合成（图像叠加）"></a>合成（图像叠加）</h3><h4 id="全局透明度"><a href="#全局透明度" class="headerlink" title="全局透明度"></a>全局透明度</h4><p>globalAlpha，取值为0~1之间，与常见透明度设置一样的。</p>
-<h4 id="叠加效果设置"><a href="#叠加效果设置" class="headerlink" title="叠加效果设置"></a>叠加效果设置</h4><p>globalCompositionOperation，取值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//得到图像数据，保存为数组</span></div><div class="line"><span class="keyword">var</span> imageData = context.getImageData(<span class="number">10</span>,<span class="number">5</span>,<span class="number">50</span>,<span class="number">50</span>);</div><div class="line"></div><div class="line"><span class="comment">//获取对象的属性</span></div><div class="line"><span class="keyword">var</span> w = imageData.width;</div><div class="line"><span class="keyword">var</span> h = imageData.height; </div><div class="line"><span class="keyword">var</span> data = imageData.data,</div><div class="line">    r = data[<span class="number">0</span>],</div><div class="line">    g = data[<span class="number">1</span>],</div><div class="line">    b = data[<span class="number">2</span>],</div><div class="line">    a = data[<span class="number">3</span>];</div></pre></td></tr></table></figure>
+<h2 id="合成（图像叠加）"><a href="#合成（图像叠加）" class="headerlink" title="合成（图像叠加）"></a>合成（图像叠加）</h2><h3 id="全局透明度"><a href="#全局透明度" class="headerlink" title="全局透明度"></a>全局透明度</h3><p><code>globalAlpha</code>，取值为 0 ~ 1 之间，与常见透明度设置一样的。</p>
+<h3 id="叠加效果设置"><a href="#叠加效果设置" class="headerlink" title="叠加效果设置"></a>叠加效果设置</h3><p><code>globalCompositionOperation</code>，取值：</p>
 <ol>
 <li>source-over（默认值），后绘制在上，覆盖</li>
 <li>source-in，仅重叠部分可见</li>
@@ -454,7 +496,7 @@
 <li>copy，后绘制图形完全替代重叠的先绘制图形</li>
 <li>xor，重叠部分执行异或操作</li>
 </ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总的来说canvas的基本绘制并不难，但正常的需求需要我们能通过JavaScript来使之运动，或者组合选项之后绘制出惊艳的图像。o(<em>￣▽￣</em>)o</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>总的来说canvas的基本绘制并不难，但正常的需求需要我们能通过JavaScript来使之运动，或者组合选项之后绘制出惊艳的图像。o(*￣▽￣*)o</p>
 <blockquote>
 <p>听说Filpbord的H5版就是完全通过Canvas绘制的，似乎是可以让画面变更流畅。(o゜▽゜)o☆</p>
 </blockquote>
@@ -477,8 +519,6 @@
         <div class="post-tags">
           
             <a href="/tags/Canvas/" rel="tag"># Canvas</a>
-          
-            <a href="/tags/HTML/" rel="tag"># HTML</a>
           
         </div>
       
@@ -522,25 +562,6 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/19/Canvas绘图基础-2D部分/"
-     data-title="Canvas绘图基础-2D部分"
-     data-content=""
-     data-url="http://yoursite.com/2016/09/19/Canvas绘图基础-2D部分/">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -551,10 +572,6 @@
 
           
   <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/09/19/Canvas绘图基础-2D部分/"
-           data-title="Canvas绘图基础-2D部分" data-url="http://yoursite.com/2016/09/19/Canvas绘图基础-2D部分/">
-      </div>
     
   </div>
 
@@ -606,7 +623,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -617,7 +634,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -628,7 +645,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -677,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本的概念"><span class="nav-number">1.</span> <span class="nav-text">基本的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas元素"><span class="nav-number">1.1.</span> <span class="nav-text">Canvas元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#兼容性"><span class="nav-number">1.2.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含"><span class="nav-number">1.3.</span> <span class="nav-text">包含</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">1.4.</span> <span class="nav-text">基本用法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2D绘制"><span class="nav-number">2.</span> <span class="nav-text">2D绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-number">2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制矩形-方法"><span class="nav-number">2.2.</span> <span class="nav-text">绘制矩形(方法)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置路径"><span class="nav-number">2.3.</span> <span class="nav-text">配置路径</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#路径方法"><span class="nav-number">2.3.1.</span> <span class="nav-text">路径方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">绘制方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制文本"><span class="nav-number">2.4.</span> <span class="nav-text">绘制文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文本配置"><span class="nav-number">2.4.1.</span> <span class="nav-text">文本配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制方法-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">绘制方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变换"><span class="nav-number">2.5.</span> <span class="nav-text">变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阴影属性"><span class="nav-number">2.6.</span> <span class="nav-text">阴影属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#渐变"><span class="nav-number">2.7.</span> <span class="nav-text">渐变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像"><span class="nav-number">2.8.</span> <span class="nav-text">图像</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制图像"><span class="nav-number">2.8.1.</span> <span class="nav-text">绘制图像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式"><span class="nav-number">2.8.2.</span> <span class="nav-text">模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用图像数据（ImageData）"><span class="nav-number">2.8.3.</span> <span class="nav-text">使用图像数据（ImageData）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合成（图像叠加）"><span class="nav-number">2.9.</span> <span class="nav-text">合成（图像叠加）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局透明度"><span class="nav-number">2.9.1.</span> <span class="nav-text">全局透明度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#叠加效果设置"><span class="nav-number">2.9.2.</span> <span class="nav-text">叠加效果设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Canvas元素"><span class="nav-number">1.1.</span> <span class="nav-text">Canvas元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容性"><span class="nav-number">1.2.</span> <span class="nav-text">兼容性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包含"><span class="nav-number">1.3.</span> <span class="nav-text">包含</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本用法"><span class="nav-number">1.4.</span> <span class="nav-text">基本用法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2D绘制"><span class="nav-number">2.</span> <span class="nav-text">2D绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制矩形-方法"><span class="nav-number">2.2.</span> <span class="nav-text">绘制矩形(方法)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置路径"><span class="nav-number">2.3.</span> <span class="nav-text">配置路径</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路径方法"><span class="nav-number">2.3.1.</span> <span class="nav-text">路径方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">绘制方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制文本"><span class="nav-number">2.4.</span> <span class="nav-text">绘制文本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文本配置"><span class="nav-number">2.4.1.</span> <span class="nav-text">文本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制方法-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">绘制方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变换"><span class="nav-number">2.5.</span> <span class="nav-text">变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阴影属性"><span class="nav-number">2.5.1.</span> <span class="nav-text">阴影属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渐变"><span class="nav-number">2.6.</span> <span class="nav-text">渐变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图像"><span class="nav-number">2.7.</span> <span class="nav-text">图像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制图像"><span class="nav-number">2.7.1.</span> <span class="nav-text">绘制图像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式"><span class="nav-number">2.7.2.</span> <span class="nav-text">模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用图像数据（ImageData）"><span class="nav-number">2.7.3.</span> <span class="nav-text">使用图像数据（ImageData）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合成（图像叠加）"><span class="nav-number">2.8.</span> <span class="nav-text">合成（图像叠加）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局透明度"><span class="nav-number">2.8.1.</span> <span class="nav-text">全局透明度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#叠加效果设置"><span class="nav-number">2.8.2.</span> <span class="nav-text">叠加效果设置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -822,41 +839,25 @@
 
   
 
-  
-    
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"ljw-bigtail"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-      
-      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-      <script src="/js/src/hook-duoshuo.js?v=5.1.2"></script>
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+
+
+
+	
+
+
+
+
+
   
 
 
 
 
 
-
-
-
+  
 
 
 
