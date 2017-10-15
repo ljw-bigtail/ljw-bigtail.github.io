@@ -1054,54 +1054,14 @@
 
       
         
-          
-            <h1 id="攻击方式"><a href="#攻击方式" class="headerlink" title="攻击方式"></a>攻击方式</h1><h2 id="反射型"><a href="#反射型" class="headerlink" title="反射型"></a>反射型</h2><p>通过URL输入提交到服务器端，待解析响应后，返回到浏览器，并解析执行XSS代码的行为。</p>
-<p>例子（常见于插入广告后再进行传播）：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在地址后添加攻击性代码后传播</span></div><div class="line">/?xss=<span class="xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">onclick</span>=<span class="string">"alert(1)"</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<h2 id="存储型"><a href="#存储型" class="headerlink" title="存储型"></a>存储型</h2><p> 上面的不影响服务端，但存储型会影响服务端（存在文件系统、数据库等地方），下次请求时页面不用再次提交XSS代码。</p>
-<h1 id="防范措施"><a href="#防范措施" class="headerlink" title="防范措施"></a>防范措施</h1><h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>对用户输入的数据进行HTML Entity编码。</p>
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>十进制</th>
-<th>转义字符</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>“</td>
-<td>&amp;#34 ;</td>
-<td>&amp;quot ;</td>
-</tr>
-<tr>
-<td>&amp;</td>
-<td>&amp;#38 ;</td>
-<td>&amp;amp ;</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>&amp;#60 ;</td>
-<td>&amp;lt ;</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>&amp;#62 ;</td>
-<td>&amp;gt ;</td>
-</tr>
-<tr>
-<td>不断开空格（\s）</td>
-<td>&amp;#160 ;</td>
-<td>&amp;nbsp ;</td>
-</tr>
-</tbody>
-</table>
-<p>使用replace来替换上面的这些字符，使得不影响结果。</p>
-<h2 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h2><p>删除用户上传的不安全的内容，包括DOM属性，如onerror等事件，或是Style节点、Script节点、Iframe节点等。</p>
-<p>直接使用JavaScript来筛选上传的数据即可。</p>
-<h2 id="校正"><a href="#校正" class="headerlink" title="校正"></a>校正</h2><p>避免直接对HTML Entity解码，使用DOM Parse转换，校正不配对的DOM标签。</p>
-
-          
+          <p>喵~</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/19/XSS初识/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
