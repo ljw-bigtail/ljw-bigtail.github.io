@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,jQuery," />
+  <meta name="keywords" content="Express|Node.js," />
 
 
 
@@ -101,18 +101,18 @@
 
 
 
-<meta name="description" content="之前的选择器已经讲完了，但是jQuery的用处不仅仅在这里，还有对于DOM树的操作。">
-<meta name="keywords" content="JavaScript,jQuery">
+<meta name="description" content="回忆一下毕业设计中用到的知识点，并与现在做的进行对比，找出以后写代码时需要注意的地方 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
+<meta name="keywords" content="Express|Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery基础+">
-<meta property="og:url" content="http://yoursite.com/2016/11/13/jQuery基础+/index.html">
+<meta property="og:title" content="回忆毕设">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/回忆毕设/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="之前的选择器已经讲完了，但是jQuery的用处不仅仅在这里，还有对于DOM树的操作。">
+<meta property="og:description" content="回忆一下毕业设计中用到的知识点，并与现在做的进行对比，找出以后写代码时需要注意的地方 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T08:24:16.387Z">
+<meta property="og:updated_time" content="2017-10-23T14:40:30.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery基础+">
-<meta name="twitter:description" content="之前的选择器已经讲完了，但是jQuery的用处不仅仅在这里，还有对于DOM树的操作。">
+<meta name="twitter:title" content="回忆毕设">
+<meta name="twitter:description" content="回忆一下毕业设计中用到的知识点，并与现在做的进行对比，找出以后写代码时需要注意的地方 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
 
 
 
@@ -142,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/13/jQuery基础+/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/22/回忆毕设/"/>
 
 
 
 
 
-  <title>jQuery基础+ | BigTail</title>
+  <title>回忆毕设 | BigTail</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/13/jQuery基础+/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/回忆毕设/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陆家伟">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jQuery基础+</h1>
+          <h1 class="post-title" itemprop="name headline">回忆毕设</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="post.created" itemprop="dateCreated datePublished" datetime="2016-11-13T00:00:00+08:00">
-                2016-11-13
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-10-22T00:00:00+08:00">
+                2017-10-22
               </time>
             
 
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/jQuery/" itemprop="url" rel="index">
-                    <span itemprop="name">jQuery</span>
+                  <a href="/categories/Express/" itemprop="url" rel="index">
+                    <span itemprop="name">Express</span>
                   </a>
                 </span>
 
@@ -364,35 +364,28 @@
       
 
       
-        <p>之前的选择器已经讲完了，但是jQuery的用处不仅仅在这里，还有对于DOM树的操作。</p>
+        <p>回忆一下毕业设计中用到的知识点，并与现在做的进行对比，找出以后写代码时需要注意的地方</p>
+<p>由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。</p>
 <a id="more"></a>
-<p>先说DOM树，每一个HTML结构都是一颗DOM树，节点的嵌套就像是树枝的延伸。</p>
-<p>每一个HTML文件的最底层的根节点都是“文档”，接下来是“&lt; html &gt;”，然后是“&lt; head &gt;”、“&lt; body &gt;”。</p>
-<p>据此，形成了一颗颗的“树”。</p>
-<h1 id="DOM节点"><a href="#DOM节点" class="headerlink" title="DOM节点"></a>DOM节点</h1><h2 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h2><p><code>$(&quot;html结构&quot;)</code>：直接在函数内部写具体的html文档，保留原始的书写方式，便捷。</p>
-<h2 id="插入节点"><a href="#插入节点" class="headerlink" title="插入节点"></a>插入节点</h2><ul>
-<li>从下面插入</li>
-</ul>
-<p><code>.append( content )</code>：向每个元素内部添加内容，$(A).append(B);把B追加到A中。<br><code>.appendTo( content )</code>：把所有匹配的元素追加到另一个、指定的元素集合中，$(A).appendTo(B);把A追加到B中。</p>
-<ul>
-<li>从上面插入</li>
-</ul>
-<p><code>.prepend()</code>：向匹配的元素内部前边添加元素，$(A).prepend(B);把B追加到A中。</p>
-<h2 id="prependTo-：向匹配的元素内部前边添加元素，-A-prependTo-B-把A追加到B中。"><a href="#prependTo-：向匹配的元素内部前边添加元素，-A-prependTo-B-把A追加到B中。" class="headerlink" title=".prependTo()：向匹配的元素内部前边添加元素，$(A).prependTo(B);把A追加到B中。"></a><code>.prependTo()</code>：向匹配的元素内部前边添加元素，$(A).prependTo(B);把A追加到B中。</h2><p><code>.aftre( content )</code>：在匹配的元素后插入指定内容，作为兄弟节点。<br><code>.before( content )</code>：在匹配的元素前插入指定的内容。<br><code>.insertAfter( content )</code>：在匹配的元素后插入指定的内容。<br><code>.insertBefore( content )</code>：在匹配的元素前插入指定的内容。</p>
-<h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><p><code>empty()</code>：清除选定元素内部的所有html代码，选中的元素仍在。（感觉身体被掏空）<br><code>remove()</code>：清除元素及内部的html代码和相关绑定的方法。（把自己也掏空）</p>
-<h2 id="remove-“选择器”-：清除选择的元素及内部的html代码和相关绑定的方法。"><a href="#remove-“选择器”-：清除选择的元素及内部的html代码和相关绑定的方法。" class="headerlink" title="remove( “选择器” )：清除选择的元素及内部的html代码和相关绑定的方法。"></a><code>remove( “选择器” )</code>：清除选择的元素及内部的html代码和相关绑定的方法。</h2><p><code>detach()</code>：暂时删除节点（存起来），还可以通过append()方法添加回来。</p>
-<h2 id="复制、替换节点"><a href="#复制、替换节点" class="headerlink" title="复制、替换节点"></a>复制、替换节点</h2><p><code>clone()</code>：复制所有匹配的元素的集合，包括所有的HTML结构；当参数为true时（<code>clone(true)</code>），不仅复制HTML结构还复制相关的事件与数据。 </p>
+<h1 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h1><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p><strong>Express</strong>是基于Node.js环境来实现WebApp的比较好的一种选择，而他其中最重要的就是<strong>“路由(Route)”</strong>。</p>
+<p>语法：<code>app.METHOD (PATH , HANDLER)</code> 。</p>
+<p>METHOD是HTTP请求，例如get/post/put/delete请求；PATH是服务器路径（字符串/正则），就是浏览页面时的路径；HANDLER是执行函数，传入了request/response两个参数以调节页面内容。</p>
+<h3 id="路由请求"><a href="#路由请求" class="headerlink" title="路由请求"></a>路由请求</h3><p>Express 定义了如下和 HTTP 请求对应的路由方法： get, post, put, head, delete, options, trace, copy, lock, mkcol, move, purge, propfind, proppatch, unlock, report, mkactivity, checkout, merge, m-search, notify, subscribe, unsubscribe, patch, search, 和 connect。</p>
+<h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><p>页面的静态资源还需要手动配置，例如图片、css、javascript等。</p>
+<p>语法：<code>app.use(express.static(&#39;public&#39;));</code>。<br><em>访问的时候直接访问public内的路径即可（相对）。</em></p>
+<p>另外，静态资源加载的方法可以调用多次，也可以虚拟一个路径来方便管理<code>app.use(&#39;static&#39;, express.static(&#39;public&#39;));</code>。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>express不包含连接数据库的模块，安装mongoose，使用它的<code>mongoose.connect</code>即可解决这个问题。</p>
+<h3 id="登录验证"><a href="#登录验证" class="headerlink" title="登录验证"></a>登录验证</h3><p>express不包含，之后会注意一下可以用那些模块。</p>
+<h3 id="404"><a href="#404" class="headerlink" title="404"></a>404</h3><p>404页应该添加一个对应的中间件。<br><code>app.use(function(req, res, next){
+    res.status(404).send(&#39;Sorry can not find that!&#39;);
+});</code></p>
+<h3 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h3><p><code>app.use(function(err, req, res, next){
+    console.error(err.stack);
+    res.status(500).send(&#39;Something broke!&#39;);
+})</code></p>
 <blockquote>
-<p>一般与append连用：<code>$(&quot;.first&quot;).append($(&quot;.arr1&quot;).clone().css(&#39;color&#39;,&#39;red&#39;));</code></p>
+<p>未完待续</p>
 </blockquote>
-<hr>
-<p><code>replaceWith( new Content )</code>：用新内容替换集合中所有匹配元素，返回过去的内容。</p>
-<h2 id="A-replaceAll-B-：A替换B，返回B的内容。与上一个只是位置不停不同。"><a href="#A-replaceAll-B-：A替换B，返回B的内容。与上一个只是位置不停不同。" class="headerlink" title="A.replaceAll(B)：A替换B，返回B的内容。与上一个只是位置不停不同。"></a><code>A.replaceAll(B)</code>：A替换B，返回B的内容。与上一个只是位置不停不同。</h2><p><code>wrap( wrappingElement )</code>：给匹配的每个元素都包裹一层html结构。参数可以直接表示（<code>&lt;div&gt;&lt;/div&gt;</code>），也可以用function，返回html结构。<br><code>unwrap()</code>：删除匹配元素的父元素，保留自身和兄弟元素。<br><code>wrapAll( wrappingElement )</code>：让匹配的元素（兄弟）一起包裹在提供的标签内部。参数同样可以用function，但含义与wrap一致。<br><code>wrapInner( wrappingElement )</code>：对匹配元素的内部增加包裹性结构，参数可以用function。</p>
-<h1 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h1><p><code>children()</code>：寻找匹配元素的子辈，可以在参数中添加对子元素的筛选条件。</p>
-<h2 id="find-：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。"><a href="#find-：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。" class="headerlink" title="find()：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。"></a><code>find()</code>：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。</h2><p><code>parent()</code>：寻找每个匹配元素的父元素。参数可以表示的筛选条件。<br><code>parents()</code>：寻找匹配元素的祖先元素（父辈、祖辈等等）。</p>
-<h2 id="closest-：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。"><a href="#closest-：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。" class="headerlink" title="closest()：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。    "></a><code>closest()</code>：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。    </h2><p><code>next()</code>：寻找匹配元素的下一个直接兄弟元素，如果匹配的元素多，可以在参数里进行筛选集合元素。<br><code>prev()</code>：寻找匹配元素的上一个直接兄弟元素，如果匹配的元素多，可以在参数里进行筛选集合元素。</p>
-<h2 id="siblings-：寻找匹配元素的兄弟元素，可以对结果进行筛选。"><a href="#siblings-：寻找匹配元素的兄弟元素，可以对结果进行筛选。" class="headerlink" title="siblings()：寻找匹配元素的兄弟元素，可以对结果进行筛选。"></a><code>siblings()</code>：寻找匹配元素的兄弟元素，可以对结果进行筛选。</h2><p><code>add()</code>：将元素添加到匹配元素的集合中。类似于按住Ctrl的多选。<br><code>each()</code>：遍历，循环隐式迭代，通过回调的方式处理。包含2个固定的实参（index索引、element元素）。</p>
-<h1 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h1><p>这一步部分主要讲了对html文档的操作方法，是对简单选择的延伸，非常实用。</p>
 
       
     </div>
@@ -410,9 +403,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-          
-            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
+            <a href="/tags/Express-Node-js/" rel="tag"># Express|Node.js</a>
           
         </div>
       
@@ -425,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/05/jQuery基础/" rel="next" title="jQuery基础">
-                <i class="fa fa-chevron-left"></i> jQuery基础
+              <a href="/2017/09/13/React入门/" rel="next" title="React入门">
+                <i class="fa fa-chevron-left"></i> React入门
               </a>
             
           </div>
@@ -434,10 +425,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/17/初识移动WEB/" rel="prev" title="初识移动WEB">
-                初识移动WEB <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -588,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM节点"><span class="nav-number">1.</span> <span class="nav-text">DOM节点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建节点"><span class="nav-number">1.1.</span> <span class="nav-text">创建节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入节点"><span class="nav-number">1.2.</span> <span class="nav-text">插入节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#prependTo-：向匹配的元素内部前边添加元素，-A-prependTo-B-把A追加到B中。"><span class="nav-number">1.3.</span> <span class="nav-text">.prependTo()：向匹配的元素内部前边添加元素，$(A).prependTo(B);把A追加到B中。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除节点"><span class="nav-number">1.4.</span> <span class="nav-text">删除节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#remove-“选择器”-：清除选择的元素及内部的html代码和相关绑定的方法。"><span class="nav-number">1.5.</span> <span class="nav-text">remove( “选择器” )：清除选择的元素及内部的html代码和相关绑定的方法。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制、替换节点"><span class="nav-number">1.6.</span> <span class="nav-text">复制、替换节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-replaceAll-B-：A替换B，返回B的内容。与上一个只是位置不停不同。"><span class="nav-number">1.7.</span> <span class="nav-text">A.replaceAll(B)：A替换B，返回B的内容。与上一个只是位置不停不同。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jQuery遍历"><span class="nav-number">2.</span> <span class="nav-text">jQuery遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#find-：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。"><span class="nav-number">2.1.</span> <span class="nav-text">find()：寻找匹配元素的后代元素（子辈、孙辈等等），必须在参数中添加对后代元素的筛选条件。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#closest-：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。"><span class="nav-number">2.2.</span> <span class="nav-text">closest()：从元素本身开始，向上逐级查找，返回最先匹配的祖先元素。    </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#siblings-：寻找匹配元素的兄弟元素，可以对结果进行筛选。"><span class="nav-number">2.3.</span> <span class="nav-text">siblings()：寻找匹配元素的兄弟元素，可以对结果进行筛选。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结一下"><span class="nav-number">3.</span> <span class="nav-text">总结一下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Express"><span class="nav-number">1.</span> <span class="nav-text">Express</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路由"><span class="nav-number">1.1.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由请求"><span class="nav-number">1.1.1.</span> <span class="nav-text">路由请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源"><span class="nav-number">1.1.2.</span> <span class="nav-text">静态资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.2.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库"><span class="nav-number">1.2.1.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录验证"><span class="nav-number">1.2.2.</span> <span class="nav-text">登录验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#404"><span class="nav-number">1.2.3.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错误处理"><span class="nav-number">1.2.4.</span> <span class="nav-text">错误处理</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
