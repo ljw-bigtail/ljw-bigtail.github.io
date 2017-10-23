@@ -101,16 +101,17 @@
 
 
 
-<meta name="description" content="正在学习前端，为着目标奋斗！">
-<meta property="og:type" content="website">
+<meta name="description" content="Express基本@[Express|Node.js] 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="BigTail">
-<meta property="og:url" content="http://yoursite.com/tags/数据库/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/express/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="正在学习前端，为着目标奋斗！">
+<meta property="og:description" content="Express基本@[Express|Node.js] 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-23T14:25:15.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BigTail">
-<meta name="twitter:description" content="正在学习前端，为着目标奋斗！">
+<meta name="twitter:description" content="Express基本@[Express|Node.js] 由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。">
 
 
 
@@ -140,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/数据库/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/23/express/"/>
 
 
 
 
 
-  <title>标签: 数据库 | BigTail</title>
+  <title> | BigTail</title>
   
 
 
@@ -165,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,54 +260,159 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>数据库<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/express/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陆家伟">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BigTail">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/04/16/MongoDB的使用/" itemprop="url">
-              
-                <span itemprop="name">MongoDB的使用</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-16T16:00:00+08:00"
-              content="2017-04-16" >
-          04-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-23T22:25:41+08:00">
+                2017-10-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Express基本"><a href="#Express基本" class="headerlink" title="Express基本"></a>Express基本</h1><p>@[Express|Node.js]</p>
+<p>由于毕业设计需要具体实现，但我并不想用jsp的方式去套模板。所以， 我想还是应该看一下Express，因为这个框架可以让我使用点击跳转的功能（路由），实现为一个APP，而不仅仅是静态的确实功能的页面。</p>
+<a id="more"></a>
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p><strong>Express</strong>是基于Node.js环境来实现WebApp的比较好的一种选择，而他其中最重要的就是<strong>“路由(Route)”</strong>。</p>
+<p>语法：<code>app.METHOD (PATH , HANDLER)</code> 。</p>
+<p>METHOD是HTTP请求，例如get/post/put/delete请求；PATH是服务器路径（字符串/正则），就是浏览页面时的路径；HANDLER是执行函数，传入了request/response两个参数以调节页面内容。</p>
+<h4 id="路由请求"><a href="#路由请求" class="headerlink" title="路由请求"></a>路由请求</h4><p>Express 定义了如下和 HTTP 请求对应的路由方法： get, post, put, head, delete, options, trace, copy, lock, mkcol, move, purge, propfind, proppatch, unlock, report, mkactivity, checkout, merge, m-search, notify, subscribe, unsubscribe, patch, search, 和 connect。</p>
+<h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><p>页面的静态资源还需要手动配置，例如图片、css、javascript等。</p>
+<p>语法：<code>app.use(express.static(&#39;public&#39;));</code>。<br><em>访问的时候直接访问public内的路径即可（相对）。</em></p>
+<p>另外，静态资源加载的方法可以调用多次，也可以虚拟一个路径来方便管理<code>app.use(&#39;static&#39;, express.static(&#39;public&#39;));</code>。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><p>express不包含连接数据库的模块，安装mongoose，使用它的<code>mongoose.connect</code>即可解决这个问题。</p>
+<h4 id="登录验证"><a href="#登录验证" class="headerlink" title="登录验证"></a>登录验证</h4><p>express不包含，之后会注意一下可以用那些模块。</p>
+<h4 id="404"><a href="#404" class="headerlink" title="404"></a>404</h4><p>404页应该添加一个对应的中间件。<br><code>app.use(function(req, res, next){
+    res.status(404).send(&#39;Sorry can not find that!&#39;);
+});</code></p>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p><code>app.use(function(err, req, res, next){
+    console.error(err.stack);
+    res.status(500).send(&#39;Something broke!&#39;);
+})</code></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/13/React入门/" rel="next" title="React入门">
+                <i class="fa fa-chevron-left"></i> React入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -314,6 +420,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -334,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -414,6 +533,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Express基本"><span class="nav-number">1.</span> <span class="nav-text">Express基本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由"><span class="nav-number">1.0.1.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#路由请求"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">路由请求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源"><span class="nav-number">1.0.2.</span> <span class="nav-text">静态资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">1.0.3.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#登录验证"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">登录验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误处理"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">错误处理</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -539,6 +674,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
