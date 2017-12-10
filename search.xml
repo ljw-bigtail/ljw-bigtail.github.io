@@ -32,14 +32,16 @@
       
         <categories>
             
-            <category> Express </category>
+            <category> Node.js </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> Express|Node.js </tag>
+            <tag> Node.js </tag>
+            
+            <tag> Express </tag>
             
         </tags>
         
@@ -402,14 +404,14 @@
       
         <categories>
             
-            <category> 建站 </category>
+            <category> 工作记录 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> JavaScript </tag>
+            <tag> 工作记录 </tag>
             
             <tag> 建站 </tag>
             
@@ -528,7 +530,7 @@
         
         <tags>
             
-            <tag> 读书 </tag>
+            <tag> 阅读 </tag>
             
             <tag> 设计 </tag>
             
@@ -625,16 +627,16 @@
       
         <categories>
             
-            <category> MongoDB </category>
+            <category> 数据库 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> MongoDB </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> MongoDB </tag>
             
         </tags>
         
@@ -693,14 +695,12 @@
       
         <categories>
             
-            <category> Demo </category>
+            <category> 生活 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> 感悟 </tag>
             
             <tag> 生活 </tag>
             
@@ -760,14 +760,14 @@
       
         <categories>
             
-            <category> 收获+More </category>
+            <category> 生活 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 收获+More </tag>
+            <tag> 生活 </tag>
             
         </tags>
         
@@ -910,19 +910,19 @@
       <content type="html"><![CDATA[<p>在云澜软件实习的期间，收获颇多。</p>
 <p>明明白白做人，兢兢业业做事。</p>
 <a id="more"></a>
-<h3 id="进度12-5"><a href="#进度12-5" class="headerlink" title="进度12.5%"></a>进度12.5%</h3><p>至此，我在公司学到的东西仅限于jeecms的使用、前后端不分离的工作常态与适应工作环境。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="进度12-5"><a href="#进度12-5" class="headerlink" title="进度12.5%"></a>进度12.5%</h2><p>至此，我在公司学到的东西仅限于jeecms的使用、前后端不分离的工作常态与适应工作环境。</p>
 <p>我度过很长一段零散的空余时间，在这些碎片中，我迷失了。</p>
 <p>就像是在远洋的途中，感受在风暴之巅，孤独而又彷惶。</p>
 <blockquote>
 <p>路漫漫其修远兮，吾将上下而求索。</p>
 </blockquote>
-<h3 id="进度25"><a href="#进度25" class="headerlink" title="进度25%"></a>进度25%</h3><p>期间，我加了几次班，不是因为残留的工作，而是因为一次对话，我选择加班。</p>
+<h2 id="进度25"><a href="#进度25" class="headerlink" title="进度25%"></a>进度25%</h2><p>期间，我加了几次班，不是因为残留的工作，而是因为一次对话，我选择加班。</p>
 <p>关于时间碎片，我决定用做项目和看书去提升技术，充分利用时间。</p>
 <p>关于经验，我明白，有些事情，不是说说就能明白的；有些时间，非得经历才能感受。</p>
 <p>时间线上，我没有止步，我也不会止步；也许会在某时某刻，我会放慢脚步，但我不允许自己止步于此。</p>
 <p>因为迷失，不仅仅是对时间的伤害，还是对意志的摧残。</p>
-<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-16/16220212-file_1481858973393_11710.jpg" alt="(╯‵□′)╯炸弹！•••*～●"></p>
-<h3 id="进度50"><a href="#进度50" class="headerlink" title="进度50%"></a>进度50%</h3><p>在这期间，我收获到了非常多的东西：</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-16/16220212-file_1481858973393_11710.jpg" alt="(╯‵□′)╯炸弹！•••\*～●"></p>
+<h2 id="进度50"><a href="#进度50" class="headerlink" title="进度50%"></a>进度50%</h2><p>在这期间，我收获到了非常多的东西：</p>
 <p>从项目，我自己设计并实现了学校能工院的网站的前端部分，再过一阵正式上线，这就算是一个项目了。</p>
 <p>在写页面的过程中，10次改动（以后可能还需要更改）、优化流程等都让我学到了很多知识。</p>
 <p>还有一些别的演示Demo，补充了一些知识。</p>
@@ -938,7 +938,7 @@
 <li>细致的做事。在无数次的测试中，我发现开发的过程中，只有熟悉并使用规范才能减少维护所产生的时间成本。</li>
 <li>完整的逻辑。在录数据阶段，发现了一些逻辑问题，有一些在我请教了公司的前辈之后，搞明白了；还有一些，比较大的逻辑问题，需要修改后台代码，有些逻辑甚至需要改动很大 ，公司是经不起这样大的风险的。应对方法确实有，但这样挖坑会导致更麻烦的问题（前面说的演示账号无法登陆就是”果”）。So，必须要在写代码之前，优化逻辑，完善流程，确定每个参与者对业务流程的熟悉与问题。<br><img src="http://odmo6x3ig.bkt.clouddn.com/16-12-16/11117542-file_1481858934558_fb32.jpg" alt="学到了，就满足了"></li>
 </ul>
-<h3 id="进度100"><a href="#进度100" class="headerlink" title="进度100%"></a>进度100%</h3><p><em>补记于2017-02-03</em></p>
+<h2 id="进度100"><a href="#进度100" class="headerlink" title="进度100%"></a>进度100%</h2><p><em>补记于2017-02-03</em></p>
 <p>其实早就应该写下来这后续的记录，但是一直比较忙。</p>
 <p>后续的部分也并没有什么大的改变，只是学到的东西不仅限于表面的东西，更多的，是一种氛围，一种态度。</p>
 <p>多说无益，还是做好自己应该做的事，问心无愧得好。</p>
@@ -946,109 +946,22 @@
       
         <categories>
             
-            <category> 收获+More </category>
+            <category> 工作记录 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 实习 </tag>
-            
-            <tag> 工作 </tag>
+            <tag> 工作记录 </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[jQuery基础++]]></title>
-      <url>http://yoursite.com/2016/11/22/jQuery%E5%9F%BA%E7%A1%80++/</url>
-      <content type="html"><![CDATA[<p>前两部分已经把如何查询到节点的各种方法说清楚了，现在就应该描述一下，当我找到节点之后应该做些什么：</p>
-<p>不仅仅是DOM树的操作，还有各种事件达到的交互效果。</p>
-<a id="more"></a>
-<h1 id="事件描述"><a href="#事件描述" class="headerlink" title="事件描述"></a>事件描述</h1><h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><ul>
-<li><code>$ele.click([data] , function(e){});</code>，鼠标单击触发，可以传入一个参数（data），使用时e.Data（等于data）。</li>
-<li><code>$ele.dblclick([data] , function(e){});</code>，鼠标双击触发，使用方法和上面一样。</li>
-<li><code>$ele.mousedown([data] , function(e){});</code>，鼠标按下触发，使用方法和上面一样。</li>
-<li><code>$ele.mouseup([data] , function(e){});</code>，鼠标抬起触发，使用方法和上面一样。</li>
-</ul>
-<hr>
-<ul>
-<li><code>$ele.mousemove([data] , function(e){});</code>，鼠标移动时触发，使用方法和上面一样。</li>
-<li><code>$ele.mouseover([data] , function(e){});</code>，鼠标移入时触发，使用方法和上面一样。冒泡。</li>
-<li><code>$ele.mousemove([data] , function(e){});</code>，鼠标移出时触发，使用方法和上面一样。冒泡。</li>
-</ul>
-<hr>
-<ul>
-<li><code>$ele.hover(function1(e){} , function2(e){});</code>，鼠标移动时触发，阻止冒泡的情况下一次包含了下面两种情况，移入（function1）、移出（function2）。</li>
-<li><code>$ele.mouseenter([data] , function(e){});</code>，鼠标移入时触发，使用方法和上面一样。阻止了冒泡。</li>
-<li><code>$ele.mouseleave([data] , function(e){});</code>，鼠标移出时触发，使用方法和上面一样。阻止了冒泡。</li>
-</ul>
-<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
-<li><code>$ele.focusin([data] , function(e){});</code>，当元素获得焦点时触发，使用方法和上面一样。</li>
-<li><code>$ele.focusout([data] , function(e){});</code>，当元素失去焦点时触发，使用方法和上面一样。</li>
-<li><code>$ele.focus([data] , function(e){});</code>，当元素获得焦点时触发，使用方法和上面一样。阻止了冒泡。</li>
-<li><code>$ele.blur([data] , function(e){});</code>，当元素失去焦点时触发，使用方法和上面一样。阻止了冒泡。</li>
-</ul>
-<hr>
-<ul>
-<li><code>$ele.change(function(e){});</code>，当元素的值发生改变时触发。（&lt; input &gt;、&lt; textarea &gt;、&lt; select &gt;）</li>
-<li><code>$ele.select([data] , function(e){});</code>，当元素的值被选中时时触发，使用方法和上面一样。（&lt; input &gt;、&lt; textarea &gt;）</li>
-<li><code>$ele.submit(function(e){});</code>，当表单被提交时（点击input的submit类型）触发。（&lt; form &gt;）</li>
-</ul>
-<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><ul>
-<li><code>$ele.keydown([data] , function(e){});</code>，当键盘被按下时触发，使用方法和上面一样。</li>
-<li><code>$ele.keyup([data] , function(e){});</code>，当键盘被松开弹起时触发，使用方法和上面一样。</li>
-</ul>
-<hr>
-<ul>
-<li><code>$ele.keypress( );</code>，当键盘被按下时触发，每插入一个字符都会调用一次。（只能捕获单个字符，不能捕获组合键，无法响应系统功能键（如delete，backspace），不区分小键盘和主键盘的数字字符）</li>
-</ul>
-<h1 id="操作事件"><a href="#操作事件" class="headerlink" title="操作事件"></a>操作事件</h1><h2 id="绑定与解绑"><a href="#绑定与解绑" class="headerlink" title="绑定与解绑"></a>绑定与解绑</h2><h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><p>绑定的方法：on( event , [ selector ] , [ data ] );</p>
-<p>也可以绑定多事件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">on( &#123;</div><div class="line">	event : <span class="function"><span class="keyword">function</span>(<span class="params"> </span>)</span>&#123; &#125; , </div><div class="line">   	event : <span class="function"><span class="keyword">function</span>(<span class="params"> </span>)</span>&#123; &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="卸载事件"><a href="#卸载事件" class="headerlink" title="卸载事件"></a>卸载事件</h3><p>解绑的方法：off( “ event event1 “ , function(){});</p>
-<p>也可以卸载对象绑定的全部方法。</p>
-<h2 id="事件对象（Event）"><a href="#事件对象（Event）" class="headerlink" title="事件对象（Event）"></a>事件对象（Event）</h2><p>主要变现为事件委托：</p>
-<p>给div绑定方法，让p来执行，实际上就是给p的方法。</p>
-<p>优势在于优化了性能（搜索DOM树耗费的性能）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).on( <span class="string">"click"</span> , <span class="string">"p"</span> , <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</div></pre></td></tr></table></figure>
-<p>意义在于多事件绑定时，对语句的简化：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对ul下的每个li都绑定了事件。</span></div><div class="line">$(<span class="string">"ul"</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    alert(<span class="string">'触发的元素是内容是: '</span> + event.target.textContent);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><ul>
-<li>trigger( type , [ data ] );</li>
-</ul>
-<p>之前一直不理解trigger存在的意义是什么但是通过Baidu，我认为trigger的意义就是把不能但需要绑定方法的事件去绑定方法，效果就是可以自定义事件，但基础还是之前的那些事件。</p>
-<ul>
-<li>triggerHandler( type , [ data ] );</li>
-</ul>
-<p>使用方式与上面一样，差别在于：这个方法不会触发浏览器的默认行为；阻止了事件冒泡；仅影响匹配到的第一个元素；若不触发任何事件，返回undefined，而不是当前对象（不能链式调用）。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完了事件，我的理解是，有关于事件，我需要考虑的事有两件：</p>
-<p>第一，交互效果，哪种外部设备的控制反馈给人的效果更好，就选择哪种事件；</p>
-<p>第二，性能，当代码段达到一定量级时，性能需求大于浏览器能提供的，就会增加等待时间，或者是卡顿，而性能需求一般在于搜索DOM树，反复的搜索会导致性能下降，所以要学会使用事件代理，去解决这个问题。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> jQuery </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> jQuery </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[jQuery基础+++]]></title>
-      <url>http://yoursite.com/2016/11/22/jQuery%E5%9F%BA%E7%A1%80+++/</url>
+      <title><![CDATA[jQuery基础 —— Part4]]></title>
+      <url>http://yoursite.com/2016/11/22/jQuery%E5%9F%BA%E7%A1%80%20%E2%80%94%E2%80%94%20Part4/</url>
       <content type="html"><![CDATA[<p>到此，jQuery的基础（使用阶段）就告一段落了，以后要用jQuery做任务。</p>
 <p>我认为，理解思路才是最重要的。</p>
 <p>比如jQuery的实现方面和css很像；很多函数都会返回获取的元素，因此实现了链式调用······</p>
@@ -1140,7 +1053,92 @@
       
         <categories>
             
-            <category> jQuery </category>
+            <category> JavaScript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> jQuery </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[jQuery基础 —— Part3]]></title>
+      <url>http://yoursite.com/2016/11/22/jQuery%E5%9F%BA%E7%A1%80%20%E2%80%94%E2%80%94%20Part3/</url>
+      <content type="html"><![CDATA[<p>前两部分已经把如何查询到节点的各种方法说清楚了，现在就应该描述一下，当我找到节点之后应该做些什么：</p>
+<p>不仅仅是DOM树的操作，还有各种事件达到的交互效果。</p>
+<a id="more"></a>
+<h1 id="事件描述"><a href="#事件描述" class="headerlink" title="事件描述"></a>事件描述</h1><h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><ul>
+<li><code>$ele.click([data] , function(e){});</code>，鼠标单击触发，可以传入一个参数（data），使用时e.Data（等于data）。</li>
+<li><code>$ele.dblclick([data] , function(e){});</code>，鼠标双击触发，使用方法和上面一样。</li>
+<li><code>$ele.mousedown([data] , function(e){});</code>，鼠标按下触发，使用方法和上面一样。</li>
+<li><code>$ele.mouseup([data] , function(e){});</code>，鼠标抬起触发，使用方法和上面一样。</li>
+</ul>
+<hr>
+<ul>
+<li><code>$ele.mousemove([data] , function(e){});</code>，鼠标移动时触发，使用方法和上面一样。</li>
+<li><code>$ele.mouseover([data] , function(e){});</code>，鼠标移入时触发，使用方法和上面一样。冒泡。</li>
+<li><code>$ele.mousemove([data] , function(e){});</code>，鼠标移出时触发，使用方法和上面一样。冒泡。</li>
+</ul>
+<hr>
+<ul>
+<li><code>$ele.hover(function1(e){} , function2(e){});</code>，鼠标移动时触发，阻止冒泡的情况下一次包含了下面两种情况，移入（function1）、移出（function2）。</li>
+<li><code>$ele.mouseenter([data] , function(e){});</code>，鼠标移入时触发，使用方法和上面一样。阻止了冒泡。</li>
+<li><code>$ele.mouseleave([data] , function(e){});</code>，鼠标移出时触发，使用方法和上面一样。阻止了冒泡。</li>
+</ul>
+<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
+<li><code>$ele.focusin([data] , function(e){});</code>，当元素获得焦点时触发，使用方法和上面一样。</li>
+<li><code>$ele.focusout([data] , function(e){});</code>，当元素失去焦点时触发，使用方法和上面一样。</li>
+<li><code>$ele.focus([data] , function(e){});</code>，当元素获得焦点时触发，使用方法和上面一样。阻止了冒泡。</li>
+<li><code>$ele.blur([data] , function(e){});</code>，当元素失去焦点时触发，使用方法和上面一样。阻止了冒泡。</li>
+</ul>
+<hr>
+<ul>
+<li><code>$ele.change(function(e){});</code>，当元素的值发生改变时触发。（&lt; input &gt;、&lt; textarea &gt;、&lt; select &gt;）</li>
+<li><code>$ele.select([data] , function(e){});</code>，当元素的值被选中时时触发，使用方法和上面一样。（&lt; input &gt;、&lt; textarea &gt;）</li>
+<li><code>$ele.submit(function(e){});</code>，当表单被提交时（点击input的submit类型）触发。（&lt; form &gt;）</li>
+</ul>
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><ul>
+<li><code>$ele.keydown([data] , function(e){});</code>，当键盘被按下时触发，使用方法和上面一样。</li>
+<li><code>$ele.keyup([data] , function(e){});</code>，当键盘被松开弹起时触发，使用方法和上面一样。</li>
+</ul>
+<hr>
+<ul>
+<li><code>$ele.keypress( );</code>，当键盘被按下时触发，每插入一个字符都会调用一次。（只能捕获单个字符，不能捕获组合键，无法响应系统功能键（如delete，backspace），不区分小键盘和主键盘的数字字符）</li>
+</ul>
+<h1 id="操作事件"><a href="#操作事件" class="headerlink" title="操作事件"></a>操作事件</h1><h2 id="绑定与解绑"><a href="#绑定与解绑" class="headerlink" title="绑定与解绑"></a>绑定与解绑</h2><h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><p>绑定的方法：on( event , [ selector ] , [ data ] );</p>
+<p>也可以绑定多事件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">on( &#123;</div><div class="line">	event : <span class="function"><span class="keyword">function</span>(<span class="params"> </span>)</span>&#123; &#125; , </div><div class="line">   	event : <span class="function"><span class="keyword">function</span>(<span class="params"> </span>)</span>&#123; &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="卸载事件"><a href="#卸载事件" class="headerlink" title="卸载事件"></a>卸载事件</h3><p>解绑的方法：off( “ event event1 “ , function(){});</p>
+<p>也可以卸载对象绑定的全部方法。</p>
+<h2 id="事件对象（Event）"><a href="#事件对象（Event）" class="headerlink" title="事件对象（Event）"></a>事件对象（Event）</h2><p>主要变现为事件委托：</p>
+<p>给div绑定方法，让p来执行，实际上就是给p的方法。</p>
+<p>优势在于优化了性能（搜索DOM树耗费的性能）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).on( <span class="string">"click"</span> , <span class="string">"p"</span> , <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; );</div></pre></td></tr></table></figure>
+<p>意义在于多事件绑定时，对语句的简化：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对ul下的每个li都绑定了事件。</span></div><div class="line">$(<span class="string">"ul"</span>).on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    alert(<span class="string">'触发的元素是内容是: '</span> + event.target.textContent);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><ul>
+<li>trigger( type , [ data ] );</li>
+</ul>
+<p>之前一直不理解trigger存在的意义是什么但是通过Baidu，我认为trigger的意义就是把不能但需要绑定方法的事件去绑定方法，效果就是可以自定义事件，但基础还是之前的那些事件。</p>
+<ul>
+<li>triggerHandler( type , [ data ] );</li>
+</ul>
+<p>使用方式与上面一样，差别在于：这个方法不会触发浏览器的默认行为；阻止了事件冒泡；仅影响匹配到的第一个元素；若不触发任何事件，返回undefined，而不是当前对象（不能链式调用）。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>看完了事件，我的理解是，有关于事件，我需要考虑的事有两件：</p>
+<p>第一，交互效果，哪种外部设备的控制反馈给人的效果更好，就选择哪种事件；</p>
+<p>第二，性能，当代码段达到一定量级时，性能需求大于浏览器能提供的，就会增加等待时间，或者是卡顿，而性能需求一般在于搜索DOM树，反复的搜索会导致性能下降，所以要学会使用事件代理，去解决这个问题。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> JavaScript </category>
             
         </categories>
         
@@ -1367,7 +1365,7 @@
       
         <categories>
             
-            <category> 移动WEB </category>
+            <category> 移动端 </category>
             
         </categories>
         
@@ -1381,8 +1379,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[jQuery基础+]]></title>
-      <url>http://yoursite.com/2016/11/13/jQuery%E5%9F%BA%E7%A1%80+/</url>
+      <title><![CDATA[jQuery基础 —— Part2]]></title>
+      <url>http://yoursite.com/2016/11/13/jQuery%E5%9F%BA%E7%A1%80%20%E2%80%94%E2%80%94%20Part2/</url>
       <content type="html"><![CDATA[<p>之前的选择器已经讲完了，但是jQuery的用处不仅仅在这里，还有对于DOM树的操作。</p>
 <a id="more"></a>
 <p>先说DOM树，每一个HTML结构都是一颗DOM树，节点的嵌套就像是树枝的延伸。</p>
@@ -1416,7 +1414,7 @@
       
         <categories>
             
-            <category> jQuery </category>
+            <category> JavaScript </category>
             
         </categories>
         
@@ -1432,8 +1430,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[jQuery基础]]></title>
-      <url>http://yoursite.com/2016/11/05/jQuery%E5%9F%BA%E7%A1%80/</url>
+      <title><![CDATA[jQuery基础 —— Part1]]></title>
+      <url>http://yoursite.com/2016/11/05/jQuery%E5%9F%BA%E7%A1%80%20%E2%80%94%E2%80%94%20Part1/</url>
       <content type="html"><![CDATA[<p>我的观念一直是要学好原生JS，以后再遇见封装的框架就不担心了，但事实······</p>
 <p>不是有了工作才去学习这些框架，而是有了框架的基础，在工作中进行更深一步的认识与学习。</p>
 <p>所以，我现在拿起jQuery，正确认识一下。</p>
@@ -1596,12 +1594,14 @@
       
         <categories>
             
-            <category> jQuery </category>
+            <category> JavaScript </category>
             
         </categories>
         
         
         <tags>
+            
+            <tag> JavaScript </tag>
             
             <tag> jQuery </tag>
             
@@ -1723,6 +1723,8 @@
         <tags>
             
             <tag> JavaScript </tag>
+            
+            <tag> 阅读 </tag>
             
         </tags>
         
@@ -2195,7 +2197,53 @@ source sql文件路径;
             
             <tag> HTML </tag>
             
-            <tag> 读书 </tag>
+            <tag> 阅读 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记]]></title>
+      <url>http://yoursite.com/2016/10/18/%E3%80%8ACSS%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%9A%E6%8E%8C%E6%8F%A1%E7%BD%91%E9%A1%B5%E6%A0%B7%E5%BC%8F%E4%B8%8ECSS%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E3%80%8B%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>文章末尾有下载链接。</p>
+<a id="more"></a>
+<h3 id="书"><a href="#书" class="headerlink" title="书"></a>书</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-10-14/88332454.jpg" alt="封面"></p>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>CSS 层叠样式表文件 Cascading Style Sheets</li>
+<li>CSS透明滤镜：通过调整透明度和position来实现层叠后的透视效果。IE-<code>alpha(opacity=70);</code>，FF/Chrome-<code>opacity0.7</code>。</li>
+</ul>
+<blockquote>
+<p>万恶的IE6不能正常的显示PNG-24的图片，hack方法：</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: url(image/PNG_24.png);</div><div class="line">_<span class="selector-tag">background</span>: <span class="selector-tag">none</span>;</div><div class="line">_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'image/PNG_24.png' , sizingMethod = 'crop');</div></pre></td></tr></table></figure>
+<ul>
+<li>新的解决浮动的方法，加入``，算是一种思路，尽量用:after解决。</li>
+<li>经验：多看css手册、了解H5标签的含义、分析网站布局、勤动手、总结、笔记、收藏阅读好的代码。</li>
+<li>W3cSchool的css验证，<a href="https://jigsaw.w3.org/css-validator/#validate_by_uri" target="_blank" rel="external">网址</a>。只是一种辅助工具，用来验证代码是否符合规范，并不能绝对的保证代码的优劣。</li>
+</ul>
+<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><ul>
+<li>这本书的前三章就像是手册一样，基本上就是w3cSchool的手册的扩充，如果阅读手册的时候觉得部分不能理解，阅读这本书也是一个办法。</li>
+<li>要是彩色的就更好了。</li>
+<li>书上说css的滤镜非常多，然后我查了一下，css3已经推出滤镜（Filter）这个新功能。</li>
+<li>这本书很棒的地方在于页脚提供的大神的博客地址，书的最后面也有很多链接，不过不是全都在正常更新。</li>
+<li>最好多多注意第6部分，正好是我现在需要知道的，经验。</li>
+</ul>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><p><a href="http://pan.baidu.com/s/1eSA1vnc" target="_blank" rel="external">CSS那些事儿：掌握网页样式与CSS布局核心技术</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 读书笔记 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> 阅读 </tag>
             
         </tags>
         
@@ -2249,107 +2297,7 @@ source sql文件路径;
             
             <tag> 工作记录 </tag>
             
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[用字体替换icon]]></title>
-      <url>http://yoursite.com/2016/10/18/%E7%94%A8%E5%AD%97%E4%BD%93%E6%9B%BF%E6%8D%A2icon/</url>
-      <content type="html"><![CDATA[<p>一个很棒的解决方法，前题是有合适的全格式字体库、icon对照表。</p>
-<a id="more"></a>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: <span class="string">"simple-icon"</span>;</div><div class="line">	<span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">"../fonts/simple.eot"</span>);<span class="comment">/*IE9兼容模式*/</span></div><div class="line">	<span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">"../fonts/simple.eot?#iefix"</span>) <span class="built_in">format</span>(<span class="string">"embedded-opentype"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.woff"</span>) <span class="built_in">format</span>(<span class="string">"woff"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.ttf"</span>) <span class="built_in">format</span>(<span class="string">"truetype"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.svg"</span>) <span class="built_in">format</span>(<span class="string">"svg"</span>),;</div><div class="line">&#125;	</div><div class="line"><span class="selector-class">.simple-icon</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: <span class="string">"simple-icon"</span>;</div><div class="line">	<span class="attribute">font-style</span>: normal;</div><div class="line">	<span class="attribute">font-weight</span>: normal;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">64px</span>;</div><div class="line">	<span class="attribute">-webkit-font-smoothing</span>: antialiased;</div><div class="line">	<span class="attribute">-moz-osx-font-smoothing</span>: grayscale;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-      
-        <categories>
-            
-            <category> CSS </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 技巧 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[css的优先级——权重规则]]></title>
-      <url>http://yoursite.com/2016/10/18/css%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E2%80%94%E2%80%94%E6%9D%83%E9%87%8D%E8%A7%84%E5%88%99/</url>
-      <content type="html"><![CDATA[<p>不需要硬记：越内联越强，越唯一越强。</p>
-<a id="more"></a>
-<p>css的样式是会继承的，那如何控制覆盖样式呢？</p>
-<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-10-13/4327105.jpg" alt="CSS权重"></p>
-<p>计算方法如下：</p>
-<p>MAX —— ！important（IE6不支持），直接最高级，妥妥的！</p>
-<p>1000分 —— 内联样式，如: style=””。</p>
-<p>100分 —— ID选择器，如：#content{}。</p>
-<p>10分 —— 类，伪类和属性选择器，如.content{}。</p>
-<p>1分 —— 类型选择器和伪元素选择器，如div{}。</p>
-<p>结果很清晰，哪个分值更高就使用哪个！</p>
-]]></content>
-      
-        <categories>
-            
-            <category> CSS </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> 技巧 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记]]></title>
-      <url>http://yoursite.com/2016/10/18/%E3%80%8ACSS%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%9A%E6%8E%8C%E6%8F%A1%E7%BD%91%E9%A1%B5%E6%A0%B7%E5%BC%8F%E4%B8%8ECSS%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E3%80%8B%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>文章末尾有下载链接。</p>
-<a id="more"></a>
-<h3 id="书"><a href="#书" class="headerlink" title="书"></a>书</h3><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-10-14/88332454.jpg" alt="封面"></p>
-<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
-<li>CSS 层叠样式表文件 Cascading Style Sheets</li>
-<li>CSS透明滤镜：通过调整透明度和position来实现层叠后的透视效果。IE-<code>alpha(opacity=70);</code>，FF/Chrome-<code>opacity0.7</code>。</li>
-</ul>
-<blockquote>
-<p>万恶的IE6不能正常的显示PNG-24的图片，hack方法：</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background: url(image/PNG_24.png);</div><div class="line">_<span class="selector-tag">background</span>: <span class="selector-tag">none</span>;</div><div class="line">_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src = 'image/PNG_24.png' , sizingMethod = 'crop');</div></pre></td></tr></table></figure>
-<ul>
-<li>新的解决浮动的方法，加入``，算是一种思路，尽量用:after解决。</li>
-<li>经验：多看css手册、了解H5标签的含义、分析网站布局、勤动手、总结、笔记、收藏阅读好的代码。</li>
-<li>W3cSchool的css验证，<a href="https://jigsaw.w3.org/css-validator/#validate_by_uri" target="_blank" rel="external">网址</a>。只是一种辅助工具，用来验证代码是否符合规范，并不能绝对的保证代码的优劣。</li>
-</ul>
-<h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><ul>
-<li>这本书的前三章就像是手册一样，基本上就是w3cSchool的手册的扩充，如果阅读手册的时候觉得部分不能理解，阅读这本书也是一个办法。</li>
-<li>要是彩色的就更好了。</li>
-<li>书上说css的滤镜非常多，然后我查了一下，css3已经推出滤镜（Filter）这个新功能。</li>
-<li>这本书很棒的地方在于页脚提供的大神的博客地址，书的最后面也有很多链接，不过不是全都在正常更新。</li>
-<li>最好多多注意第6部分，正好是我现在需要知道的，经验。</li>
-</ul>
-<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><p><a href="http://pan.baidu.com/s/1eSA1vnc" target="_blank" rel="external">CSS那些事儿：掌握网页样式与CSS布局核心技术</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 读书笔记 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> 读书 </tag>
+            <tag> JSP </tag>
             
         </tags>
         
@@ -2440,12 +2388,12 @@ source sql文件路径;
 <li>再在请求体填写规定格式的信息（name=陆家伟&amp;number=119&amp;sex=男&amp;job=前端工程师），返回（员工：陆家伟 信息保存成功！）（实际php未真正保存信息到数据库，因为并没有使用数据库）；</li>
 <li>测试完成。</li>
 </ol>
-<p>*规定：信息填写完后，回车或Execute，就可以发送信息了。</p>
+<p><em>规定：信息填写完后，回车或Execute，就可以发送信息了。</em></p>
 <h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p>json是一种方便的数据格式。</p>
 <h2 id="json规则"><a href="#json规则" class="headerlink" title="json规则"></a>json规则</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>“名称”：“值对”，</p>
 <h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><ul>
 <li><code>eval( &#39;(&#39; + jsonData + &#39;)&#39; );</code>，解析并执行（如果json内有function）。</li>
-<li><code>JSON.parse(jsonData);</code>，仅解析。*推荐</li>
+<li><code>JSON.parse(jsonData);</code>，仅解析。<em>推荐</em></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//基本的json</span></div><div class="line"><span class="keyword">var</span> jsonData = <span class="string">'&#123;</span></div><div class="line"><span class="string">	“staff”:[</span></div><div class="line"><span class="string">    	&#123;"name":"张三","age":"12"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"李四","age":"13"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"王五","age":"14"&#125;</span></div><div class="line"><span class="string">    ]</span></div><div class="line"><span class="string">&#125;'</span>;</div><div class="line"><span class="comment">//解析方法1</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">eval</span>( <span class="string">'('</span> + jsonData + <span class="string">')'</span> );</div><div class="line"><span class="comment">//解析方法2</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">JSON</span>.parse(jsonData);</div><div class="line"><span class="comment">//使用方法</span></div><div class="line"><span class="comment">//jsonObj.staff[0].name;</span></div></pre></td></tr></table></figure>
 <h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>用来与服务器交互数据的一种协议。</p>
@@ -2500,7 +2448,7 @@ source sql文件路径;
       
         <categories>
             
-            <category> Ajax </category>
+            <category> JavaScript </category>
             
         </categories>
         
@@ -2510,6 +2458,64 @@ source sql文件路径;
             <tag> JavaScript </tag>
             
             <tag> Ajax </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CSS的优先级——权重规则]]></title>
+      <url>http://yoursite.com/2016/10/18/CSS%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E2%80%94%E2%80%94%E6%9D%83%E9%87%8D%E8%A7%84%E5%88%99/</url>
+      <content type="html"><![CDATA[<p>不需要硬记：越内联越强，越唯一越强。</p>
+<a id="more"></a>
+<p>css的样式是会继承的，那如何控制覆盖样式呢？</p>
+<p><img src="http://odmo6x3ig.bkt.clouddn.com/16-10-13/4327105.jpg" alt="CSS权重"></p>
+<p>计算方法如下：</p>
+<p>MAX —— ！important（IE6不支持），直接最高级，妥妥的！</p>
+<p>1000分 —— 内联样式，如: style=””。</p>
+<p>100分 —— ID选择器，如：#content{}。</p>
+<p>10分 —— 类，伪类和属性选择器，如.content{}。</p>
+<p>1分 —— 类型选择器和伪元素选择器，如div{}。</p>
+<p>结果很清晰，哪个分值更高就使用哪个！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> CSS </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> Tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[用字体替换icon]]></title>
+      <url>http://yoursite.com/2016/10/18/%E7%94%A8%E5%AD%97%E4%BD%93%E6%9B%BF%E6%8D%A2icon/</url>
+      <content type="html"><![CDATA[<p>一个很棒的解决方法，前题是有合适的全格式字体库、icon对照表。</p>
+<a id="more"></a>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: <span class="string">"simple-icon"</span>;</div><div class="line">	<span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">"../fonts/simple.eot"</span>);<span class="comment">/*IE9兼容模式*/</span></div><div class="line">	<span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">"../fonts/simple.eot?#iefix"</span>) <span class="built_in">format</span>(<span class="string">"embedded-opentype"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.woff"</span>) <span class="built_in">format</span>(<span class="string">"woff"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.ttf"</span>) <span class="built_in">format</span>(<span class="string">"truetype"</span>),</div><div class="line">	<span class="built_in">url</span>(<span class="string">"../fonts/simple.svg"</span>) <span class="built_in">format</span>(<span class="string">"svg"</span>),;</div><div class="line">&#125;	</div><div class="line"><span class="selector-class">.simple-icon</span>&#123;</div><div class="line">	<span class="attribute">font-family</span>: <span class="string">"simple-icon"</span>;</div><div class="line">	<span class="attribute">font-style</span>: normal;</div><div class="line">	<span class="attribute">font-weight</span>: normal;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">64px</span>;</div><div class="line">	<span class="attribute">-webkit-font-smoothing</span>: antialiased;</div><div class="line">	<span class="attribute">-moz-osx-font-smoothing</span>: grayscale;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> CSS </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> Tips </tag>
             
         </tags>
         
@@ -2692,8 +2698,8 @@ source sql文件路径;
     </entry>
     
     <entry>
-      <title><![CDATA[CSS第三节-定位]]></title>
-      <url>http://yoursite.com/2016/10/11/CSS%E7%AC%AC%E4%B8%89%E8%8A%82-%E5%AE%9A%E4%BD%8D%20/</url>
+      <title><![CDATA[CSS-定位 —— Part3]]></title>
+      <url>http://yoursite.com/2016/10/11/CSS-%E5%AE%9A%E4%BD%8D%20%E2%80%94%E2%80%94%20Part3/</url>
       <content type="html"><![CDATA[<p>float与position的故事。</p>
 <a id="more"></a>
 <h1 id="浮动：float"><a href="#浮动：float" class="headerlink" title="浮动：float"></a>浮动：float</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>使元素脱离文档流，然后被放在父元素内的左边或者右边。</p>
@@ -2766,8 +2772,8 @@ source sql文件路径;
     </entry>
     
     <entry>
-      <title><![CDATA[CSS第二节-盒模型]]></title>
-      <url>http://yoursite.com/2016/09/30/CSS%E7%AC%AC%E4%BA%8C%E8%8A%82-%E7%9B%92%E6%A8%A1%E5%9E%8B/</url>
+      <title><![CDATA[CSS-盒模型 —— Part2]]></title>
+      <url>http://yoursite.com/2016/09/30/CSS-%E7%9B%92%E6%A8%A1%E5%9E%8B%20%E2%80%94%E2%80%94%20Part2/</url>
       <content type="html"><![CDATA[<p>盒子里面就是一片新天地。</p>
 <a id="more"></a>
 <h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><h2 id="盒模型包含什么"><a href="#盒模型包含什么" class="headerlink" title="盒模型包含什么"></a>盒模型包含什么</h2><p><img src="http://odmo6x3ig.bkt.clouddn.com/16-9-23/51926324.jpg" alt="css盒模型主视图"></p>
@@ -2932,8 +2938,8 @@ source sql文件路径;
     </entry>
     
     <entry>
-      <title><![CDATA[CSS第一节-基础属性]]></title>
-      <url>http://yoursite.com/2016/09/21/CSS%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7/</url>
+      <title><![CDATA[CSS-基础属性 —— Part1]]></title>
+      <url>http://yoursite.com/2016/09/21/CSS-%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7%20%E2%80%94%E2%80%94%20Part1/</url>
       <content type="html"><![CDATA[<p>CSS是网页的样式表现。</p>
 <p>由于HTML的默认样式很单调，所以我们需要CSS来调节样式，使单一的文字变得更优雅。</p>
 <a id="more"></a>
@@ -3709,11 +3715,9 @@ source sql文件路径;
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> git </tag>
             
-            <tag> 博客 </tag>
+            <tag> Hexo博客 </tag>
             
         </tags>
         

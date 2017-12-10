@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="BigTail">
 <meta property="og:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。 未完待续。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-15T08:12:34.109Z">
+<meta property="og:updated_time" content="2017-12-10T09:55:19.517Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax初识">
 <meta name="twitter:description" content="我认为Ajax是非常关键的知识，但是由于并没有接触过实际的项目，我认为自己的Ajax水平差很远。 未完待续。">
@@ -327,8 +327,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ajax/" itemprop="url" rel="index">
-                    <span itemprop="name">Ajax</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -446,12 +446,12 @@
 <li>再在请求体填写规定格式的信息（name=陆家伟&amp;number=119&amp;sex=男&amp;job=前端工程师），返回（员工：陆家伟 信息保存成功！）（实际php未真正保存信息到数据库，因为并没有使用数据库）；</li>
 <li>测试完成。</li>
 </ol>
-<p>*规定：信息填写完后，回车或Execute，就可以发送信息了。</p>
+<p><em>规定：信息填写完后，回车或Execute，就可以发送信息了。</em></p>
 <h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><p>json是一种方便的数据格式。</p>
 <h2 id="json规则"><a href="#json规则" class="headerlink" title="json规则"></a>json规则</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>“名称”：“值对”，</p>
 <h3 id="解析方法"><a href="#解析方法" class="headerlink" title="解析方法"></a>解析方法</h3><ul>
 <li><code>eval( &#39;(&#39; + jsonData + &#39;)&#39; );</code>，解析并执行（如果json内有function）。</li>
-<li><code>JSON.parse(jsonData);</code>，仅解析。*推荐</li>
+<li><code>JSON.parse(jsonData);</code>，仅解析。<em>推荐</em></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//基本的json</span></div><div class="line"><span class="keyword">var</span> jsonData = <span class="string">'&#123;</span></div><div class="line"><span class="string">	“staff”:[</span></div><div class="line"><span class="string">    	&#123;"name":"张三","age":"12"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"李四","age":"13"&#125;,</span></div><div class="line"><span class="string">        &#123;"name":"王五","age":"14"&#125;</span></div><div class="line"><span class="string">    ]</span></div><div class="line"><span class="string">&#125;'</span>;</div><div class="line"><span class="comment">//解析方法1</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">eval</span>( <span class="string">'('</span> + jsonData + <span class="string">')'</span> );</div><div class="line"><span class="comment">//解析方法2</span></div><div class="line"><span class="keyword">var</span> jsonObj = <span class="built_in">JSON</span>.parse(jsonData);</div><div class="line"><span class="comment">//使用方法</span></div><div class="line"><span class="comment">//jsonObj.staff[0].name;</span></div></pre></td></tr></table></figure>
 <h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>用来与服务器交互数据的一种协议。</p>
@@ -534,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/17/深入闭包（优缺点）/" rel="next" title="深入闭包（优缺点）">
-                <i class="fa fa-chevron-left"></i> 深入闭包（优缺点）
+              <a href="/2016/10/18/CSS的优先级——权重规则/" rel="next" title="CSS的优先级——权重规则">
+                <i class="fa fa-chevron-left"></i> CSS的优先级——权重规则
               </a>
             
           </div>
@@ -544,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/18/《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记/" rel="prev" title="《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记">
-                《CSS那些事儿：掌握网页样式与CSS布局核心技术》笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/18/创建自己的网站（动态）/" rel="prev" title="创建自己的网站（动态）">
+                创建自己的网站（动态） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,7 +637,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -648,7 +648,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
