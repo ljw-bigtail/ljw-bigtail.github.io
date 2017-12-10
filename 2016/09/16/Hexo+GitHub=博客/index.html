@@ -111,7 +111,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/17-9-2/81855554.jpg">
 <meta property="og:image" content="http://odmo6x3ig.bkt.clouddn.com/17-9-2/28078901.jpg">
-<meta property="og:updated_time" content="2017-10-15T07:34:35.792Z">
+<meta property="og:updated_time" content="2017-12-10T08:19:17.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+GitHub=博客">
 <meta name="twitter:description" content="如何通过Hexo和GitHub Page服务搭建免费的个人博客。 还有，如何拯救你的博客(／‵口′)／~╧╧">
@@ -387,6 +387,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
 <p>验证信息如下，即为成功配置SSH。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi ljw-bigtail! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</div></pre></td></tr></table></figure>
+<blockquote>
+<p>2017-12-10更新</p>
+</blockquote>
+<p>今天，我遇到了一种新的提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;github.com (***.***.***.***)&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is SHA256:*******************************************.</div><div class="line">Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>填写yes之后就可以正确执行并显示如上的信息。</p>
 <h2 id="搭建本地博客（安装Hexo）"><a href="#搭建本地博客（安装Hexo）" class="headerlink" title="搭建本地博客（安装Hexo）"></a>搭建本地博客（安装Hexo）</h2><ol>
 <li>新建文件夹作为博客目录（D:/hexo），文件夹内右键打开Git bash；</li>
 <li>输入命令<code>npm install -g hexo</code>，全局安装hexo脚手架；</li>
@@ -555,7 +561,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -566,7 +572,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

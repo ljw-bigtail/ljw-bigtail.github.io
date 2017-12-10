@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,BigTail,hexo" />
+  <meta name="keywords" content="安全,XSS," />
 
 
 
@@ -101,16 +101,18 @@
 
 
 
-<meta name="description" content="正在学习前端，为着目标奋斗！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BigTail">
-<meta property="og:url" content="http://yoursite.com/tags/安全-XSS/index.html">
+<meta name="description" content="喵~">
+<meta name="keywords" content="安全,XSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XSS初识">
+<meta property="og:url" content="http://yoursite.com/2017/06/19/XSS初识/index.html">
 <meta property="og:site_name" content="BigTail">
-<meta property="og:description" content="正在学习前端，为着目标奋斗！">
+<meta property="og:description" content="喵~">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-10T08:32:12.549Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BigTail">
-<meta name="twitter:description" content="正在学习前端，为着目标奋斗！">
+<meta name="twitter:title" content="XSS初识">
+<meta name="twitter:description" content="喵~">
 
 
 
@@ -140,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/安全-XSS/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/19/XSS初识/"/>
 
 
 
 
 
-  <title>标签: 安全,XSS | BigTail</title>
+  <title>XSS初识 | BigTail</title>
   
 
 
@@ -165,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,54 +261,221 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>安全,XSS<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/XSS初识/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陆家伟">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BigTail">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/07/19/XSS初识/" itemprop="url">
-              
-                <span itemprop="name">XSS初识</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">XSS初识</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-19T22:29:22+08:00"
-              content="2017-07-19" >
-          07-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="post.created" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">
+                2017-06-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/安全/" itemprop="url" rel="index">
+                    <span itemprop="name">安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>喵~</p>
+<a id="more"></a>
+<h1 id="攻击方式"><a href="#攻击方式" class="headerlink" title="攻击方式"></a>攻击方式</h1><h2 id="反射型"><a href="#反射型" class="headerlink" title="反射型"></a>反射型</h2><p>通过URL输入提交到服务器端，待解析响应后，返回到浏览器，并解析执行XSS代码的行为。</p>
+<p>例子（常见于插入广告后再进行传播）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在地址后添加攻击性代码后传播</span></div><div class="line">/?xss=&lt;p onclick="alert(1)"&gt;</div></pre></td></tr></table></figure>
+<h2 id="存储型"><a href="#存储型" class="headerlink" title="存储型"></a>存储型</h2><p> 上面的不影响服务端，但存储型会影响服务端（存在文件系统、数据库等地方），下次请求时页面不用再次提交XSS代码。</p>
+<h1 id="防范措施"><a href="#防范措施" class="headerlink" title="防范措施"></a>防范措施</h1><h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>对用户输入的数据进行HTML Entity编码。</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>十进制</th>
+<th>转义字符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“</td>
+<td>&amp;#34 ;</td>
+<td>&amp;quot ;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&amp;#38 ;</td>
+<td>&amp;amp ;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&amp;#60 ;</td>
+<td>&amp;lt ;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&amp;#62 ;</td>
+<td>&amp;gt ;</td>
+</tr>
+<tr>
+<td>不断开空格（\s）</td>
+<td>&amp;#160 ;</td>
+<td>&amp;nbsp ;</td>
+</tr>
+</tbody>
+</table>
+<p>使用replace来替换上面的这些字符，使得不影响结果。</p>
+<h2 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h2><p>删除用户上传的不安全的内容，包括DOM属性，如onerror等事件，或是Style节点、Script节点、Iframe节点等。</p>
+<p>直接使用JavaScript来筛选上传的数据即可。</p>
+<h2 id="校正"><a href="#校正" class="headerlink" title="校正"></a>校正</h2><p>避免直接对HTML Entity解码，使用DOM Parse转换，校正不配对的DOM标签。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/安全/" rel="tag"># 安全</a>
+          
+            <a href="/tags/XSS/" rel="tag"># XSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/16/MongoDB的使用/" rel="next" title="MongoDB的使用">
+                <i class="fa fa-chevron-left"></i> MongoDB的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/06/《设计中的设计》笔记/" rel="prev" title="《设计中的设计》笔记">
+                《设计中的设计》笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -314,6 +483,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -334,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -364,7 +546,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -375,7 +557,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -414,6 +596,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#攻击方式"><span class="nav-number">1.</span> <span class="nav-text">攻击方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#反射型"><span class="nav-number">1.1.</span> <span class="nav-text">反射型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储型"><span class="nav-number">1.2.</span> <span class="nav-text">存储型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#防范措施"><span class="nav-number">2.</span> <span class="nav-text">防范措施</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编码"><span class="nav-number">2.1.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤"><span class="nav-number">2.2.</span> <span class="nav-text">过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#校正"><span class="nav-number">2.3.</span> <span class="nav-text">校正</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -539,6 +737,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
