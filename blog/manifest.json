@@ -1,0 +1,36 @@
+{
+  "name": "Leo's Blog.",
+  "short_name": "Leo Blog.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A Blog that includes FE and Daily By LuJiaWei",
+  "icons": [{
+    "src": "/images/avatar.jpg",
+    "sizes": "48x48",
+    "type": "image/jpg"
+  }, {
+    "src": "/images/avatar.jpg",
+    "sizes": "72x72",
+    "type": "image/jpg"
+  }, {
+    "src": "/images/avatar.jpg",
+    "sizes": "96x96",
+    "type": "image/jpg"
+  }, {
+    "src": "/images/avatar.jpg",
+    "sizes": "144x144",
+    "type": "image/jpg"
+  }, {
+    "src": "/images/avatar.jpg",
+    "sizes": "168x168",
+    "type": "image/jpg"
+  }, {
+    "src": "/images/avatar.jpg",
+    "sizes": "192x192",
+    "type": "image/jpg"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }]
+}
