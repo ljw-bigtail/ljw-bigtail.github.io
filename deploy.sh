@@ -21,4 +21,4 @@ cp -rf ./dist/* ../ljw-bigtail.github.io/
 cd ../ljw-bigtail.github.io
 git add -A
 git commit -m 'deploy'
-git push origin master:main
+git push origin main
