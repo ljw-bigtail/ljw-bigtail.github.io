@@ -27,5 +27,5 @@ git push origin main
 cd ../
 mkdir www.inland.vip
 cp -rf ./ljw-bigtail.github.io/ ./www.inland.vip/
-zip -r -o www.inland.vip.zip ./www.inland.vip -x='.git/*' -x='deploy.sh' -x='.DS_Store' -x='README.md'
+zip -r -o www.inland.vip.zip ./www.inland.vip -x='www.inland.vip/.git/*' -x='www.inland.vip/deploy.sh' -x='www.inland.vip/.DS_Store' -x='www.inland.vip/README.md'
 mv -f www.inland.vip.zip /Users/leo/Desktop
