@@ -22,3 +22,10 @@ cd ../ljw-bigtail.github.io
 git add -A
 git commit -m 'deploy'
 git push origin main
+
+# 打包
+cd ../
+mkdir www.inland.vip
+cp -rf ./ljw-bigtail.github.io/ ./www.inland.vip/
+zip -r -o www.inland.vip.zip ./www.inland.vip -x='.git/*' -x='deploy.sh' -x='.DS_Store' -x='README.md'
+mv -f www.inland.vip.zip /Users/leo/Desktop
